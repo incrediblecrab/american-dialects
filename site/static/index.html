@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Where are you from?</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="progress" id="progress"><div class="progress-fill" id="progress-fill"></div></div>
+
+<main>
+
+  <section class="screen is-active" id="screen-intro">
+    <div class="intro">
+      <h1>Where are you from?</h1>
+      <p class="lede">Answer a few questions about how you speak. Not what you think is correct &mdash; what you actually say.</p>
+      <button class="btn" id="start">Begin</button>
+      <p class="fine">Twelve questions. Nothing leaves this machine.</p>
+    </div>
+  </section>
+
+  <section class="screen" id="screen-quiz">
+    <div class="step" id="step"></div>
+    <h2 class="question" id="question"></h2>
+    <div class="choices" id="choices"></div>
+    <div class="quiz-actions">
+      <button class="link" id="skip">I have no word for this</button>
+      <button class="link" id="finish">Guess now</button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen-result">
+    <div class="result">
+      <div class="map-wrap">
+        <img class="map" id="map" alt="Probability map of where you grew up">
+      </div>
+      <p class="eyebrow">You most likely grew up near</p>
+      <h2 class="place" id="place"></h2>
+      <p class="confidence" id="confidence"></p>
+
+      <div class="breakdown">
+        <div class="col">
+          <h3>Places</h3>
+          <ul id="places"></ul>
+        </div>
+        <div class="col">
+          <h3>States</h3>
+          <ul id="states"></ul>
+        </div>
+      </div>
+
+      <div class="truth" id="truth">
+        <h3>Was it right?</h3>
+        <p class="fine">This is the only thing that makes the number above mean anything.</p>
+        <div class="truth-row">
+          <input type="text" id="truth-input" placeholder="City, State" autocomplete="off" spellcheck="false">
+          <button class="btn btn-small" id="truth-save">Save</button>
+        </div>
+        <p class="fine saved" id="truth-saved" hidden>Logged.</p>
+      </div>
+
+      <button class="link again" id="again">Play again</button>
+    </div>
+  </section>
+
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>

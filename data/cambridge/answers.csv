@@ -1,0 +1,808 @@
+id,choice_index,answer,color_hex,pct
+1,1,sub (or submarine),#ff0000,52.0
+1,2,hoagie,#00ff00,8.0
+1,3,deli or deli sandwich,#0000ff,6.0
+1,4,I only call it a sandwich,#ffff00,5.0
+1,5,hero,#ff00ff,3.0
+1,6,club sandwich,#00ffff,3.0
+1,7,poor boy (or po-boy),#000000,2.0
+2,1,soda,#ff0000,41.0
+2,2,pop,#00ff00,17.0
+2,3,coke,#0000ff,10.0
+2,4,soft drink,#ffff00,10.0
+2,5,I just call each kind by its individual name,#ff00ff,5.0
+2,6,soda pop,#00ffff,3.0
+2,7,fountain drink,#000000,2.0
+7,1,tennis shoes or tennishoes,#ff0000,33.0
+7,2,sneakers or sneaks,#00ff00,29.0
+7,3,gym shoes,#0000ff,8.0
+7,4,running shoes,#ffff00,8.0
+7,5,shoes,#ff00ff,6.0
+7,6,tennies or tenners,#00ffff,3.0
+7,7,trainers,#000000,2.0
+13,1,crawfish,#ff0000,37.0
+13,2,crayfish,#00ff00,23.0
+13,3,"crawdad, crawdaddy",#0000ff,21.0
+13,4,I have no word for this critter,#ffff00,4.0
+13,5,lobster,#ff00ff,2.0
+13,6,crab,#00ffff,1.0
+13,7,prawn,#000000,1.0
+20,1,you guys,#ff0000,35.0
+20,2,"y'all, ya'll",#00ff00,15.0
+20,3,you all,#ffff00,12.0
+20,4,you,#0000ff,12.0
+20,5,all of you,#ff00ff,8.0
+20,6,all y'all,#00ffff,4.0
+20,7,you people,#000000,3.0
+21,1,"roly poly, rollie pollie, rolly polly",#ff0000,43.0
+21,2,pillbug,#00ff00,15.0
+21,3,potato bug,#0000ff,11.0
+21,4,I just call them bugs,#ffff00,4.0
+21,5,I don't know this creature,#ff00ff,4.0
+21,6,sow bug,#000000,2.0
+21,7,"I know what this creature is, but I have no word for it",#00ffff,2.0
+30,1,I have no special word or phrase for this,#ff0000,48.0
+30,2,sunshower,#00ff00,35.0
+30,3,"the devil is beating his wife, the devil is whipping his wife",#0000ff,7.0
+30,4,liquid sun(shine),#ffff00,1.0
+31,1,"sleep, sleeps, eye sleep",#ff0000,20.0
+31,2,"boogers, eye boogers, eye boogies",#00ff00,17.0
+31,3,"gunk, eye gunk, sleep gunk, guck, eye guck",#0000ff,11.0
+31,4,"crusties, eye crusties",#ffff00,9.0
+31,5,"crust, eye crust",#ff00ff,8.0
+31,6,"sleepies, sleepy",#00ffff,5.0
+31,7,sand,#000000,5.0
+67,1,"with the same vowel as in the word ""man""",#ff0000,60.0
+67,2,"with the same vowel as in the word ""ah""",#00ff00,18.0
+67,3,"with the vowel in ""don"" when referring to the general concept of an aunt, but with the vowel in ""man"" when referring to a specific person by name (e.g. ""Aunt Mary"")",#0000ff,5.0
+67,4,"with the same vowel as in the word ""dawn"", which for me *is* the same sound as in ""don""",#ffff00,4.0
+67,5,"with the same vowel as in the word ""dawn"", which for me is *not* the same sound as in ""don""",#00ffff,3.0
+67,6,"with the same vowel as in the word ""ain't""",#ff00ff,3.0
+67,7,"with the vowel in ""man"" when referring to the general concept of an aunt, but with the vowel in ""don"" when referring to a specific person by name (e.g. ""Aunt Mary"")",#000000,1.0
+68,1,garage sale,#ff0000,42.0
+68,2,yard sale,#00ff00,33.0
+68,3,"yard sale and garage sale are interchangeable, but I wouldn't use any of the others",#0000ff,11.0
+68,4,rummage sale,#ffff00,4.0
+68,5,tag sale,#ff00ff,1.0
+68,6,car boot sale,#000000,1.0
+68,7,estate sale,#00ffff,1.0
+69,1,shopping cart,#ff0000,50.0
+69,2,grocery cart,#00ff00,20.0
+69,3,cart (but not shopping cart or grocery cart),#0000ff,12.0
+69,4,"buggy, shopping buggy",#ffff00,7.0
+69,5,"trolley, supermarket trolley, shopping trolley",#00ffff,3.0
+69,6,"basket, grocery basket, shopping basket",#ff00ff,3.0
+69,7,"carriage, shopping carriage",#000000,1.0
+70,1,roundabout,#ff0000,50.0
+70,2,traffic circle,#00ff00,24.0
+70,3,rotary,#ffff00,7.0
+70,4,circle,#0000ff,7.0
+70,5,I have no specific term for this,#ff00ff,3.0
+70,6,loop,#00ffff,1.0
+71,1,"Yes, I always pronounce the [r]",#ff0000,91.0
+71,2,I'm not sure whether I pronounce the [r] or not in such cases,#00ff00,3.0
+71,3,"No, I never pronounce the [r]",#ffff00,2.0
+71,4,"I pronounce the [r] when the next word begins with a vowel (""the bar is open"") but not when the next word begins with a consonant",#0000ff,2.0
+72,1,"""sawing"" and ""saw it"" - I don't pronounce an [r] in either one",#ff0000,93.0
+72,2,"""saw[r]ing"" and ""saw[r] it"" - I pronounce an [r] in both",#00ff00,2.0
+72,3,"I can say ""saw[r]ing"", but I would never pronounce an [r] in ""saw it""",#ffff00,1.0
+72,4,"I can say ""saw[r] it"", but I would never pronounce an [r] in ""sawing""",#0000ff,1.0
+73,1,blah-ish (no [r]),#ff0000,74.0
+73,2,"I would avoid saying this form, so as to avoid having to decide whether to pronounce an [r] or not",#00ff00,8.0
+73,3,blah[r]ish (I pronounce an [r]),#0000ff,1.0
+73,4,blah-ish or blah[r]ish (I can pronounce this with or without an [r]--both sound acceptable to me),#ffff00,1.0
+74,1,"""shah of"" (I don't pronounce an [r])",#ff0000,89.0
+74,2,"""shah[r] of"" (I pronounce an [r])",#00ff00,4.0
+74,3,"I would avoid using this phrasing, so that I wouldn't have to decide whether to pronounce an [r] or not",#0000ff,3.0
+74,4,"""shah of "" or ""shah[r] of"" (I can either pronounce an [r] or not--both sound acceptable to me)",#ffff00,1.0
+75,1,they are identical: both begin with a [w] sound,#ff0000,79.0
+75,2,"they are different: <witch> begins with a [w] sound, and <which> begins with a sort of [hw] sound",#0000ff,9.0
+75,3,I always pronounce <witch> with a [w] sound; I can pronounce <which> with either a [w] or a [hw] sound,#00ff00,9.0
+76,1,dinner,#ff0000,58.0
+76,2,either dinner or supper; I don't distinguish the two,#00ff00,15.0
+76,3,supper,#0000ff,11.0
+76,4,"supper informally, and dinner in formal situations",#ffff00,5.0
+76,5,tea,#000000,1.0
+76,6,supper is an evening meal while dinner is eaten earlier,#00ffff,1.0
+76,7,dinner is a big meal; supper is a lighter meal,#ff00ff,1.0
+77,1,"""in line"" or ""in a line""",#ff0000,88.0
+77,2,"""in a queue""",#00ff00,5.0
+77,3,"""on line"" or ""on a line""",#0000ff,4.0
+78,1,couch,#ff0000,43.0
+78,2,"I use ""couch"" and ""sofa"" interchangeably, but none of the others",#00ff00,24.0
+78,3,sofa,#0000ff,18.0
+78,4,"I use both couch and sofa, but a sofa is fancier than a couch",#ffff00,4.0
+78,5,"I use both couch and sofa, but a couch is bigger than a sofa",#ff00ff,2.0
+78,6,davenport,#000000,1.0
+78,7,settee,#00ffff,1.0
+79,1,liquor store,#ff0000,74.0
+79,2,ABC store,#00ff00,5.0
+79,3,package store (or packie),#0000ff,4.0
+79,4,off-licence or offie,#ff00ff,2.0
+79,5,"state store, state liquor store",#ffff00,2.0
+79,6,beer store,#00ffff,2.0
+79,7,party store,#000000,1.0
+80,1,bathroom,#ff0000,32.0
+80,2,restroom,#00ff00,31.0
+80,3,men's room or ladies' room,#0000ff,14.0
+80,4,toilet,#ffff00,4.0
+80,5,washroom,#ff00ff,2.0
+80,6,facilities,#00ffff,1.0
+80,7,little girl's room,#000000,1.0
+81,1,emergency brake,#ff0000,48.0
+81,2,parking brake,#00ff00,31.0
+81,3,hand brake,#ffff00,9.0
+81,4,e brake,#0000ff,9.0
+82,1,stick-shift,#ff0000,35.0
+82,2,manual (transmission),#00ff00,27.0
+82,3,stick,#0000ff,24.0
+82,4,standard (transmission),#ffff00,8.0
+82,5,five-speed,#ff00ff,2.0
+83,1,pacifier or passie,#ff0000,65.0
+83,2,binky,#00ff00,19.0
+83,3,"nuk, nook, nookie, nuchie, noodgie, noo noo, nunu, noonie",#0000ff,3.0
+83,4,dummy or dumdum,#ffff00,3.0
+83,5,soother,#ff00ff,1.0
+83,6,plug or plugger,#00ffff,1.0
+84,1,take-out,#ff0000,53.0
+84,2,to-go,#00ff00,24.0
+84,3,carry-out,#0000ff,12.0
+84,4,take-away,#ffff00,4.0
+84,5,pick-up,#ff00ff,3.0
+85,1,waterbug,#ff0000,40.0
+85,2,I have no word for this critter,#00ff00,17.0
+85,3,water strider,#0000ff,10.0
+85,4,water spider,#ffff00,5.0
+85,5,water-skeeter,#00ffff,3.0
+85,6,water skimmer,#ff00ff,3.0
+85,7,pond skimmer,#000000,2.0
+86,1,alley,#ff0000,66.0
+86,2,alleyway,#00ff00,18.0
+86,3,back alley,#0000ff,6.0
+86,4,walkway,#ffff00,1.0
+86,5,backstreet,#ff00ff,1.0
+86,6,lane,#00ffff,1.0
+86,7,ginnel,#000000,0.0
+87,1,"ATM, ATM machine",#ff0000,78.0
+87,2,cash machine,#00ff00,7.0
+87,3,bank machine,#0000ff,3.0
+87,4,MAC machine,#ffff00,2.0
+87,5,money machine,#000000,1.0
+87,6,automatic teller or automated teller,#00ffff,1.0
+87,7,cashpoint,#ff00ff,1.0
+88,1,pinkie toe,#ff0000,46.0
+88,2,little toe,#00ff00,23.0
+88,3,pinkie,#0000ff,16.0
+88,4,baby toe,#ffff00,9.0
+88,5,small toe,#00ffff,1.0
+88,6,"piggie, piggie toe, little piggie",#ff00ff,1.0
+89,1,green onion,#ff0000,46.0
+89,2,scallion,#00ff00,26.0
+89,3,chive,#0000ff,8.0
+89,4,spring onion,#ffff00,5.0
+89,5,leek,#ff00ff,4.0
+89,6,shallot,#00ffff,3.0
+89,7,I have no special term for this,#000000,2.0
+240,1,pop,#ff0000,39.0
+240,2,soda,#00ff00,37.0
+240,3,coke,#0000ff,18.0
+240,4,soft drink,#ffff00,1.0
+241,1,"[æ] as in ""ant""",#ff0000,76.0
+241,2,"[ɑ] as in ""ah""",#00ff00,9.0
+241,3,"I use [ɑ/ɒ] when referring to the general concept of an aunt, but [æ] when referring to a specific person by name.",#0000ff,5.0
+241,4,"[ɒ] as in ""caught""",#ff00ff,2.0
+241,5,"I have the same vowel in ""ah"", ""caught"", and ""aunt""",#ffff00,2.0
+241,6,"I use [æ] when referring to the general concept of an aunt, but [ɑ/ɒ] when referring to a specific person by name.",#00ffff,1.0
+242,1,"[ɪ] as in ""sit""",#ff0000,62.0
+242,2,"[ɛ] as in ""set""",#00ff00,30.0
+242,3,"[i:] as in ""see""",#0000ff,3.0
+242,4,other,#ffff00,3.0
+243,1,"[o:] as in ""Bo""",#ff0000,70.0
+243,2,"[u:] as in ""boo""",#00ff00,20.0
+243,3,"I have seen this word in print, but have no idea how to pronounce it",#0000ff,4.0
+243,4,I have never seen or heard this word,#ffff00,3.0
+244,1,"with 2 syllables (""car-ml"")",#ff0000,41.0
+244,2,"with 3 syllables (""carra-mel"")",#00ff00,33.0
+244,3,I use both interchangeably,#0000ff,18.0
+244,4,"I have both forms, but the two have different meanings (please state how in the comments box)",#ffff00,3.0
+244,5,other,#ff00ff,2.0
+245,1,"[ɪ] as in ""sit""",#ff0000,67.0
+245,2,"[i:] as in ""see""",#00ff00,26.0
+245,3,other,#0000ff,5.0
+246,1,"[ɑ] as in ""car"" (""sen-tar"")",#ff0000,49.0
+246,2,"rhymes with ""sore"" and ""more"" (""sen-tore"")",#00ff00,23.0
+246,3,"[ɒ] as in ""caught""",#0000ff,12.0
+246,4,"I use the same vowel in ""car"", ""caught"", and ""centaur""",#ffff00,10.0
+246,5,other,#ff00ff,2.0
+247,1,"with [u:] as in ""coop"" (""coopon"")",#ff0000,61.0
+247,2,"with [ju:] as in ""cute"" (""cyoopon"")",#00ff00,36.0
+247,3,other,#0000ff,1.0
+248,1,"[e:] as in ""say""",#ff0000,42.0
+248,2,"[ɛ] as in ""set""",#00ff00,26.0
+248,3,"I say something in between the vowels in ""set"" and ""say"", but closer to the one in ""say""",#0000ff,15.0
+248,4,"I say something in between the vowels in ""set"" and ""say"", but closer to the one in ""set""",#ffff00,14.0
+248,5,other,#ff00ff,1.0
+249,1,"[ejɑ] (2 syllables, ""cray-ahn"")",#ff0000,45.0
+249,2,"[ejɒ] (2 syllables, ""cray-awn"", where the second syllable rhymes with ""dawn"")",#00ff00,37.0
+249,3,"[æ] as in ""man"" (1 syllable, ""cran"")",#0000ff,13.0
+249,4,"[aw] (I pronounce this the same as ""crown"")",#ffff00,2.0
+249,5,other,#ff00ff,1.0
+250,1,"[i:] as in ""see""",#ff0000,86.0
+250,2,I use both interchangeably,#00ff00,6.0
+250,3,"[ɪ] as in ""sit""",#0000ff,4.0
+250,4,"I use both, but they mean two different things (please state how they differ in the comments box)",#ffff00,2.0
+251,1,"[ɔ] as in ""sore"" (""flore-i-da"")",#ff0000,76.0
+251,2,"[ɑ] as in ""ah"" (""flah-ri-da"")",#00ff00,9.0
+251,3,"[ɒ] as in ""saw"" (""flaw-ri-da"")",#0000ff,6.0
+251,4,"[o:] as in ""flow"" (""flow-ri-da"")",#ffff00,5.0
+251,5,other,#ff00ff,2.0
+252,1,"[ə] as in ""bird"" (""flurr-ish"")",#ff0000,63.0
+252,2,"[ɔ] as in ""sore"" (""flore-ish"")",#00ff00,24.0
+252,3,"[ʌ] as in ""sun"" (""fluh-rish"")",#0000ff,8.0
+252,4,other (including if you use one pronunciation for the verb and a different pronunciation for the noun),#ffff00,4.0
+253,1,"[ɪ] as in ""sit""",#ff0000,77.0
+253,2,"[i:] as in ""see""",#00ff00,21.0
+253,3,other,#0000ff,1.0
+254,1,"with [ɔj] as in ""boy"" (""loyer"")",#ff0000,71.0
+254,2,"with [ɒ] as in ""saw"" (""law-yer"")",#00ff00,22.0
+254,3,I use both interchangeably,#0000ff,5.0
+255,1,all 3 are the same,#ff0000,60.0
+255,2,Mary and marry are the same; merry is different,#00ff00,15.0
+255,3,all 3 are different,#0000ff,13.0
+255,4,Mary and merry are the same; marry is different,#ffff00,9.0
+256,1,"with [ejə] (3 syllables--""may-uh-naze"")",#ff0000,47.0
+256,2,"with [æ] as in ""man"" (2 syllables--""man-aze"")",#00ff00,41.0
+256,3,I use both interchangeably,#0000ff,8.0
+256,4,other,#ffff00,3.0
+257,1,"[i:] as in ""near""",#ff0000,59.0
+257,2,"[ɪ] as in ""knit""",#00ff00,29.0
+257,3,I say something in between [ɪ] and [ɛ],#0000ff,7.0
+257,4,other,#ffff00,2.0
+257,5,"[ɛ] as in ""net""",#ff00ff,1.0
+258,1,mischievous (3 syllables),#ff0000,42.0
+258,2,mischievious (4 syllables),#00ff00,30.0
+258,3,I use both,#0000ff,20.0
+258,4,"I write ""mischievous"" but say ""mischievious""",#ffff00,6.0
+259,1,"[e:] as in ""say""",#ff0000,86.0
+259,2,"I use [e:] with the words in isolation, but [i:] in compounds (such as ""Sunday school"")",#00ff00,5.0
+259,3,"[i:] as in ""see""",#0000ff,4.0
+259,4,"other (e.g. do you use one vowel in some day names, and another in the other names?)",#ffff00,2.0
+260,1,"[ɑ] as in ""father""",#ff0000,49.0
+260,2,"[æ] as in ""jam""",#00ff00,48.0
+260,3,other,#0000ff,1.0
+261,1,"[pi:kɑn] with stress on the second syllable (""pee-KAHN"")",#ff0000,31.0
+261,2,"[pɪkɑn] (""pick Ahn"")",#00ff00,21.0
+261,3,"[pi:kæn] with stress on the first syllable (""PEE-can"")",#0000ff,14.0
+261,4,"[pi:kɑn] with stress on the first syllable (""PEE-Kahn"")",#ffff00,13.0
+261,5,"[pi:kæn] with stress on the second syllable (""pee-CAN"")",#ff00ff,7.0
+261,6,"I pronounce it differently when it's alone than when it's in a compound like ""pecan pie"" (please state how you pronounce the two variants in the comments box)",#00ffff,5.0
+261,7,other,#000000,3.0
+262,1,two syllables,#ff0000,66.0
+262,2,one syllable,#00ff00,33.0
+263,1,"[i:] as in ""see"" (""reely"")",#ff0000,50.0
+263,2,"[ɪ] as in ""sit"" (""rilly"")",#00ff00,27.0
+263,3,other (including if you use two or more of these interchangeably),#0000ff,11.0
+263,4,"[iə] (""ree-l-y"")",#ffff00,9.0
+264,1,"2 syllables (""reel-ter"")",#ff0000,41.0
+264,2,"3 syllables (real[ə]tor, in other words ""reel-uh-ter"")",#00ff00,34.0
+264,3,3 syllables (ree-l-ter),#0000ff,20.0
+264,4,other,#ffff00,2.0
+265,1,"[u:] as in ""food""",#ff0000,72.0
+265,2,these four words do not all have the same vowel (please use the comments box to let us know which is which),#00ff00,22.0
+265,3,"[ʊ] as in ""foot""",#0000ff,5.0
+266,1,I can pronounce it either way interchangeably,#ff0000,29.0
+266,2,"rhymes with ""hoot""",#00ff00,28.0
+266,3,"rhymes with ""out""",#0000ff,22.0
+266,4,"I say it like ""hoot"" for the noun and like ""out"" for the verb.",#ffff00,14.0
+266,5,"I say it like ""out"" for the noun and like ""hoot"" for the verb.",#ff00ff,2.0
+266,6,other,#00ffff,1.0
+267,1,"[ə] as in ""sir""",#ff0000,51.0
+267,2,"[i] ""sear-up""",#00ff00,27.0
+267,3,"[ɪ] ""sih-rup""",#0000ff,19.0
+267,4,other,#ffff00,1.0
+268,1,different,#ff0000,58.0
+268,2,same,#00ff00,41.0
+269,1,"all-mond (first syllable sounds like ""all"")",#ff0000,64.0
+269,2,ah-mond (no l),#00ff00,16.0
+269,3,I say something in between l and nothing,#0000ff,11.0
+269,4,"aw-mond (if different from ""ah-mond"")",#ffff00,5.0
+269,5,other,#ff00ff,2.0
+270,1,"[s] as in ""sock""",#ff0000,93.0
+270,2,"[ʃ] as in ""shock""",#00ff00,6.0
+271,1,asteri[sk],#ff0000,58.0
+271,2,asteri[k] (with no s in the final cluster),#00ff00,32.0
+271,3,asteri[ks],#0000ff,7.0
+271,4,other,#ffff00,1.0
+272,1,I pronounce the first d,#ff0000,47.0
+272,2,I don't pronounce the first d,#00ff00,27.0
+272,3,I only pronounce the first d when I'm speaking slowly/carefully,#0000ff,17.0
+272,4,I vary freely between pronouncing the first d and not doing so,#ffff00,6.0
+273,1,[z],#ff0000,47.0
+273,2,[s],#00ff00,33.0
+273,3,both are acceptable to me,#0000ff,18.0
+274,1,pronounced e[ts]etera (4 syllables),#ff0000,61.0
+274,2,pronounced eksetera (4 syllables),#00ff00,17.0
+274,3,pronounced e[ts]etra (3 syllables),#0000ff,11.0
+274,4,pronounced eksetra (3 syllables),#ffff00,6.0
+274,5,other,#ff00ff,2.0
+275,1,"[ʒ] as in the middle consonant of ""measure""",#ff0000,48.0
+275,2,"[ʤ] as in ""edge""",#00ff00,40.0
+275,3,I use both interchangeably,#0000ff,10.0
+275,4,other,#ffff00,1.0
+276,1,"[s] as in ""sock""",#ff0000,49.0
+276,2,"[ʃ] as in ""shock""",#00ff00,48.0
+276,3,other,#0000ff,1.0
+277,1,I pronounce the h,#ff0000,95.0
+277,2,I don't pronounce the h,#00ff00,2.0
+277,3,I can pronounce the h or not,#0000ff,2.0
+278,1,"[s] as in ""sock""",#ff0000,88.0
+278,2,"[ʃ] as in ""shock""",#00ff00,10.0
+278,3,other,#0000ff,1.0
+279,1,[s],#ff0000,70.0
+279,2,[z],#00ff00,29.0
+280,1,with [kw],#ff0000,62.0
+280,2,"with [k] (""cor-ter"")",#00ff00,30.0
+280,3,I use both interchangeably,#0000ff,6.0
+281,1,spigot,#ff0000,53.0
+281,2,I don't use either version of this word,#00ff00,16.0
+281,3,spicket,#0000ff,14.0
+281,4,"I say ""spicket"" but spell it ""spigot""",#ffff00,11.0
+281,5,I use both interchangeably,#ff00ff,3.0
+281,6,I use both with different meanings (please explain how in the comments box),#00ffff,1.0
+282,1,"the ""g"" is pronounced as [k]",#ff0000,43.0
+282,2,"the ""g"" is pronounced as [ʒ]",#00ff00,35.0
+282,3,"the ""g"" is silent",#0000ff,20.0
+283,1,[s],#ff0000,90.0
+283,2,[z],#00ff00,5.0
+283,3,either one,#0000ff,3.0
+284,1,CREAM cheese (stress on the first syllable),#ff0000,52.0
+284,2,cream CHEESE (stress on the second syllable),#00ff00,24.0
+284,3,it sounds right either way,#0000ff,19.0
+284,4,other,#ffff00,3.0
+285,1,inSURance (stress on the second syllable),#ff0000,75.0
+285,2,INsurance (stress on the first syllable),#00ff00,12.0
+285,3,I can stress either the first or the second syllable,#0000ff,11.0
+286,1,NEW Haven,#ff0000,44.0
+286,2,New HAVEN,#00ff00,42.0
+286,3,I use both interchangeably,#0000ff,10.0
+286,4,other,#ffff00,2.0
+287,1,ThanksGIVing,#ff0000,63.0
+287,2,THANKSgiving,#00ff00,28.0
+287,3,I use both interchangeably,#0000ff,7.0
+288,1,umBRELLa,#ff0000,78.0
+288,2,UMbrella,#00ff00,21.0
+289,1,dragged,#ff0000,73.0
+289,2,drug,#00ff00,19.0
+289,3,I use both interchangeably,#0000ff,6.0
+290,1,you guys,#ff0000,41.0
+290,2,you,#00ff00,23.0
+290,3,y'all,#0000ff,17.0
+290,4,you all,#ffff00,12.0
+290,5,other,#ff00ff,3.0
+291,1,no,#ff0000,67.0
+291,2,yes,#00ff00,30.0
+291,3,other,#0000ff,2.0
+292,1,no,#ff0000,38.0
+292,2,yes,#00ff00,33.0
+292,3,"I can use ""where are you at"" in contexts such as asking someone how s/he is coming along on a project, but not in the general sense of ""where are you physically located in the world at this moment"".",#0000ff,28.0
+293,1,no,#ff0000,87.0
+293,2,yes (please consider adding which combinations of modals you use in the comments box),#00ff00,11.0
+294,1,"this use of ""anymore"" is unacceptable",#ff0000,91.0
+294,2,"this use of ""anymore"" is acceptable",#00ff00,6.0
+294,3,not sure,#0000ff,2.0
+295,1,unacceptable,#ff0000,88.0
+295,2,acceptable,#00ff00,7.0
+295,3,not sure,#0000ff,4.0
+296,1,unacceptable,#ff0000,60.0
+296,2,acceptable,#00ff00,35.0
+296,3,not sure,#0000ff,3.0
+297,1,unacceptable,#ff0000,68.0
+297,2,acceptable,#00ff00,23.0
+297,3,not sure,#0000ff,7.0
+298,1,garage sale,#ff0000,53.0
+298,2,yard sale,#00ff00,35.0
+298,3,rummage sale,#0000ff,4.0
+298,4,other,#ffff00,3.0
+298,5,tag sale,#ff00ff,2.0
+299,1,"I have never heard of this ""game"" and have no idea what it's called",#ff0000,51.0
+299,2,mumbly peg,#00ff00,11.0
+299,3,other (state here if you have heard one or more of these terms but never knew what they meant),#0000ff,9.0
+299,4,mumbledy-peg,#ffff00,8.0
+299,5,mumblety-peg,#ff00ff,6.0
+299,6,chicken,#00ffff,3.0
+299,7,Russian roulette,#000000,2.0
+300,1,I have no word for this,#ff0000,64.0
+300,2,other,#00ff00,13.0
+300,3,curb strip,#0000ff,9.0
+300,4,berm,#ffff00,4.0
+300,5,parking,#ff00ff,2.0
+300,6,tree lawn,#00ffff,2.0
+300,7,verge,#000000,2.0
+301,1,island,#ff0000,43.0
+301,2,other,#00ff00,20.0
+301,3,I have no word for this,#0000ff,17.0
+301,4,boulevard,#ffff00,10.0
+301,5,traffic island,#ff00ff,7.0
+301,6,midway,#00ffff,1.0
+302,1,median,#ff0000,80.0
+302,2,median strip,#00ff00,12.0
+302,3,I have no word for this,#0000ff,2.0
+302,4,island,#ffff00,1.0
+302,5,other,#ff00ff,1.0
+303,1,milkshake/shake,#ff0000,96.0
+303,2,frappe,#00ff00,1.0
+304,1,sub,#ff0000,78.0
+304,2,hoagie,#00ff00,6.0
+304,3,hero,#0000ff,4.0
+304,4,other,#ffff00,3.0
+304,5,grinder,#ff00ff,2.0
+304,6,poor boy,#00ffff,2.0
+304,7,I have no word for this,#000000,1.0
+305,1,I use lightning bug and firefly interchangeably,#ff0000,38.0
+305,2,lightning bug,#00ff00,34.0
+305,3,firefly,#0000ff,26.0
+306,1,crawfish,#ff0000,39.0
+306,2,crayfish,#00ff00,27.0
+306,3,crawdad,#0000ff,23.0
+306,4,I have no word for this critter,#ffff00,4.0
+306,5,other,#ff00ff,4.0
+307,1,daddy long leg(s),#ff0000,93.0
+307,2,other,#00ff00,4.0
+307,3,daddy big legs,#0000ff,1.0
+308,1,grandma,#ff0000,50.0
+308,2,other,#00ff00,31.0
+308,3,grandmother,#ffff00,5.0
+308,4,nana,#0000ff,5.0
+308,5,granny,#ff00ff,3.0
+308,6,grammy/grammie/grammi,#00ffff,2.0
+309,1,grandma,#ff0000,47.0
+309,2,other,#00ff00,23.0
+309,3,gramma,#0000ff,14.0
+309,4,grandmother,#ffff00,6.0
+309,5,granny,#00ffff,3.0
+309,6,nana,#ff00ff,3.0
+310,1,other (including if you use a different term to address him directly than you do when speaking about him to a third party),#ff0000,30.0
+310,2,"I spell it ""grandpa"" but pronounce it as ""grampa""",#00ff00,26.0
+310,3,grandpa,#0000ff,22.0
+310,4,grampa,#ffff00,14.0
+310,5,"grandad, granddad",#ff00ff,5.0
+310,6,gramps,#00ffff,1.0
+311,1,other,#ff0000,35.0
+311,2,grandpa,#00ff00,33.0
+311,3,grampa,#0000ff,29.0
+312,1,dust bunnies,#ff0000,71.0
+312,2,dust balls,#00ff00,21.0
+312,3,other,#0000ff,4.0
+313,1,tennis shoes,#ff0000,48.0
+313,2,sneakers,#00ff00,38.0
+313,3,gymshoes,#0000ff,5.0
+313,4,other,#ffff00,3.0
+313,5,shoes,#ff00ff,2.0
+313,6,running shoes,#00ffff,1.0
+314,1,roly poly,#ff0000,34.0
+314,2,pill bug,#00ff00,14.0
+314,3,potato bug,#0000ff,12.0
+314,4,I have no idea what this creature is,#ffff00,11.0
+314,5,"I know what this creature is, but have no word for it",#ff00ff,8.0
+314,6,doodle bug,#00ffff,5.0
+314,7,sow bug,#000000,4.0
+315,1,shopping cart,#ff0000,73.0
+315,2,grocery cart,#00ff00,16.0
+315,3,buggy,#0000ff,4.0
+315,4,other,#ffff00,3.0
+316,1,kitty-corner,#ff0000,47.0
+316,2,catty-corner,#00ff00,33.0
+316,3,"I can only use ""diagonal"" for this",#0000ff,11.0
+316,4,I have no term for this,#ffff00,3.0
+316,5,other,#ff00ff,2.0
+316,6,catercorner,#00ffff,1.0
+317,1,doing donuts,#ff0000,81.0
+317,2,other,#00ff00,14.0
+317,3,doing cookies,#0000ff,1.0
+317,4,whipping shitties,#ffff00,1.0
+318,1,"scratch paper is still usable (for example, the paper you bring to do extra work on a test); scrap paper is paper that isn't needed anymore and can be thrown away.",#ff0000,36.0
+318,2,scratch paper,#00ff00,32.0
+318,3,scrap paper,#0000ff,28.0
+318,4,other,#ffff00,2.0
+319,1,highway,#ff0000,58.0
+319,2,"a freeway has limited access (no stop lights, no intersections), whereas a highway can have stop lights and intersections",#00ff00,13.0
+319,3,freeway,#0000ff,12.0
+319,4,a freeway is bigger than a highway,#ffff00,5.0
+319,5,expressway,#00ffff,4.0
+319,6,other,#ff00ff,4.0
+320,1,I have no term or expression for this,#ff0000,58.0
+320,2,sunshower,#00ff00,30.0
+320,3,the devil is beating his wife,#0000ff,6.0
+320,4,other,#ffff00,3.0
+320,5,liquid sun,#ff00ff,1.0
+321,1,goose bumps,#ff0000,89.0
+321,2,goose pimples,#00ff00,6.0
+321,3,chill bumps,#0000ff,1.0
+322,1,sleep,#ff0000,40.0
+322,2,eye booger,#00ff00,9.0
+322,3,other,#0000ff,8.0
+322,4,sand,#ff00ff,7.0
+322,5,I have no word for this,#ffff00,7.0
+322,6,gunk,#00ffff,6.0
+322,7,sleepies,#000000,5.0
+323,1,other,#ff0000,43.0
+323,2,blow-off,#00ff00,38.0
+323,3,gut,#0000ff,10.0
+323,4,crip course,#ffff00,4.0
+323,5,bird,#ff00ff,1.0
+324,1,traffic circle,#ff0000,35.0
+324,2,roundabout,#00ff00,27.0
+324,3,I have no word for this,#0000ff,14.0
+324,4,rotary,#ffff00,10.0
+324,5,circle,#ff00ff,9.0
+324,6,other,#00ffff,2.0
+325,1,rubber band,#ff0000,34.0
+325,2,hair tie,#00ff00,20.0
+325,3,other,#0000ff,20.0
+325,4,hair thing,#ffff00,13.0
+325,5,(hair) elastic,#ff00ff,10.0
+326,1,"no, but I know what it means",#ff0000,40.0
+326,2,I have no idea what this means,#00ff00,30.0
+326,3,yes,#0000ff,28.0
+327,1,yes,#ff0000,58.0
+327,2,"no, but I know what it means",#00ff00,32.0
+327,3,I have no idea what this means,#0000ff,9.0
+328,1,I have no word for this,#ff0000,30.0
+328,2,duck-footed,#00ff00,28.0
+328,3,bow-legged,#0000ff,26.0
+328,4,splay-footed,#ffff00,4.0
+328,5,slue-footed,#00ffff,3.0
+328,6,toed out,#ff00ff,3.0
+328,7,other,#000000,2.0
+329,1,yes,#ff0000,43.0
+329,2,no,#00ff00,42.0
+329,3,"yes, but I can also use it in other forms such as apple slaw or broccoli slaw",#0000ff,9.0
+329,4,I have never heard that usage before,#ffff00,4.0
+330,1,coffin,#ff0000,61.0
+330,2,casket,#00ff00,19.0
+330,3,"a coffin and a casket are not the same, and I know the difference",#0000ff,12.0
+330,4,other,#ffff00,6.0
+331,1,oil and vinegar,#ff0000,73.0
+331,2,vinegar and oil,#0000ff,12.0
+331,3,both sound equally good to me,#00ff00,12.0
+331,4,neither,#ffff00,1.0
+332,1,other,#ff0000,85.0
+332,2,Chinese fire drill,#00ff00,9.0
+332,3,Chinese lane change,#0000ff,4.0
+333,1,in line,#ff0000,91.0
+333,2,on line,#0000ff,3.0
+333,3,both sound equally good,#00ff00,3.0
+334,1,frosting,#ff0000,33.0
+334,2,both,#00ff00,27.0
+334,3,icing,#0000ff,18.0
+334,4,"icing is thinner than frosting, white, and/or made of powdered sugar and milk or lemon juice",#ffff00,18.0
+335,1,New York City,#ff0000,44.0
+335,2,other,#00ff00,43.0
+335,3,Chicago,#0000ff,6.0
+335,4,Boston,#ffff00,2.0
+335,5,DC,#ff00ff,1.0
+335,6,LA,#00ffff,1.0
+336,1,there is no distinction; they both have the same meaning,#ff0000,33.0
+336,2,I do not use the term supper,#00ff00,31.0
+336,3,dinner takes place in a more formal setting than supper,#0000ff,13.0
+336,4,"supper is an evening meal while dinner is eaten earlier (lunch, for example)",#ffff00,9.0
+336,5,"supper is an evening meal, dinner is the main meal",#ff00ff,7.0
+336,6,other,#00ffff,4.0
+337,1,trash can,#ff0000,37.0
+337,2,These words refer to different things,#00ff00,30.0
+337,3,garbage can,#0000ff,28.0
+337,4,other,#ffff00,2.0
+337,5,waste(paper) basket,#ff00ff,1.0
+338,1,By accident,#ff0000,73.0
+338,2,both,#00ff00,12.0
+338,3,On accident,#0000ff,10.0
+338,4,neither,#ffff00,2.0
+338,5,other,#ff00ff,1.0
+339,1,frontage road,#ff0000,31.0
+339,2,service road,#00ff00,26.0
+339,3,access road,#0000ff,18.0
+339,4,we have them but I have no word for them,#ffff00,11.0
+339,5,I've never heard of this concept,#ff00ff,4.0
+339,6,feeder road,#000000,3.0
+339,7,other,#00ffff,3.0
+340,1,mow the lawn,#ff0000,63.0
+340,2,cut the grass,#00ff00,20.0
+340,3,other,#0000ff,8.0
+340,4,mow the grass,#ffff00,7.0
+341,1,hand in,#ff0000,74.0
+341,2,both,#00ff00,13.0
+341,3,other,#0000ff,7.0
+341,4,pass in,#ffff00,3.0
+342,1,waterbug,#ff0000,45.0
+342,2,I have no word for this,#00ff00,22.0
+342,3,waterstrider,#0000ff,11.0
+342,4,water-spider,#ffff00,8.0
+342,5,skimmer,#ff00ff,4.0
+342,6,other,#00ffff,3.0
+342,7,water beetle,#000000,2.0
+343,1,water fountain,#ff0000,60.0
+343,2,drinking fountain,#00ff00,33.0
+343,3,bubbler,#0000ff,3.0
+343,4,other,#ffff00,1.0
+344,1,the subway,#ff0000,81.0
+344,2,other,#00ff00,6.0
+344,3,the metro,#0000ff,4.0
+344,4,"the L, or the El",#ffff00,3.0
+344,5,the T,#ff00ff,2.0
+344,6,BART,#00ffff,1.0
+345,1,soda,#ff0000,47.0
+345,2,pop,#00ff00,28.0
+345,3,coke,#0000ff,14.0
+345,4,soft drink,#ffff00,5.0
+345,5,other,#ff00ff,2.0
+346,1,tp'ing,#ff0000,59.0
+346,2,toilet papering,#00ff00,19.0
+346,3,I have no word for this,#0000ff,6.0
+346,4,rolling,#ffff00,5.0
+346,5,wrapping,#ff00ff,3.0
+346,6,papering,#00ffff,3.0
+347,1,"rubbernecking is the activity (slowing down and gawking) that causes the traffic jam, but I have no word for the traffic jam itself",#ff0000,55.0
+347,2,rubbernecking,#00ff00,16.0
+347,3,I have no word for this,#0000ff,12.0
+347,4,gapers' block,#ffff00,3.0
+347,5,other,#ff00ff,3.0
+347,6,rubberneck,#00ffff,2.0
+347,7,Lookie Lou,#000000,1.0
+348,1,"[æ] as in ""sat""",#ff0000,87.0
+348,2,"[e:] as in ""say""",#00ff00,9.0
+348,3,other,#0000ff,2.0
+349,1,bag,#ff0000,85.0
+349,2,sack,#00ff00,12.0
+349,3,other,#0000ff,2.0
+350,1,I have no word for this,#ff0000,74.0
+350,2,mischief night,#00ff00,9.0
+350,3,devil's night,#0000ff,8.0
+350,4,other,#ffff00,4.0
+350,5,cabbage night,#ff00ff,1.0
+350,6,devil's eve,#00ffff,1.0
+351,1,heel,#ff0000,61.0
+351,2,end,#00ff00,15.0
+351,3,crust,#0000ff,14.0
+351,4,butt,#ffff00,3.0
+351,5,other,#ff00ff,2.0
+351,6,I have no word for this,#00ffff,1.0
+352,1,barbituate,#ff0000,78.0
+352,2,barbiturate,#00ff00,10.0
+352,3,I don't use either of these,#0000ff,9.0
+352,4,other,#ffff00,1.0
+353,1,p,#ff0000,57.0
+353,2,f,#00ff00,40.0
+353,3,other,#0000ff,1.0
+354,1,[z],#ff0000,67.0
+354,2,[s],#00ff00,31.0
+354,3,other,#0000ff,1.0
+355,1,a moot point,#ff0000,85.0
+355,2,I have no idea,#00ff00,6.0
+355,3,a mute point,#0000ff,4.0
+355,4,either one of the above,#ffff00,1.0
+356,1,"[sp] (as in ""desperate"")",#ff0000,77.0
+356,2,"[zb] (rhymes with ""lesbian"")",#00ff00,21.0
+356,3,other,#0000ff,1.0
+357,1,basement,#ff0000,62.0
+357,2,"A basement is finished (for example with plastered or painted walls, carpets, etc.), whereas a cellar is unfinished (made up of bare stone or cement, used only for storage).",#00ff00,14.0
+357,3,"I use both, and they mean the same thing",#0000ff,10.0
+357,4,"A cellar has an outside entrance (some call this a ""bulkhead""), whereas a basement does not",#ffff00,8.0
+357,5,cellar,#ff00ff,1.0
+357,6,other,#00ffff,1.0
+358,1,I have never heard of such a thing,#ff0000,47.0
+358,2,"we have these in my area, but we have no special term for them",#00ff00,31.0
+358,3,other,#0000ff,11.0
+358,4,brew thru,#ffff00,3.0
+358,5,beer barn,#ff00ff,2.0
+359,1,take-out,#ff0000,65.0
+359,2,either take-out or carry-out,#00ff00,24.0
+359,3,carry-out,#0000ff,7.0
+359,4,other,#ffff00,2.0
+360,1,shotgun,#ff0000,67.0
+360,2,dibs,#00ff00,22.0
+360,3,I have no term for this,#0000ff,7.0
+360,4,other,#ffff00,2.0
+361,1,ogle,#ff0000,40.0
+361,2,"oggle (pronounced to rhyme with ""boggle"", but may still be spelled ""ogle"")",#00ff00,23.0
+361,3,oogle,#0000ff,17.0
+361,4,I have no word for this activity,#ffff00,8.0
+361,5,I use both oogle and ogle interchangeably,#00ffff,3.0
+361,6,"I use both ogle and ""oggle""",#ff00ff,3.0
+361,7,other,#000000,3.0
+362,1,especially,#ff0000,94.0
+362,2,"expecially (or ""ecspecially"" or ""ekspecially"")",#00ff00,2.0
+362,3,I use both interchangeably,#0000ff,1.0
+90,1,scone (rhymes with bone),#ff0000,77.0
+90,2,scon (rhymes with gone),#00ff00,12.0
+90,3,I've never said this word and don't know how to pronounce it,#0000ff,3.0
+91,1,roll,#ff0000,60.0
+91,2,dinner roll,#00ff00,14.0
+91,3,bread roll,#0000ff,12.0
+91,4,bun,#ffff00,6.0
+91,5,french roll,#ff00ff,1.0
+92,1,"with a short ""a"" sound, as in the word ""mass""",#ff0000,88.0
+92,2,"with a long ""ah"" sound, as in the word ""farm""",#00ff00,11.0
+93,1,ginnel,#ffff00,1.0
+93,2,lane,#0000ff,1.0
+93,3,cut,#ff00ff,0.0
+93,4,snicket,#000000,0.0
+93,5,entry,#00ffff,0.0
+93,6,jitty,#ff0000,0.0
+93,7,close,#00ff00,0.0
+94,1,teenager,#ff0000,38.0
+94,2,chav,#00ff00,12.0
+94,3,trendy,#0000ff,5.0
+94,4,townie,#ffff00,4.0
+94,5,scally,#ff00ff,1.0
+94,6,pikey,#00ffff,1.0
+95,1,aitch,#ff0000,87.0
+95,2,haitch,#00ff00,11.0
+96,1,underwear,#ff0000,55.0
+96,2,underpants,#00ff00,13.0
+96,3,briefs,#0000ff,9.0
+96,4,pants,#ffff00,7.0
+96,5,knickers,#00ffff,3.0
+96,6,drawers,#ff00ff,3.0
+97,1,"it rhymes with ""gate""",#ff0000,93.0
+97,2,"it rhymes with ""get""",#00ff00,5.0
+98,1,tennis shoes,#ff0000,37.0
+98,2,sneakers,#00ff00,35.0
+98,3,trainers,#0000ff,11.0
+98,4,gym shoes,#ffff00,4.0
+98,5,kicks,#ff00ff,2.0
+98,6,runners,#00ffff,1.0
+99,1,"It begins with ""sk"", like ""sketch""",#ff0000,89.0
+99,2,"It begins with ""sh"", like shed",#00ff00,9.0
+100,1,pants,#ff0000,72.0
+100,2,trousers,#00ff00,15.0
+100,3,slacks,#0000ff,7.0
+100,4,britches,#ffff00,2.0
+102,1,soda,#ff0000,44.0
+102,2,pop,#00ff00,20.0
+102,3,coke,#0000ff,11.0
+102,4,soft drink,#ffff00,9.0
+102,5,fizzy drink,#ff00ff,8.0
+102,6,soda pop,#00ffff,2.0
+103,1,siksth,#ff0000,81.0
+103,2,sikth (no s sound between the k and the th),#00ff00,17.0
+104,1,chip sandwich,#ff0000,31.0
+104,2,chip butty,#00ff00,15.0
+105,1,"with the same vowel as ""fall"", but different than the vowels in ""bold"" and ""ah""",#ff0000,66.0
+105,2,"with the same vowel as in ""ah""",#00ff00,28.0
+105,3,"with same vowel as in ""bold""",#0000ff,3.0
+106,1,garbage man,#ff0000,50.0
+106,2,trash man,#00ff00,15.0
+106,3,bin man,#0000ff,11.0
+106,4,waste collector,#ffff00,5.0
+106,5,dust man,#ff00ff,3.0
+106,6,dustbin man,#00ffff,3.0
+107,1,"a-gen (with the vowel in ""den"")",#ff0000,90.0
+107,2,"a-gane (with the vowel in ""brain"")",#00ff00,7.0
+108,1,roundabout,#ff0000,61.0
+108,2,traffic circle,#00ff00,28.0
+108,3,rotary,#0000ff,6.0
+108,4,island,#ffff00,2.0
+109,1,"the same as the vowel in ""beat""",#ff0000,92.0
+109,2,"the same as the vowel in ""bit""",#00ff00,3.0
+109,3,"the same as the vowel in ""bet""",#0000ff,2.0
+110,1,drying rack,#ff0000,45.0
+110,2,clothes rack,#00ff00,38.0
+110,3,clothes horse,#0000ff,9.0
+110,4,airer,#ffff00,2.0
+111,1,"with the consonant sound in ""church""",#ff0000,77.0
+111,2,"with the consonant sound in ""judge""",#00ff00,16.0
+112,1,soccer,#ff0000,80.0
+112,2,football,#00ff00,18.0
+113,1,"with the vowel [ə] (""uh"", or in popular spelling ""cinemer""))",#ff0000,64.0
+113,2,"with the vowel [ɑ] (""ah"", or in popular spelling ""cinemar"")",#00ff00,33.0
+114,1,truce,#ff0000,33.0
+114,2,time out,#00ff00,32.0
+114,3,quits,#0000ff,7.0
+114,4,pax,#ffff00,2.0
+114,5,barley,#ff00ff,1.0
+115,1,woodlouse,#ff0000,15.0
+115,2,grub,#00ff00,6.0
+115,3,slater,#ffff00,1.0
+115,4,wood bug,#0000ff,1.0
+116,1,"It doesn't rhyme with ""put""",#ff0000,83.0
+116,2,"It rhymes with ""put""",#00ff00,14.0

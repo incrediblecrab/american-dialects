@@ -1,0 +1,15 @@
+ygdp_phenomenon,ygdp_sentence_id,hds_question,hds_choice,direction,confidence,note
+come_with,1216;1217;1218;1219;1220,51,a,high YGDP rating -> would say it -> HDS q51 'a' (yes),high,Near-identical single question ('Are you coming with?'); tightest map in the set. 1:1 phenomenon<->question.
+positive_anymore,1226;1227;1228;1229;1230,54,a,high YGDP rating -> acceptable -> HDS q54 'a' (acceptable),medium,"One YGDP phenomenon spread over four HDS anymore questions (q54-57 are one construction), so coarser than come-with."
+positive_anymore,1226;1227;1228;1229;1230,55,a,high YGDP rating -> acceptable -> HDS q55 'a' (acceptable),medium,Same construction as q54; redundant with it.
+positive_anymore,1226;1227;1228;1229;1230,56,a,high YGDP rating -> acceptable -> HDS q56 'a' (acceptable),medium,'Pantyhose are so expensive anymore' -- prototypical positive anymore; strongest of the four a priori.
+positive_anymore,1226;1227;1228;1229;1230,57,a,high YGDP rating -> acceptable -> HDS q57 'a' (acceptable),low,"'Forget the nice clothes anymore' is an elliptical imperative, the least prototypical positive-anymore of the four; a-priori weakest match (this confidence set BEFORE seeing that its AUC is a null)."
+alls_construction,,q50 (address a group),,n/a,rejected,"The mooted q50<->y'all pairing has NO YGDP counterpart: y'all is not a YGDP phenomenon at all, and 'Alls construction' is 'alls I know is...' (a free-relative complementiser), unrelated to 2nd-person-plural pronouns."
+needs_washed,,(none),,n/a,rejected,No HDS question tests 'needs washed' / needs+past-participle. HDS syntax items are only q49-q53 and q54-q57; none covers this construction.
+fixin_to,,(none),,n/a,rejected,No HDS question tests 'fixin' to' / prospective future. HDS has no future-marker item.
+dative_presentatives,,(none),,n/a,rejected,No HDS question tests presentative datives ('here's you a piece').
+personal_datives,,(none),,n/a,rejected,No HDS question tests personal datives ('I got me a truck').
+all_the_faster,,(none),,n/a,rejected,No HDS question tests 'all the faster' ('this is all the faster it goes').
+double_modals,,q53 (might could),,n/a,rejected,"HDS q53 tests double modals, but YGDP ships no double-modal file (Bare-Got-Do-Support is 'do you got', unrelated)."
+where_at,,q52 (where are you at),,n/a,rejected,"HDS q52 tests locative 'at', but YGDP ships no such file."
+drug_dragged,,q49 (I ___ her body from the pool),,n/a,rejected,HDS q49 tests 'drug' as past tense of 'drag' (morphology). YGDP ships no corresponding file.

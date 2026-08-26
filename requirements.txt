@@ -1,0 +1,8 @@
+requests
+pillow
+numpy
+scipy
+matplotlib
+
+# only for model/neural.py, the discriminative model; everything else runs without it
+torch

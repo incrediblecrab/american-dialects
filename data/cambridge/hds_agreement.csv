@@ -1,0 +1,96 @@
+cambridge_id,hds_question,answer,pearson_r,mae_pp,cambridge_primary_colour
+290,50,you guys,0.470,21.85,1
+290,50,you,0.342,16.31,1
+290,50,y'all,0.724,18.28,1
+290,50,you all,0.190,14.80,0
+298,58,garage sale,0.444,23.16,1
+298,58,yard sale,0.443,22.04,1
+298,58,rummage sale,0.399,11.77,1
+298,58,tag sale,0.162,1.30,0
+300,60,curb strip,0.220,33.48,1
+300,60,berm,0.243,20.01,0
+300,60,parking,0.436,12.35,0
+300,60,tree lawn,0.147,7.25,0
+300,60,verge,0.229,14.19,0
+302,62,median,0.233,15.93,1
+302,62,median strip,0.199,13.51,1
+302,62,island,0.264,4.46,0
+303,63,milkshake/shake,0.349,2.21,1
+303,63,frappe,0.349,2.21,1
+304,64,sub,0.229,19.18,1
+304,64,hoagie,0.379,8.28,1
+304,64,hero,0.025,10.90,1
+304,64,grinder,0.355,1.71,0
+304,64,poor boy,0.351,5.08,0
+305,65,I use lightning bug and firefly interchangeably,0.238,25.14,1
+305,65,lightning bug,0.389,19.36,1
+305,65,firefly,0.533,18.67,1
+306,66,crawfish,0.373,20.99,1
+306,66,crayfish,0.524,15.19,1
+306,66,crawdad,0.464,21.40,1
+312,72,dust bunnies,0.190,21.15,1
+312,72,dust balls,0.190,21.15,1
+313,73,tennis shoes,0.357,23.92,1
+313,73,sneakers,0.490,16.80,1
+313,73,gymshoes,0.187,8.65,1
+313,73,shoes,0.157,5.80,0
+313,73,running shoes,0.121,3.08,0
+314,74,roly poly,0.462,26.25,1
+314,74,pill bug,0.175,14.56,1
+314,74,potato bug,0.430,10.47,1
+314,74,"I know what this creature is, but have no word for it",0.155,17.43,0
+314,74,doodle bug,0.320,5.41,0
+314,74,sow bug,0.163,7.59,0
+315,75,shopping cart,0.395,19.61,1
+315,75,grocery cart,0.239,17.38,1
+315,75,buggy,0.689,6.32,1
+316,76,kitty-corner,0.550,21.60,1
+316,76,catty-corner,0.507,20.61,1
+316,76,"I can only use ""diagonal"" for this",0.283,11.63,1
+316,76,catercorner,0.306,2.25,0
+320,80,sunshower,0.506,23.89,1
+320,80,the devil is beating his wife,0.515,22.72,1
+320,80,liquid sun,0.135,5.68,0
+324,84,traffic circle,0.173,27.66,1
+324,84,roundabout,0.185,25.29,1
+324,84,rotary,0.394,8.28,0
+324,84,circle,0.158,11.50,0
+334,94,frosting,0.313,21.20,1
+334,94,both,0.145,25.83,1
+334,94,icing,0.410,12.01,1
+334,94,"icing is thinner than frosting, white, and/or made of powdered sugar and milk or lemon juice",0.253,17.43,0
+336,96,there is no distinction; they both have the same meaning,0.179,22.62,1
+336,96,I do not use the term supper,0.372,20.00,1
+336,96,dinner takes place in a more formal setting than supper,0.198,14.30,1
+336,96,"supper is an evening meal while dinner is eaten earlier (lunch, for example)",0.267,14.65,0
+336,96,"supper is an evening meal, dinner is the main meal",0.156,11.19,0
+337,97,trash can,0.331,22.79,1
+337,97,These words refer to different things,0.227,25.66,1
+337,97,garbage can,0.306,18.62,1
+337,97,waste(paper) basket,0.088,8.87,0
+343,103,water fountain,0.427,23.12,1
+343,103,drinking fountain,0.408,22.39,1
+343,103,bubbler,0.399,2.59,1
+344,104,the subway,0.186,18.45,1
+344,104,the metro,0.115,12.54,1
+344,104,"the L, or the El",0.125,5.02,0
+344,104,the T,0.292,3.07,0
+344,104,BART,0.268,3.53,0
+345,105,soda,0.487,18.75,1
+345,105,pop,0.585,19.73,1
+345,105,coke,0.624,14.36,1
+345,105,soft drink,0.097,13.32,0
+350,110,mischief night,0.126,39.98,1
+350,110,devil's night,0.228,33.63,1
+350,110,cabbage night,0.071,25.98,0
+350,110,devil's eve,0.192,11.43,0
+357,117,basement,0.218,23.58,1
+357,117,"A basement is finished (for example with plastered or painted walls, carpets, etc.), whereas a cellar is unfinished (made up of bare stone or cement, used only for storage).",0.107,20.61,1
+357,117,"I use both, and they mean the same thing",0.382,7.29,1
+357,117,"A cellar has an outside entrance (some call this a ""bulkhead""), whereas a basement does not",0.261,13.95,0
+357,117,cellar,0.221,2.65,0
+359,119,take-out,0.310,21.34,1
+359,119,either take-out or carry-out,0.255,18.79,1
+359,119,carry-out,0.183,9.91,1
+360,120,shotgun,0.119,22.79,1
+360,120,dibs,0.119,22.79,1

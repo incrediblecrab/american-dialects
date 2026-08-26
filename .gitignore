@@ -1,0 +1,67 @@
+.venv/
+__pycache__/
+
+# Cached HTML, GIFs and map tiles. Large, and re-fetchable by the scrapers.
+data/raw/
+
+# Derived arrays, rebuilt from the scraped data by:
+#   scrape/hds_geo.py   -> grid.npz, cells.csv.gz
+#   model/tensor.py     -> likelihood.npz
+# Together about 210 MB, well past what belongs in a repository, and every
+# one of them is a pure function of the CSVs that are tracked.
+data/hds/geo/grid.npz
+data/hds/geo/cells.csv.gz
+data/model/likelihood.npz
+data/model/prior.npz
+data/cambridge/geo/grid.npz
+data/cambridge/geo/cells.csv.gz
+
+# Simulated control population, rebuilt by model/nullcheck.py
+data/nullcheck/
+
+# Bandwidth CV sweep artefacts, rebuilt by model/bandwidth.py
+data/model/bandwidth_*.csv
+data/model/catchment_*.npy
+
+# Simulated population for the accuracy curve, rebuilt by model/nullcheck.py
+data/selfconsistency/
+
+# Trained weights and the simulated training pool for the discriminative
+# model, rebuilt by:
+#   model/neural.py prep    -> neural_pool.npz  (21 MB)
+#   model/neural.py train   -> neural_net.pt    (31 MB)
+# The small result tables next to them (neural_curve.csv, neural_backtest.csv)
+# are tracked, because the report cites their numbers.
+data/model/neural_net.pt
+data/model/neural_pool.npz
+
+# Orphaned intermediate. Nothing in the tree reads it.
+model/_covered.npy
+
+# --------------------------------------------------------------------------
+# Personal data. Nothing below this line may be committed.
+# --------------------------------------------------------------------------
+
+# Real people who played the quiz, logged with the hometown they typed in.
+# This is the validation set the project still needs, and it is exactly the
+# kind of thing that must stay on the machine that collected it.
+data/quiz/
+
+# Respondent-level records for ~22,000 real people from the Yale Grammatical
+# Diversity Project: precise lat/lon, age, gender, race, and the city they
+# were raised in along with their mother's and father's. Any two of those
+# columns together are quasi-identifying, and race is special-category data.
+# YGDP states no reuse terms on its feed, so redistributing these records
+# would be a licensing problem on top of a privacy one.
+#
+# Everything here is reproducible without redistributing it:
+#   scrape/ygdp.py             -> respondents.csv, from the public feed
+#   model/ygdp_validation.py   -> people.csv, answers.csv, from the above
+# The aggregate outputs beside them (crosswalk.csv, phenomena.csv, and the
+# three .md reports) contain no individual records and stay tracked.
+data/ygdp/respondents.csv
+data/ygdp/people.csv
+data/ygdp/answers.csv
+
+# macOS directory metadata. Leaks nothing important, belongs nowhere.
+.DS_Store

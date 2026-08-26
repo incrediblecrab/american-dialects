@@ -1,0 +1,698 @@
+question,choice,choice_index,answer,color,pct_national,has_map
+1,a,1,"[ɑ] as in ""ah""",red,9.62,1
+1,b,2,"[æ] as in ""ant""",blue,75.15,1
+1,c,3,"[ɔ] as in ""caught""",green,2.77,1
+1,d,4,"I have the same vowel in ""ah"", ""caught"", and ""aunt""",purple,2.52,1
+1,e,5,"I pronounce it the same as ""ain't""",orange,0.58,1
+1,f,6,"I use [ɑ/ɔ] when referring to the general concept of an aunt, but [æ] when referring to a specific person by name.",cyan,6.64,1
+1,g,7,"I use [æ] when referring to the general concept of an aunt, but [ɑ/ɔ] when referring to a specific person by name.",magenta,1.84,1
+1,h,8,other,brown,0.88,1
+2,a,1,"[ɪ] as in ""sit""",red,64.82,1
+2,b,2,"[i:] as in ""see""",blue,3.59,1
+2,c,3,"[ɛ] as in ""set""",green,28.6,1
+2,d,4,other,purple,2.99,1
+3,a,1,"[o:] as in ""Bo""",red,70.58,1
+3,b,2,"[u:] as in ""boo""",blue,19.27,1
+3,c,3,"I have seen this word in print, but have no idea how to pronounce it",green,5.42,1
+3,d,4,I have never seen or heard this word,purple,3.7,1
+3,e,5,other,orange,1.03,1
+4,a,1,"with 2 syllables (""car-ml"")",red,38.02,1
+4,b,2,"with 3 syllables (""carra-mel"")",blue,37.66,1
+4,c,3,I use both interchangeably,green,17.26,1
+4,d,4,"I have both forms, but the two have different meanings (please state how in the comments box)",purple,3.77,1
+4,e,5,other,orange,3.28,1
+5,a,1,"[i:] as in ""see""",red,31.52,1
+5,b,2,"[ɪ] as in ""sit""",blue,63.97,1
+5,c,3,other,green,4.51,1
+6,a,1,"[ɑ] as in ""car"" (""sen-tar"")",red,38.21,1
+6,b,2,"[ɔ] as in ""caught""",blue,16.87,1
+6,c,3,"I use the same vowel in ""car"", ""caught"", and ""centaur""",green,12.09,1
+6,d,4,"rhymes with ""sore"" and ""more"" (""sen-tore"")",purple,29.89,1
+6,e,5,other,orange,2.93,1
+7,a,1,"with [u:] as in ""coop"" (""coopon"")",red,66.86,1
+7,b,2,"with [ju:] as in ""cute"" (""cyoopon"")",blue,31.31,1
+7,c,3,other,green,1.83,1
+8,a,1,"[ɛ] as in ""set""",red,28.0,1
+8,b,2,"[e:] as in ""say""",blue,40.17,1
+8,c,3,"I say something in between the vowels in ""set"" and ""say"", but closer to the one in ""say""",green,17.48,1
+8,d,4,"I say something in between the vowels in ""set"" and ""say"", but closer to the one in ""set""",purple,13.46,1
+8,e,5,other,orange,0.9,1
+9,a,1,"[æ] as in ""man"" (1 syllable, ""cran"")",red,14.13,1
+9,b,2,"[ejɑ] (2 syllables, ""cray-ahn"")",blue,48.64,1
+9,c,3,"[ejɔ] (2 syllables, ""cray-awn"", where the second syllable rhymes with ""dawn"")",green,34.53,1
+9,d,4,"[aw] (I pronounce this the same as ""crown"")",purple,1.46,1
+9,e,5,other,orange,1.24,1
+10,a,1,"[i:] as in ""see""",red,88.57,1
+10,b,2,"[ɪ] as in ""sit""",blue,3.85,1
+10,c,3,I use both interchangeably,green,5.13,1
+10,d,4,I don't know how to pronounce this word,purple,0.04,1
+10,e,5,"I use both, but they mean two different things (please state how they differ in the comments box)",orange,2.05,1
+10,f,6,other,cyan,0.36,1
+11,a,1,"[o:] as in ""flow"" (""flow-ri-da"")",red,4.95,1
+11,b,2,"[ɑ] as in ""ah"" (""flah-ri-da"")",blue,11.37,1
+11,c,3,"[ɔ] as in ""saw"" (""flaw-ri-da"")",green,7.09,1
+11,d,4,"[[backwardsc]] as in ""sore"" (""flore-i-da"")",purple,73.38,1
+11,e,5,other,orange,3.2,1
+12,a,1,"[ə] as in ""bird"" (""flurr-ish"")",red,62.23,1
+12,b,2,"[[backwardsc]] as in ""sore"" (""flore-ish"")",blue,23.07,1
+12,c,3,"[[caret]] as in ""sun"" (""fluh-rish"")",green,10.18,1
+12,d,4,other (including if you use one pronunciation for the verb and a different pronunciation for the noun),purple,4.52,1
+13,a,1,"[i:] as in ""see""",red,19.96,1
+13,b,2,"[ɪ] as in ""sit""",blue,78.23,1
+13,c,3,other,green,1.81,1
+14,a,1,"with [[backwardsc]j] as in ""boy"" (""loyer"")",red,72.84,1
+14,b,2,"with [ɔ] as in ""saw"" (""law-yer"")",blue,21.96,1
+14,c,3,I use both interchangeably,green,4.86,1
+14,d,4,other,purple,0.34,1
+15,a,1,all 3 are the same,red,56.88,1
+15,b,2,all 3 are different,blue,17.34,1
+15,c,3,Mary and merry are the same; marry is different,green,8.97,1
+15,d,4,merry and marry are the same; Mary is different,purple,0.96,1
+15,e,5,Mary and marry are the same; merry is different,orange,15.84,1
+16,a,1,"with [æ] as in ""man"" (2 syllables--""man-aze"")",red,41.65,1
+16,b,2,"with [ejə] (3 syllables--""may-uh-naze"")",blue,45.83,1
+16,c,3,I use both interchangeably,green,8.81,1
+16,d,4,other,purple,3.71,1
+17,a,1,"[i:] as in ""near""",red,26.21,1
+17,b,2,"[ɪ] as in ""knit""",blue,52.13,1
+17,c,3,"[ɛ] as in ""net""",green,2.35,1
+17,d,4,I say something in between [ɪ] and [ɛ],purple,15.38,1
+17,e,5,other,orange,3.94,1
+18,a,1,mischievous (3 syllables),red,47.71,1
+18,b,2,mischievious (4 syllables),blue,26.33,1
+18,c,3,"I write ""mischievous"" but say ""mischievious""",green,5.97,1
+18,d,4,I use both,purple,19.41,1
+18,e,5,other,orange,0.59,1
+19,a,1,"[e:] as in ""say""",red,86.78,1
+19,b,2,"[i:] as in ""see""",blue,4.69,1
+19,c,3,"I use [e:] with the words in isolation, but [i:] in compounds (such as ""Sunday school"")",green,6.12,1
+19,d,4,"other (e.g. do you use one vowel in some day names, and another in the other names?)",purple,2.4,1
+20,a,1,"[æ] as in ""jam""",red,45.92,1
+20,b,2,"[ɑ] as in ""father""",blue,51.86,1
+20,c,3,other,green,2.23,1
+21,a,1,"[pi:kæn] with stress on the first syllable (""PEE-can"")",red,17.03,1
+21,b,2,"[pi:kæn] with stress on the second syllable (""pee-CAN"")",blue,9.02,1
+21,c,3,"[pi:kɑn] with stress on the first syllable (""PEE-Kahn"")",green,13.19,1
+21,d,4,"[pi:kɑn] with stress on the second syllable (""pee-KAHN"")",purple,28.6,1
+21,e,5,"[pɪkæn] (""pick Ann"")",orange,1.48,1
+21,f,6,"[pɪkɑn] (""pick Ahn"")",cyan,20.92,1
+21,g,7,"I pronounce it differently when it's alone than when it's in a compound like ""pecan pie"" (please state how you pronounce the two variants in the comments box)",magenta,6.24,1
+21,h,8,other,brown,3.51,1
+22,a,1,one syllable,red,32.39,1
+22,b,2,two syllables,blue,67.61,1
+23,a,1,"[i:] as in ""see"" (""reely"")",red,52.54,1
+23,b,2,"[ɪ] as in ""sit"" (""rilly"")",blue,26.28,1
+23,c,3,"[iə] (""ree-l-y"")",green,8.21,1
+23,d,4,other (including if you use two or more of these interchangeably),purple,12.97,1
+24,a,1,"2 syllables (""reel-ter"")",red,44.21,1
+24,b,2,"3 syllables (real[ə]tor, in other words ""reel-uh-ter"")",blue,32.21,1
+24,c,3,3 syllables (ree-l-ter),green,19.7,1
+24,d,4,"I don't use this word; I use ""estate agent""",purple,1.09,1
+24,e,5,other,orange,2.79,1
+25,a,1,"[u:] as in ""food""",red,75.09,1
+25,b,2,"[ʌ] as in ""foot""",blue,3.07,1
+25,c,3,these four words do not all have the same vowel (please use the comments box to let us know which is which),green,21.84,1
+26,a,1,"rhymes with ""hoot""",red,29.99,1
+26,b,2,"rhymes with ""out""",blue,19.72,1
+26,c,3,I can pronounce it either way interchangeably,green,30.42,1
+26,d,4,"I say it like ""hoot"" for the noun and like ""out"" for the verb.",purple,15.97,1
+26,e,5,"I say it like ""out"" for the noun and like ""hoot"" for the verb.",orange,2.5,1
+26,f,6,other,cyan,1.4,1
+27,a,1,"[i] ""sear-up""",red,13.43,1
+27,b,2,"[ɪ] ""sih-rup""",blue,34.08,1
+27,c,3,"[ə] as in ""sir""",green,49.89,1
+27,d,4,other,purple,2.6,1
+28,a,1,different,red,60.93,1
+28,b,2,same,blue,39.07,1
+29,a,1,"all-mond (first syllable sounds like ""all"")",red,59.68,1
+29,b,2,ah-mond (no l),blue,18.69,1
+29,c,3,"aw-mond (if different from ""ah-mond"")",green,5.65,1
+29,d,4,I say something in between l and nothing,purple,13.53,1
+29,e,5,other,orange,2.45,1
+30,a,1,"[s] as in ""sock""",red,93.82,1
+30,b,2,"[[sh]] as in ""shock""",blue,6.18,1
+31,a,1,asteri[ks],red,8.98,1
+31,b,2,asteri[sk],blue,60.87,1
+31,c,3,asteri[k] (with no s in the final cluster),green,28.79,1
+31,d,4,other,purple,1.36,1
+32,a,1,I pronounce the first d,red,50.15,1
+32,b,2,I don't pronounce the first d,blue,24.26,1
+32,c,3,I vary freely between pronouncing the first d and not doing so,green,6.9,1
+32,d,4,I only pronounce the first d when I'm speaking slowly/carefully,purple,17.45,1
+32,e,5,"Depends whether it refers to a political or generic candidate, as in ""that assignment looks like a good candidate for elimination"" (please state how the two pronunciations differ)",orange,0.63,1
+32,f,6,other,cyan,0.61,1
+33,a,1,[s],red,35.73,1
+33,b,2,[z],blue,42.81,1
+33,c,3,both are acceptable to me,green,21.16,1
+33,d,4,other,purple,0.3,1
+34,a,1,pronounced e[ts]etera (4 syllables),red,65.12,1
+34,b,2,pronounced e[ts]etra (3 syllables),blue,11.54,1
+34,c,3,pronounced eksetera (4 syllables),green,14.68,1
+34,d,4,pronounced eksetra (3 syllables),purple,5.99,1
+34,e,5,other,orange,2.67,1
+35,a,1,"[[g]] as in the middle consonant of ""measure""",red,51.28,1
+35,b,2,"[[dg]] as in ""edge""",blue,37.01,1
+35,c,3,I use both interchangeably,green,10.67,1
+35,d,4,other,purple,1.04,1
+36,a,1,"[s] as in ""sock""",red,52.38,1
+36,b,2,"[[sh]] as in ""shock""",blue,45.48,1
+36,c,3,other,green,2.14,1
+37,a,1,I pronounce the h,red,94.65,1
+37,b,2,I don't pronounce the h,blue,2.73,1
+37,c,3,I can pronounce the h or not,green,2.16,1
+37,d,4,other,purple,0.47,1
+38,a,1,"[s] as in ""sock""",red,88.27,1
+38,b,2,"[[sh]] as in ""shock""",blue,10.55,1
+38,c,3,other,green,1.18,1
+39,a,1,[s],red,66.19,1
+39,b,2,[z],blue,33.81,1
+40,a,1,with [kw],red,62.07,1
+40,b,2,"with [k] (""cor-ter"")",blue,30.09,1
+40,c,3,I use both interchangeably,green,7.41,1
+40,d,4,other,purple,0.43,1
+41,a,1,spicket,red,6.38,1
+41,b,2,spigot,blue,66.89,1
+41,c,3,I use both interchangeably,green,2.52,1
+41,d,4,"I say ""spicket"" but spell it ""spigot""",purple,12.64,1
+41,e,5,I use both with different meanings (please explain how in the comments box),orange,2.0,1
+41,f,6,I don't use either version of this word,cyan,9.23,1
+41,g,7,other,magenta,0.34,1
+42,a,1,"the ""g"" is pronounced as [g]",red,38.93,1
+42,b,2,"the ""g"" is pronounced as [k]",blue,41.75,1
+42,c,3,"the ""g"" is silent",green,19.33,1
+43,a,1,[s],red,92.13,1
+43,b,2,[z],blue,5.3,1
+43,c,3,either one,green,2.35,1
+43,d,4,other,purple,0.21,1
+44,a,1,CREAM cheese (stress on the first syllable),red,56.29,1
+44,b,2,cream CHEESE (stress on the second syllable),blue,24.71,1
+44,c,3,it sounds right either way,green,16.25,1
+44,d,4,other,purple,2.74,1
+45,a,1,INsurance (stress on the first syllable),red,11.12,1
+45,b,2,inSURance (stress on the second syllable),blue,79.82,1
+45,c,3,I can stress either the first or the second syllable,green,8.86,1
+45,d,4,other,purple,0.19,1
+46,a,1,NEW Haven,red,46.13,1
+46,b,2,New HAVEN,blue,42.28,1
+46,c,3,I use both interchangeably,green,9.97,1
+46,d,4,other,purple,1.62,1
+47,a,1,THANKSgiving,red,26.17,1
+47,b,2,ThanksGIVing,blue,65.34,1
+47,c,3,I use both interchangeably,green,8.01,1
+47,d,4,other,purple,0.49,1
+48,a,1,UMbrella,red,21.43,1
+48,b,2,umBRELLa,blue,78.57,1
+49,a,1,dragged,red,80.69,1
+49,b,2,drug,blue,12.99,1
+49,c,3,I use both interchangeably,green,5.78,1
+49,d,4,other,purple,0.54,1
+50,a,1,you all,red,12.63,1
+50,b,2,"yous, youse",blue,0.67,1
+50,c,3,you lot,green,0.18,1
+50,d,4,you guys,purple,42.53,1
+50,e,5,you 'uns,orange,0.2,1
+50,f,6,yins,cyan,0.37,1
+50,g,7,you,magenta,24.82,1
+50,h,8,other,brown,4.62,1
+50,i,9,y'all,yellow,13.99,1
+51,a,1,yes,red,38.01,1
+51,b,2,no,blue,60.12,1
+51,c,3,other,green,1.87,1
+52,a,1,yes,red,33.99,1
+52,b,2,no,blue,35.61,1
+52,c,3,"I can use ""where are you at"" in contexts such as asking someone how s/he is coming along on a project, but not in the general sense of ""where are you physically located in the world at this moment"".",green,30.4,1
+53,a,1,yes (please consider adding which combinations of modals you use in the comments box),red,11.51,1
+53,b,2,no,blue,87.68,1
+53,c,3,other,green,0.81,1
+54,a,1,"this use of ""anymore"" is acceptable",red,4.98,1
+54,b,2,"this use of ""anymore"" is unacceptable",blue,92.89,1
+54,c,3,not sure,green,2.13,1
+55,a,1,acceptable,red,5.41,1
+55,b,2,unacceptable,blue,91.56,1
+55,c,3,not sure,green,3.03,1
+56,a,1,acceptable,red,29.23,1
+56,b,2,unacceptable,blue,67.26,1
+56,c,3,not sure,green,3.51,1
+57,a,1,acceptable,red,22.08,1
+57,b,2,unacceptable,blue,70.17,1
+57,c,3,not sure,green,7.75,1
+58,a,1,tag sale,red,3.6,1
+58,b,2,yard sale,blue,36.41,1
+58,c,3,garage sale,green,52.17,1
+58,d,4,rummage sale,purple,3.1,1
+58,e,5,thrift sale,orange,0.13,1
+58,f,6,stoop sale,cyan,0.39,1
+58,g,7,carport sale,magenta,0.05,1
+58,h,8,sidewalk sale,brown,0.2,1
+58,i,9,jumble (sale),yellow,0.1,1
+58,j,10,car boot sale,pink,0.05,1
+58,k,11,car boot,lightblue,0.0,1
+58,l,12,patio sale,lightgreen,0.07,1
+58,m,13,other,,,0
+59,a,1,mumblety-peg,red,8.07,1
+59,b,2,mumbledy-peg,blue,8.69,1
+59,c,3,mumbly peg,green,10.84,1
+59,d,4,mumbly pegs,purple,0.47,1
+59,e,5,mumblely peg (with 2 l's),orange,1.81,1
+59,f,6,mumble peg,cyan,0.23,1
+59,g,7,mummety-peg,magenta,0.02,1
+59,h,8,mumble-the-peg,brown,0.0,1
+59,i,9,fumbledy peg,yellow,0.0,1
+59,j,10,numblety peg,pink,0.22,1
+59,k,11,peggy,lightblue,0.02,1
+59,l,12,baseball jackknife,lightgreen,0.16,1
+59,m,13,stick-knife,,,0
+59,n,14,stick-frog,,,0
+59,o,15,stretch,,,0
+59,p,16,chicken,,,0
+59,q,17,knifey,,,0
+59,r,18,splits,,,0
+59,s,19,Russian roulette,,,0
+59,t,20,"I have never heard of this ""game"" and have no idea what it's called",,,0
+59,u,21,other (state here if you have heard one or more of these terms but never knew what they meant),,,0
+60,a,1,berm,red,4.01,1
+60,b,2,parking,blue,1.75,1
+60,c,3,tree lawn,green,1.92,1
+60,d,4,terrace,purple,0.73,1
+60,e,5,curb strip,orange,8.65,1
+60,f,6,beltway,cyan,0.17,1
+60,g,7,verge,magenta,2.56,1
+60,h,8,I have no word for this,brown,67.92,1
+60,i,9,other,yellow,12.3,1
+61,a,1,boulevard,red,9.11,1
+61,b,2,midway,blue,0.96,1
+61,c,3,traffic island,green,8.4,1
+61,d,4,island,purple,44.18,1
+61,e,5,neutral ground,orange,0.79,1
+61,f,6,I have no word for this,cyan,16.04,1
+61,g,7,other,magenta,20.52,1
+62,a,1,median strip,red,13.36,1
+62,b,2,median,blue,79.22,1
+62,c,3,boulevard,green,0.09,1
+62,d,4,mall,purple,0.02,1
+62,e,5,traffic island,orange,0.69,1
+62,f,6,neutral ground,cyan,0.24,1
+62,g,7,island,magenta,2.05,1
+62,h,8,park strip,brown,0.02,1
+62,i,9,I have no word for this,yellow,2.48,1
+62,j,10,other,pink,1.82,1
+63,a,1,milkshake/shake,red,96.42,1
+63,b,2,frappe,blue,2.37,1
+63,c,3,cabinet,green,0.24,1
+63,d,4,velvet,purple,0.0,1
+63,e,5,thick shake,orange,0.12,1
+63,f,6,other,cyan,0.85,1
+64,a,1,sub,red,77.15,1
+64,b,2,grinder,blue,2.87,1
+64,c,3,hoagie,green,6.98,1
+64,d,4,hero,purple,5.18,1
+64,e,5,poor boy,orange,1.77,1
+64,f,6,bomber,cyan,0.01,1
+64,g,7,Italian sandwich,magenta,0.46,1
+64,h,8,baguette,brown,0.25,1
+64,i,9,sarney,yellow,0.03,1
+64,j,10,I have no word for this,pink,0.91,1
+64,k,11,other,lightblue,4.41,1
+65,a,1,lightning bug,red,29.07,1
+65,b,2,firefly,blue,30.43,1
+65,c,3,I use lightning bug and firefly interchangeably,green,39.81,1
+65,d,4,peenie wallie,purple,0.02,1
+65,e,5,I have no word for this,orange,0.35,1
+65,f,6,other,cyan,0.32,1
+66,a,1,crawfish,red,38.82,1
+66,b,2,crayfish,blue,32.45,1
+66,c,3,craw,green,0.03,1
+66,d,4,crowfish,purple,0.03,1
+66,e,5,crawdad,orange,19.48,1
+66,f,6,mudbug,cyan,0.1,1
+66,g,7,I have no word for this critter,magenta,5.43,1
+66,h,8,other,brown,3.67,1
+67,a,1,daddy long leg(s),red,94.28,1
+67,b,2,daddy big legs,blue,1.09,1
+67,c,3,daddy (bug),green,0.02,1
+67,d,4,father longlegs,purple,0.03,1
+67,e,5,granddaddy,orange,0.49,1
+67,f,6,daddy graybeard,cyan,0.02,1
+67,g,7,daddy spider,magenta,0.0,1
+67,h,8,harvestman,brown,0.16,1
+67,i,9,moskeet spider,yellow,0.03,1
+67,j,10,pointer,pink,0.0,1
+67,k,11,shepherd spider,lightblue,0.0,1
+67,l,12,other,lightgreen,3.89,1
+68,a,1,grandmother,red,4.78,1
+68,b,2,granny,blue,3.77,1
+68,c,3,grandma,green,50.67,1
+68,d,4,nana,purple,5.77,1
+68,e,5,mimi,orange,0.97,1
+68,f,6,grammy/grammie/grammi,cyan,3.24,1
+68,g,7,other,magenta,30.79,1
+69,a,1,grandmother,red,6.38,1
+69,b,2,granny,blue,3.67,1
+69,c,3,grandma,green,47.7,1
+69,d,4,gramma,purple,13.67,1
+69,e,5,nana,orange,4.49,1
+69,f,6,other,cyan,24.09,1
+70,a,1,gramps,red,1.02,1
+70,b,2,grandpa,blue,21.05,1
+70,c,3,grampa,green,13.86,1
+70,d,4,"grandad, granddad",purple,5.07,1
+70,e,5,pap,orange,0.84,1
+70,f,6,"I spell it ""grandpa"" but pronounce it as ""grampa""",cyan,25.9,1
+70,g,7,other (including if you use a different term to address him directly than you do when speaking about him to a third party),magenta,32.26,1
+71,a,1,gramps,red,0.95,1
+71,b,2,grandpa,blue,32.29,1
+71,c,3,grampa,green,28.87,1
+71,d,4,pap,purple,0.59,1
+71,e,5,other,orange,37.31,1
+72,a,1,dust bunnies,red,71.92,1
+72,b,2,dust kittens,blue,0.32,1
+72,c,3,dust mice,green,0.98,1
+72,d,4,kitties,purple,0.31,1
+72,e,5,dust balls,orange,21.35,1
+72,f,6,other,cyan,5.12,1
+73,a,1,sneakers,red,45.5,1
+73,b,2,shoes,blue,1.93,1
+73,c,3,gymshoes,green,5.55,1
+73,d,4,sand shoes,purple,0.03,1
+73,e,5,jumpers,orange,0.01,1
+73,f,6,tennis shoes,cyan,41.34,1
+73,g,7,running shoes,magenta,1.42,1
+73,h,8,runners,brown,0.17,1
+73,i,9,trainers,yellow,0.23,1
+73,j,10,I have no general word for this,pink,0.89,1
+73,k,11,other,lightblue,2.95,1
+74,a,1,pill bug,red,15.91,1
+74,b,2,doodle bug,blue,3.61,1
+74,c,3,potato bug,green,12.95,1
+74,d,4,roly poly,purple,33.07,1
+74,e,5,sow bug,orange,4.13,1
+74,f,6,basketball bug,cyan,0.08,1
+74,g,7,twiddle bug,magenta,0.04,1
+74,h,8,roll-up bug,brown,0.21,1
+74,i,9,wood louse,yellow,0.47,1
+74,j,10,millipede,pink,0.88,1
+74,k,11,centipede,lightblue,2.31,1
+74,l,12,"I know what this creature is, but have no word for it",lightgreen,9.44,1
+74,m,13,I have no idea what this creature is,,,0
+74,n,14,other,,,0
+75,a,1,shopping cart,red,77.02,1
+75,b,2,shopping wagon,blue,0.22,1
+75,c,3,grocery cart,green,13.95,1
+75,d,4,shopping carriage,purple,0.22,1
+75,e,5,carriage,orange,0.95,1
+75,f,6,buggy,cyan,4.11,1
+75,g,7,supermarket trolley,magenta,0.23,1
+75,h,8,other,brown,3.29,1
+76,a,1,kitty-corner,red,49.53,1
+76,b,2,kitacorner,blue,0.09,1
+76,c,3,catercorner,green,1.34,1
+76,d,4,catty-corner,purple,30.38,1
+76,e,5,kitty cross,orange,0.0,1
+76,f,6,kitty wampus,cyan,0.13,1
+76,g,7,"I can only use ""diagonal"" for this",magenta,12.31,1
+76,h,8,I have no term for this,brown,3.68,1
+76,i,9,other,yellow,2.53,1
+77,a,1,doing donuts,red,80.71,1
+77,b,2,doing cookies,blue,1.74,1
+77,c,3,whipping shitties,green,1.43,1
+77,d,4,other,purple,16.12,1
+78,a,1,scratch paper,red,31.01,1
+78,b,2,scrap paper,blue,30.71,1
+78,c,3,"scratch paper is still usable (for example, the paper you bring to do extra work on a test); scrap paper is paper that isn't needed anymore and can be thrown away.",green,35.65,1
+78,d,4,other,purple,2.63,1
+79,a,1,highway,red,57.0,1
+79,b,2,freeway,blue,11.98,1
+79,c,3,parkway,green,0.37,1
+79,d,4,turnpike,purple,0.54,1
+79,e,5,expressway,orange,4.85,1
+79,f,6,throughway/thru-way,cyan,0.42,1
+79,g,7,a freeway is bigger than a highway,magenta,5.13,1
+79,h,8,"a freeway is free (i.e., doesn't charge tolls); a highway isn't",brown,0.42,1
+79,i,9,"a freeway has limited access (no stop lights, no intersections), whereas a highway can have stop lights and intersections",yellow,14.75,1
+79,j,10,other,pink,4.53,1
+80,a,1,sunshower,red,34.29,1
+80,b,2,the wolf is giving birth,blue,0.04,1
+80,c,3,the devil is beating his wife,green,6.43,1
+80,d,4,monkey's wedding,purple,0.16,1
+80,e,5,fox's wedding,orange,0.15,1
+80,f,6,pineapple rain,cyan,0.03,1
+80,g,7,liquid sun,magenta,0.74,1
+80,h,8,I have no term or expression for this,brown,55.15,1
+80,i,9,other,yellow,3.02,1
+81,a,1,goose bumps,red,89.87,1
+81,b,2,goose flesh,blue,0.28,1
+81,c,3,goose pimples,green,7.3,1
+81,d,4,chill bumps,purple,1.21,1
+81,e,5,chill bugs,orange,0.01,1
+81,f,6,chilly bumps,cyan,0.07,1
+81,g,7,cold-chill bumps,magenta,1.26,1
+81,h,8,other,brown,0.0,1
+82,a,1,crackling,red,0.16,1
+82,b,2,sleep,blue,37.78,1
+82,c,3,sleeper,green,4.23,1
+82,d,4,sleepy,purple,1.56,1
+82,e,5,sleepies,orange,5.17,1
+82,f,6,sleepy seed,cyan,1.67,1
+82,g,7,sleepy bugs,magenta,0.75,1
+82,h,8,eye booger,brown,10.68,1
+82,i,9,eye shit,yellow,0.45,1
+82,j,10,eye crunchie,pink,0.13,1
+82,k,11,eye crusties,lightblue,3.1,1
+82,l,12,sand,lightgreen,7.77,1
+82,m,13,kitty,,,0
+82,n,14,gunk,,,0
+82,o,15,matter,,,0
+82,p,16,I have no word for this,,,0
+82,q,17,other,,,0
+83,a,1,gut,red,14.65,1
+83,b,2,crypt course,blue,0.41,1
+83,c,3,crip course,green,4.98,1
+83,d,4,bird,purple,1.08,1
+83,e,5,blow-off,orange,36.57,1
+83,f,6,meat,cyan,0.25,1
+83,g,7,other,magenta,42.05,1
+84,a,1,rotary,red,12.57,1
+84,b,2,roundabout,blue,24.44,1
+84,c,3,circle,green,9.21,1
+84,d,4,traffic circle,purple,38.94,1
+84,e,5,traffic circus,orange,0.17,1
+84,f,6,I have no word for this,cyan,12.31,1
+84,g,7,other,magenta,2.35,1
+85,a,1,(hair) elastic,red,12.46,1
+85,b,2,rubber band,blue,32.01,1
+85,c,3,horsetail,green,0.09,1
+85,d,4,hair thing,purple,14.97,1
+85,e,5,hair tie,orange,18.77,1
+85,f,6,other,cyan,21.71,1
+86,a,1,yes,red,30.93,1
+86,b,2,"no, but I know what it means",blue,41.83,1
+86,c,3,I have no idea what this means,green,27.24,1
+87,a,1,yes,red,55.22,1
+87,b,2,"no, but I know what it means",blue,33.93,1
+87,c,3,I have no idea what this means,green,10.85,1
+88,a,1,duck-footed,red,29.08,1
+88,b,2,slue-footed,blue,2.33,1
+88,c,3,splay-footed,green,5.26,1
+88,d,4,bow-legged,purple,26.44,1
+88,e,5,toed out,orange,2.87,1
+88,f,6,other,cyan,2.91,1
+88,g,7,I have no word for this,magenta,31.12,1
+89,a,1,yes,red,38.33,1
+89,b,2,"yes, but I can also use it in other forms such as apple slaw or broccoli slaw",blue,9.51,1
+89,c,3,no,green,47.25,1
+89,d,4,I have never heard that usage before,purple,4.2,1
+89,e,5,other,orange,0.71,1
+90,a,1,coffin,red,65.82,1
+90,b,2,casket,blue,18.09,1
+90,c,3,"a coffin and a casket are not the same, and I know the difference",green,10.25,1
+90,d,4,other,purple,5.84,1
+91,a,1,vinegar and oil,red,9.75,1
+91,b,2,oil and vinegar,blue,78.59,1
+91,c,3,both sound equally good to me,green,10.49,1
+91,d,4,neither,purple,0.85,1
+91,e,5,other,orange,0.32,1
+92,a,1,Chinese lane change,red,4.27,1
+92,b,2,Chinese fire drill,blue,7.86,1
+92,c,3,other,green,87.87,1
+93,a,1,on line,red,5.49,1
+93,b,2,in line,blue,88.3,1
+93,c,3,both sound equally good,green,5.36,1
+93,d,4,neither,purple,0.12,1
+93,e,5,other,orange,0.73,1
+94,a,1,frosting,red,32.79,1
+94,b,2,icing,blue,16.88,1
+94,c,3,"icing is thinner than frosting, white, and/or made of powdered sugar and milk or lemon juice",green,20.73,1
+94,d,4,both,purple,28.87,1
+94,e,5,neither,orange,0.04,1
+94,f,6,other,cyan,0.69,1
+95,a,1,New York City,red,46.99,1
+95,b,2,Boston,blue,2.6,1
+95,c,3,DC,green,2.25,1
+95,d,4,LA,purple,1.88,1
+95,e,5,Chicago,orange,4.57,1
+95,f,6,other,cyan,41.72,1
+96,a,1,"supper is an evening meal while dinner is eaten earlier (lunch, for example)",red,7.79,1
+96,b,2,"supper is an evening meal, dinner is the main meal",blue,7.76,1
+96,c,3,dinner takes place in a more formal setting than supper,green,12.12,1
+96,d,4,there is no distinction; they both have the same meaning,purple,34.56,1
+96,e,5,I do not use the term supper,orange,33.14,1
+96,f,6,I don't use the term dinner,cyan,0.82,1
+96,g,7,other,magenta,3.83,1
+97,a,1,trash can,red,35.53,1
+97,b,2,garbage can,blue,27.38,1
+97,c,3,rubbish bin,green,0.41,1
+97,d,4,waste(paper) basket,purple,1.06,1
+97,e,5,These words refer to different things,orange,33.26,1
+97,f,6,other,cyan,2.36,1
+98,a,1,By accident,red,77.57,1
+98,b,2,On accident,blue,9.32,1
+98,c,3,both,green,9.75,1
+98,d,4,neither,purple,1.64,1
+98,e,5,other,orange,1.72,1
+99,a,1,frontage road,red,29.14,1
+99,b,2,service road,blue,30.46,1
+99,c,3,access road,green,17.79,1
+99,d,4,feeder road,purple,1.97,1
+99,e,5,gateway,orange,0.09,1
+99,f,6,we have them but I have no word for them,cyan,12.18,1
+99,g,7,I've never heard of this concept,magenta,4.24,1
+99,h,8,other,brown,4.12,1
+100,a,1,cut the grass,red,18.38,1
+100,b,2,cut the lawn,blue,0.64,1
+100,c,3,mow the grass,green,5.75,1
+100,d,4,mow the lawn,purple,66.79,1
+100,e,5,other,orange,8.43,1
+101,a,1,pass in,red,3.47,1
+101,b,2,hand in,blue,75.74,1
+101,c,3,both,green,12.42,1
+101,d,4,neither,purple,0.36,1
+101,e,5,other,orange,8.01,1
+102,a,1,waterbug,red,46.05,1
+102,b,2,Jesus bug,blue,0.5,1
+102,c,3,waterstrider,green,13.55,1
+102,d,4,strider,purple,0.54,1
+102,e,5,water-spider,orange,6.26,1
+102,f,6,watercrawler,cyan,0.67,1
+102,g,7,water beetle,magenta,1.97,1
+102,h,8,backstrider,brown,0.14,1
+102,i,9,skimmer,yellow,3.72,1
+102,j,10,I have no word for this,pink,21.95,1
+102,k,11,other,lightblue,4.65,1
+103,a,1,bubbler,red,3.84,1
+103,b,2,water bubbler,blue,0.3,1
+103,c,3,drinking fountain,green,33.16,1
+103,d,4,water fountain,purple,60.97,1
+103,e,5,other,orange,1.74,1
+104,a,1,the subway,red,80.51,1
+104,b,2,"the L, or the El",blue,2.98,1
+104,c,3,the T,green,2.9,1
+104,d,4,the metro,purple,4.88,1
+104,e,5,BART,orange,1.92,1
+104,f,6,other,cyan,6.81,1
+105,a,1,soda,red,52.97,1
+105,b,2,pop,blue,25.08,1
+105,c,3,coke,green,12.38,1
+105,d,4,tonic,purple,0.67,1
+105,e,5,soft drink,orange,5.89,1
+105,f,6,lemonade,cyan,0.01,1
+105,g,7,cocola,magenta,0.29,1
+105,h,8,fizzy drink,brown,0.14,1
+105,i,9,dope,yellow,0.03,1
+105,j,10,other,pink,2.55,1
+106,a,1,tp'ing,red,57.61,1
+106,b,2,rolling,blue,6.68,1
+106,c,3,toilet papering,green,21.04,1
+106,d,4,wrapping,purple,2.13,1
+106,e,5,papering,orange,3.68,1
+106,f,6,bog rolling,cyan,0.05,1
+106,g,7,I have no word for this,magenta,7.78,1
+106,h,8,other,brown,1.04,1
+107,a,1,rubberneck,red,2.0,1
+107,b,2,rubbernecking,blue,14.94,1
+107,c,3,"rubbernecking is the activity (slowing down and gawking) that causes the traffic jam, but I have no word for the traffic jam itself",green,60.53,1
+107,d,4,gapers' block,purple,2.55,1
+107,e,5,gapers' delay,orange,1.87,1
+107,f,6,Lookie Lou,cyan,1.59,1
+107,g,7,curiosity delay,magenta,0.8,1
+107,h,8,gawk block,brown,0.64,1
+107,i,9,I have no word for this,yellow,11.38,1
+107,j,10,other,pink,3.7,1
+108,a,1,"[æ] as in ""sat""",red,88.62,1
+108,b,2,"[ɛ] as in ""set""",blue,0.56,1
+108,c,3,"[e:] as in ""say""",green,8.42,1
+108,d,4,other,purple,2.4,1
+109,a,1,bag,red,90.26,1
+109,b,2,sack,blue,8.1,1
+109,c,3,poke,green,0.13,1
+109,d,4,other,purple,1.51,1
+110,a,1,gate night,red,0.39,1
+110,b,2,trick night,blue,0.33,1
+110,c,3,mischief night,green,10.84,1
+110,d,4,cabbage night,purple,1.68,1
+110,e,5,goosy night,orange,0.37,1
+110,f,6,devil's night,cyan,11.13,1
+110,g,7,devil's eve,magenta,0.78,1
+110,h,8,I have no word for this,brown,70.38,1
+110,i,9,other,yellow,4.11,1
+111,a,1,end,red,17.29,1
+111,b,2,heel,blue,59.15,1
+111,c,3,crust,green,15.21,1
+111,d,4,nose,purple,0.17,1
+111,e,5,butt,orange,3.53,1
+111,f,6,shpitzel,cyan,0.05,1
+111,g,7,I have no word for this,magenta,1.97,1
+111,h,8,other,brown,2.63,1
+112,a,1,barbituate,red,78.77,1
+112,b,2,barbiturate,blue,12.1,1
+112,c,3,I don't use either of these,green,7.98,1
+112,d,4,other,purple,1.15,1
+113,a,1,f,red,41.64,1
+113,b,2,p,blue,56.55,1
+113,c,3,other,green,1.81,1
+114,a,1,[s],red,29.75,1
+114,b,2,[z],blue,69.1,1
+114,c,3,other,green,1.14,1
+115,a,1,a moot point,red,89.03,1
+115,b,2,a mute point,blue,2.96,1
+115,c,3,either one of the above,green,1.28,1
+115,d,4,I have no idea,purple,5.57,1
+115,e,5,other,orange,1.15,1
+116,a,1,"[sp] (as in ""desperate"")",red,79.13,1
+116,b,2,"[zb] (rhymes with ""lesbian"")",blue,19.33,1
+116,c,3,other,green,1.55,1
+117,a,1,basement,red,60.67,1
+117,b,2,cellar,blue,1.66,1
+117,c,3,"I use both, and they mean the same thing",green,12.6,1
+117,d,4,"A basement is finished (for example with plastered or painted walls, carpets, etc.), whereas a cellar is unfinished (made up of bare stone or cement, used only for storage).",purple,15.31,1
+117,e,5,"A cellar has an outside entrance (some call this a ""bulkhead""), whereas a basement does not",orange,8.4,1
+117,f,6,other,cyan,1.36,1
+118,a,1,brew thru,red,3.44,1
+118,b,2,party barn,blue,0.71,1
+118,c,3,bootlegger,green,0.13,1
+118,d,4,beer barn,purple,2.84,1
+118,e,5,beverage barn,orange,0.81,1
+118,f,6,"we have these in my area, but we have no special term for them",cyan,31.35,1
+118,g,7,I have never heard of such a thing,magenta,48.26,1
+118,h,8,other,brown,12.45,1
+119,a,1,take-out,red,70.52,1
+119,b,2,carry-out,blue,6.4,1
+119,c,3,either take-out or carry-out,green,20.57,1
+119,d,4,other,purple,2.5,1
+120,a,1,dibs,red,20.99,1
+120,b,2,shotgun,blue,69.04,1
+120,c,3,hosey,green,0.33,1
+120,d,4,high hosey,purple,0.11,1
+120,e,5,I have no term for this,orange,6.57,1
+120,f,6,other,cyan,2.96,1
+121,a,1,ogle,red,43.77,1
+121,b,2,oogle,blue,15.05,1
+121,c,3,"oggle (pronounced to rhyme with ""boggle"", but may still be spelled ""ogle"")",green,22.77,1
+121,d,4,I use both oogle and ogle interchangeably,purple,3.65,1
+121,e,5,"I use both ogle and ""oggle""",orange,4.45,1
+121,f,6,I have no word for this activity,cyan,7.33,1
+121,g,7,other,magenta,2.98,1
+122,a,1,"expecially (or ""ecspecially"" or ""ekspecially"")",red,1.93,1
+122,b,2,especially,blue,95.55,1
+122,c,3,I use both interchangeably,green,1.82,1
+122,d,4,neither,purple,0.16,1
+122,e,5,other,orange,0.53,1

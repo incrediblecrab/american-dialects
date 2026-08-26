@@ -1,0 +1,21 @@
+n,question,bits,entropy,selfconsistency_km,selfconsistency_state_acc,text
+1,105,0.5811458826065063,12.354144096374512,991.2291259765625,0.1275,What is your generic term for a sweetened carbonated beverage?
+2,74,0.3923184275627136,12.035652160644531,803.1281127929688,0.155,What do you call the little gray creature (that looks like an insect but is actually a crustacean) that rolls up into a ball when you touch it?
+3,95,0.3438696265220642,11.735004425048828,625.663818359375,0.255,"What is ""the City""?"
+4,99,0.3184930682182312,11.42713737487793,577.535888671875,0.295,Which of these terms do you prefer for the small road parallel to the highway?
+5,106,0.2839319705963135,11.169342994689941,468.047119140625,0.3475,What do you call the act of covering a house or area in front of a house with toilet paper?
+6,110,0.24839584529399872,10.959731101989746,463.886474609375,0.3825,What do you call the night before Halloween?
+7,79,0.23652957379817963,10.736379623413086,402.434814453125,0.38,What is your *general* term for a big road that you drive relatively fast on?
+8,64,0.20368336141109467,10.596410751342773,375.05426025390625,0.4125,"What do you call the long sandwich that contains cold cuts, lettuce, and so on?"
+9,118,0.1964028775691986,10.360343933105469,274.29510498046875,0.4775,What do you call a drive-through liquor store?
+10,103,0.16978077590465546,10.199555397033691,246.67123413085938,0.4925,What do you call the thing from which you might drink water in a school?
+11,73,0.15836527943611145,10.023927688598633,231.0520782470703,0.4875,"What is your *general* term for the rubber-soled shoes worn in gym class, for athletic activities, etc.?"
+12,58,0.1447860151529312,9.869163513183594,236.53091430664062,0.4975,"Which of these terms do you prefer for a sale of unwanted items on your porch, in your yard, etc.?"
+13,76,0.13863806426525116,9.725236892700195,213.00875854492188,0.5125,What term do you use to refer to something that is across both streets from you at an intersection (or diagonally across from you in general)?
+14,66,0.13228970766067505,9.608471870422363,215.81446838378906,0.5125,What do you call the miniature lobster that one finds in lakes and streams for example (a crustacean of the family Astacidae)?
+15,50,0.12173683196306229,9.479774475097656,204.2421875,0.5475,What word(s) do you use to address a group of two or more people?
+16,65,0.11514663696289062,9.371590614318848,186.9731903076172,0.555,What do you call the insect that flies around in the summer and has a rear section that glows in the dark?
+17,84,0.11027538031339645,9.289045333862305,173.49156188964844,0.565,What do you call a traffic situation in which several roads meet in a circle and you have to get off at a certain point?
+18,59,0.10353061556816101,9.172040939331055,163.67286682128906,0.58,"What do you call the game wherein the participants see who can throw a knife closest to the other person (or alternately, get a jackknife to stick into the ground or a piece of wood)?"
+19,83,0.09737935662269592,9.061844825744629,149.93438720703125,0.5825,What do you call an easy course?
+20,60,0.09403681010007858,8.959687232971191,146.59906005859375,0.6025,What do you call the area of grass between the sidewalk and the road?
