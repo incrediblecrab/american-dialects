@@ -223,7 +223,7 @@ export default function Quiz() {
         <div className={styles.panel}>
           {stage === "intro" ? (
             <div className={styles.intro}>
-              <p className={styles.kicker}>Harvard Dialect Survey · 2003</p>
+              <p className={styles.kicker}>Act I · Harvard Dialect Survey · 2003</p>
               <h1 className={styles.h1}>
                 A map of how America talks, recovered from a picture of itself.
               </h1>
