@@ -56,11 +56,17 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          # Must stay on the same npm major that generated package-lock.json.
-          # npm 10 and npm 11 hoist transitive dependencies differently, so a
-          # lockfile written by one is rejected as out of sync by `npm ci` on
-          # the other even when every platform's binaries are present in it.
-          # Node 24 ships npm 11; Node 22 ships npm 10.
+          # Node 24 ships npm 11, which is the major that wrote
+          # package-lock.json. npm 10 and npm 11 hoist transitive dependencies
+          # differently, so a lockfile written by one can be rejected as out of
+          # sync by `npm ci` on the other.
+          #
+          # What actually made this fragile was a stale `vite` pin in
+          # package.json left over from before the move to Astro. Astro 7 wants
+          # vite 8 and the pin asked for vite 6, so the tree carried two vites
+          # and two esbuilds, and npm placed the second copy differently on
+          # macOS than on Linux. Nothing imported the pinned vite; removing it
+          # left one of each. Astro's own scaffold sets no vite dependency.
           node-version: "24"
           cache: npm
           cache-dependency-path: web/package-lock.json
