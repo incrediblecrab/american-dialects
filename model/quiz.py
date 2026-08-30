@@ -29,7 +29,7 @@ from pathlib import Path
 import numpy as np
 
 from choose import Selector
-from infer import Geolocator, Places
+from infer import N_QUESTIONS, Geolocator, Places
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scrape"))
 from common import DATA  # noqa: E402
@@ -119,7 +119,7 @@ def play(g, sel, places, qs, ans, n_questions, adaptive=True, order=None):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("-n", "--questions", type=int, default=12)
+    ap.add_argument("-n", "--questions", type=int, default=N_QUESTIONS)
     ap.add_argument("--fixed", action="store_true",
                     help="use the precomputed order instead of adapting")
     ap.add_argument("--no-log", action="store_true")

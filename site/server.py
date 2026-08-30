@@ -31,7 +31,7 @@ sys.path.insert(0, str(ROOT.parent / "model"))
 sys.path.insert(0, str(ROOT.parent / "scrape"))
 
 from choose import Selector            # noqa: E402
-from infer import Geolocator, Places   # noqa: E402
+from infer import N_QUESTIONS, Geolocator, Places   # noqa: E402
 from common import DATA                # noqa: E402
 
 STATIC = ROOT / "static"
@@ -252,7 +252,7 @@ class Handler(BaseHTTPRequestHandler):
             sid = secrets.token_urlsafe(12)
             s = {"asked": [], "answers": [],
                  "w": MODEL["g"].prior.astype(np.float64).copy(),
-                 "n": int(data.get("n") or 12)}
+                 "n": int(data.get("n") or N_QUESTIONS)}
             with LOCK:
                 SESSIONS[sid] = s
             return self._json({"session": sid, "n": s["n"],

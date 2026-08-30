@@ -2,7 +2,7 @@
 
 const $ = (id) => document.getElementById(id);
 
-const state = { session: null, n: 12, asked: 0, question: null, busy: false };
+const state = { session: null, n: null, asked: 0, question: null, busy: false };
 
 async function api(path, body) {
   const r = await fetch(path, {
@@ -126,7 +126,7 @@ $('map').addEventListener('error', () => {
 
 async function start() {
   state.busy = true;
-  const r = await api('/api/start', { n: 12 });
+  const r = await api('/api/start', {});
   state.session = r.session;
   state.n = r.n;
   state.asked = 0;

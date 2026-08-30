@@ -104,6 +104,27 @@ dataset has that. quiz.py records exactly that, so this can eventually be
 measured rather than assumed.
 """
 
+N_QUESTIONS = 12
+"""How many questions the quiz asks, everywhere it is played.
+
+Terminal and browser both read this, so the length is defined once. It is 12
+because the 2013 New York Times quiz asked 12, which is the only reason anyone
+has ever asked 12; it was never derived from anything about dialects.
+
+findings.md recommends 14 and does not merely prefer it: with RHO at its
+deployed 0.177 the error bottoms at eleven-to-twelve questions and then climbs
+again, because the design-effect discount outruns the evidence faster than the
+questions inform it. Twelve is the correct stopping point for that model and
+for no other. With RHO = 0 both correctly specified models are still improving
+at the twenty-question measurement cap, 90% of the achievable reduction has
+arrived by 14, and 14 is also the optimum if a question is priced at 30 km of
+error.
+
+Left at 12 because raising it and leaving RHO at 0.177 would make the model
+worse, not better. The two constants have to move together, and both are
+waiting on a question ordering re-derived with the discount off.
+"""
+
 
 def tau_for(k, rho=None, base=None):
     """How much to discount the likelihood after k answers.
