@@ -57,7 +57,7 @@ from common import DATA  # noqa: E402
 
 EARTH_CELL_KM2 = None  # computed per cell; latitude changes cell width
 
-RHO = 0.177
+RHO = 0
 """Within-person residual correlation between two distinct dialect features.
 
 Measured on 349 YGDP respondents who answered two different constructions,
@@ -67,6 +67,19 @@ which is the important part: the dependence between a person's answers is
 almost entirely NOT explained by geography. It is the person. 95% CI is about
 plus or minus 0.11, and it is measured on two constructions, so treat it as an
 order of magnitude rather than a precise figure.
+
+Deployed at 0, not at 0.177, and that is the single most consequential finding
+in this project. The measurement is sound; the way it was applied was not. The
+discount it implies compounds with every question, so it removes evidence
+faster than questions supply it, and the model gets WORSE the more it is told.
+At 0.177 a twelve-answer posterior covers 1,315,932 km2 against 333,927 km2 at
+0 -- four times the area, from a correction derived to make the model more
+honest. On the ordering in question_order.csv the deployed configuration
+bottoms out at thirteen questions and then climbs 109 km by thirty, while the
+same model at RHO = 0 falls monotonically to 176 km.
+
+A correctly measured quantity, applied in the wrong place, was the largest
+single source of error in the model. See findings.md.
 """
 
 TAU_BASE = 0.55
@@ -104,25 +117,30 @@ dataset has that. quiz.py records exactly that, so this can eventually be
 measured rather than assumed.
 """
 
-N_QUESTIONS = 12
+N_QUESTIONS = 14
 """How many questions the quiz asks, everywhere it is played.
 
-Terminal and browser both read this, so the length is defined once. It is 12
+Terminal and browser both read this, so the length is defined once. It was 12
 because the 2013 New York Times quiz asked 12, which is the only reason anyone
 has ever asked 12; it was never derived from anything about dialects.
 
-findings.md recommends 14 and does not merely prefer it: with RHO at its
-deployed 0.177 the error bottoms at eleven-to-twelve questions and then climbs
-again, because the design-effect discount outruns the evidence faster than the
-questions inform it. Twelve is the correct stopping point for that model and
-for no other. With RHO = 0 both correctly specified models are still improving
-at the twenty-question measurement cap, 90% of the achievable reduction has
-arrived by 14, and 14 is also the optimum if a question is priced at 30 km of
-error.
+14 is a judgement, not an optimum, and the distinction matters. On the
+re-derived ordering both correctly specified models are STILL improving at
+thirty questions -- the Bayesian model reaches 176 km and the network 148 km,
+and neither has turned. There is no interior minimum to find, so a stopping
+point has to come from a stated rule about diminishing returns rather than
+from the curve alone.
 
-Left at 12 because raising it and leaving RHO at 0.177 would make the model
-worse, not better. The two constants have to move together, and both are
-waiting on a question ordering re-derived with the discount off.
+Two rules were applied. Priced at 30 km of error per question asked, the
+deployed Bayesian model's optimum is 14. Requiring 90% of the reduction
+available by thirty questions, it is 19. The network's answers to the same two
+rules are 11 and 16. 14 is the priced optimum of the model actually deployed
+and sits inside the network's bracket.
+
+An earlier draft justified 14 by noting the two rules agreed on it. They no
+longer do: that agreement was an artefact of a twenty-question measurement cap
+and did not survive extending the sweep. The number stands; the argument for
+it has been replaced.
 """
 
 

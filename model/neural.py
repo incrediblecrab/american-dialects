@@ -74,6 +74,32 @@ OUT = DATA / "model"
 RHO_TRUE = 0.18
 MOVER = 0.15
 
+LEGACY_RHO = 0.177
+"""The design-effect discount this project deployed until it was disproved.
+
+The curve keeps it as a negative control, because it is the evidence for the
+central finding: a model carrying this discount bottoms out around twelve
+questions and then gets steadily WORSE as it is told more, while both correctly
+specified models keep improving. That comparison is the point of the figure.
+
+Pinned to a literal rather than read from `infer.RHO`. It used to be read from
+there, which was fine only while the two happened to be equal; the moment RHO
+moves to 0 that arm would silently become a duplicate of the rho=0 arm while
+still carrying the label ".177". A control that renames itself when the thing
+it is controlling for changes is not a control.
+"""
+
+
+def _arm(rho):
+    """Curve label for a Bayes arm, e.g. 0.177 -> 'bayes(rho=.177)'.
+
+    Derived from the value so a label can never disagree with the rho it was
+    actually computed at. The leading zero is dropped to match the names
+    already written into neural_curve.csv and quoted in the documents.
+    """
+    s = f"{rho:g}"
+    return f"bayes(rho={s[1:] if s.startswith('0.') else s})"
+
 
 def xy(t, cells):
     """Flat kilometre coordinates, good enough for clustering CONUS."""
@@ -411,7 +437,7 @@ def evaluate(args):
     np.add.at(csum, lab, g.prior)
     w_cell = g.prior / np.clip(csum[lab], 1e-30, None)
 
-    order = idio.deployed_questions(20)
+    order = idio.deployed_questions(max(args.ks))
     qpos = {q: j for j, q in enumerate(questions)}
 
     print(f"held-out people: {args.n}, seed {args.seed} (train seed {SEED})")
@@ -505,7 +531,7 @@ def curve(args):
     np.add.at(csum, lab, g.prior)
     w_cell = g.prior / np.clip(csum[lab], 1e-30, None)
 
-    order = idio.deployed_questions(20)
+    order = idio.deployed_questions(args.kmax, path=args.order)
     qpos = {q: j for j, q in enumerate(questions)}
     A, home, _ = make_pool(g, args.n, questions, theta, args.seed)
     A_t = torch.tensor(A, device=dev)
@@ -529,8 +555,7 @@ def curve(args):
                                           home[i:i + C]))
         rows.append(aggregate(parts, "net", k))
 
-        for rho, name in [(0.0, "bayes(rho=0)"),
-                          (infer.RHO, "bayes(rho=.177)")]:
+        for rho, name in [(0.0, _arm(0.0)), (LEGACY_RHO, _arm(LEGACY_RHO))]:
             keep = infer.RHO
             infer.RHO = rho
             try:
@@ -553,7 +578,7 @@ def curve(args):
         print(f"  k={k:2d}  {line}")
 
     import csv as _csv
-    path = OUT / "neural_curve.csv"
+    path = Path(args.out) if args.out else OUT / "neural_curve.csv"
     with open(path, "w", newline="", encoding="utf-8") as f:
         w = _csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         w.writeheader()
@@ -564,7 +589,7 @@ def curve(args):
 
 def report_curve(rows):
     """Where the returns stop, per model."""
-    for name in ["net", "bayes(rho=0)", "bayes(rho=.177)"]:
+    for name in ["net", _arm(0.0), _arm(LEGACY_RHO)]:
         r = sorted([x for x in rows if x["model"] == name],
                    key=lambda x: x["k"])
         if not r:
@@ -620,6 +645,13 @@ def main():
     p.add_argument("--kmax", type=int, default=20)
     p.add_argument("--seed", type=int, default=771131)
     p.add_argument("--chunk", type=int, default=500)
+    p.add_argument("--order", type=str, default=None,
+                   help="question ordering CSV; default is the deployed one. "
+                        "Lets a candidate ordering be scored before it is "
+                        "deployed, so the ordering, RHO and the quiz length "
+                        "can be changed in one step instead of three.")
+    p.add_argument("--out", type=str, default=None,
+                   help="write here instead of data/model/neural_curve.csv")
     p.set_defaults(fn=curve)
 
     args = ap.parse_args()

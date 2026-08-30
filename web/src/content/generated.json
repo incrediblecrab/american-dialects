@@ -1,0 +1,3071 @@
+{
+  "constants": {
+    "eps": 0.1,
+    "legacyRho": 0.177,
+    "nQuestions": 14,
+    "rho": 0,
+    "tauBase": 0.55
+  },
+  "curve": [
+    {
+      "calibErr": 0.023,
+      "cover80": 0.8215,
+      "k": 1,
+      "medianKm": 1192.7,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 3698.3,
+      "stateAcc": 0.1135,
+      "within150": 0.1085
+    },
+    {
+      "calibErr": 0.0135,
+      "cover80": 0.8175,
+      "k": 1,
+      "medianKm": 1123.0,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 3832.6,
+      "stateAcc": 0.101,
+      "within150": 0.1135
+    },
+    {
+      "calibErr": 0.0135,
+      "cover80": 0.8175,
+      "k": 1,
+      "medianKm": 1123.0,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3832.6,
+      "stateAcc": 0.101,
+      "within150": 0.1135
+    },
+    {
+      "calibErr": 0.0282,
+      "cover80": 0.825,
+      "k": 2,
+      "medianKm": 1075.1,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 3655.3,
+      "stateAcc": 0.1325,
+      "within150": 0.13
+    },
+    {
+      "calibErr": 0.0258,
+      "cover80": 0.8245,
+      "k": 2,
+      "medianKm": 1025.5,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 3829.2,
+      "stateAcc": 0.107,
+      "within150": 0.119
+    },
+    {
+      "calibErr": 0.0258,
+      "cover80": 0.824,
+      "k": 2,
+      "medianKm": 999.0,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3836.4,
+      "stateAcc": 0.1045,
+      "within150": 0.119
+    },
+    {
+      "calibErr": 0.0237,
+      "cover80": 0.819,
+      "k": 3,
+      "medianKm": 870.9,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 3332.8,
+      "stateAcc": 0.2115,
+      "within150": 0.1795
+    },
+    {
+      "calibErr": 0.029,
+      "cover80": 0.8265,
+      "k": 3,
+      "medianKm": 942.2,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 3522.0,
+      "stateAcc": 0.1655,
+      "within150": 0.164
+    },
+    {
+      "calibErr": 0.0388,
+      "cover80": 0.841,
+      "k": 3,
+      "medianKm": 1058.2,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3633.8,
+      "stateAcc": 0.1355,
+      "within150": 0.1465
+    },
+    {
+      "calibErr": 0.029,
+      "cover80": 0.8205,
+      "k": 4,
+      "medianKm": 767.5,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 3185.8,
+      "stateAcc": 0.2365,
+      "within150": 0.207
+    },
+    {
+      "calibErr": 0.0332,
+      "cover80": 0.8305,
+      "k": 4,
+      "medianKm": 855.6,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 3342.5,
+      "stateAcc": 0.2135,
+      "within150": 0.1865
+    },
+    {
+      "calibErr": 0.0437,
+      "cover80": 0.844,
+      "k": 4,
+      "medianKm": 977.0,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3594.4,
+      "stateAcc": 0.1705,
+      "within150": 0.167
+    },
+    {
+      "calibErr": 0.032,
+      "cover80": 0.823,
+      "k": 5,
+      "medianKm": 653.7,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 3062.7,
+      "stateAcc": 0.2575,
+      "within150": 0.227
+    },
+    {
+      "calibErr": 0.034,
+      "cover80": 0.8375,
+      "k": 5,
+      "medianKm": 685.2,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 3170.0,
+      "stateAcc": 0.2405,
+      "within150": 0.2035
+    },
+    {
+      "calibErr": 0.0538,
+      "cover80": 0.863,
+      "k": 5,
+      "medianKm": 896.8,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3530.7,
+      "stateAcc": 0.1885,
+      "within150": 0.176
+    },
+    {
+      "calibErr": 0.0312,
+      "cover80": 0.8195,
+      "k": 6,
+      "medianKm": 604.0,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2891.9,
+      "stateAcc": 0.286,
+      "within150": 0.2465
+    },
+    {
+      "calibErr": 0.035,
+      "cover80": 0.837,
+      "k": 6,
+      "medianKm": 670.8,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 3172.8,
+      "stateAcc": 0.2675,
+      "within150": 0.216
+    },
+    {
+      "calibErr": 0.057,
+      "cover80": 0.866,
+      "k": 6,
+      "medianKm": 912.1,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3532.5,
+      "stateAcc": 0.2065,
+      "within150": 0.1765
+    },
+    {
+      "calibErr": 0.033,
+      "cover80": 0.8225,
+      "k": 7,
+      "medianKm": 544.9,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2633.5,
+      "stateAcc": 0.3065,
+      "within150": 0.261
+    },
+    {
+      "calibErr": 0.0363,
+      "cover80": 0.8345,
+      "k": 7,
+      "medianKm": 617.1,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2753.5,
+      "stateAcc": 0.2955,
+      "within150": 0.23
+    },
+    {
+      "calibErr": 0.062,
+      "cover80": 0.869,
+      "k": 7,
+      "medianKm": 874.1,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3423.3,
+      "stateAcc": 0.224,
+      "within150": 0.1815
+    },
+    {
+      "calibErr": 0.0378,
+      "cover80": 0.827,
+      "k": 8,
+      "medianKm": 514.0,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2574.3,
+      "stateAcc": 0.331,
+      "within150": 0.281
+    },
+    {
+      "calibErr": 0.0377,
+      "cover80": 0.838,
+      "k": 8,
+      "medianKm": 567.1,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2781.4,
+      "stateAcc": 0.326,
+      "within150": 0.251
+    },
+    {
+      "calibErr": 0.068,
+      "cover80": 0.878,
+      "k": 8,
+      "medianKm": 841.9,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3388.0,
+      "stateAcc": 0.2295,
+      "within150": 0.1835
+    },
+    {
+      "calibErr": 0.0345,
+      "cover80": 0.8255,
+      "k": 9,
+      "medianKm": 469.0,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2515.6,
+      "stateAcc": 0.3495,
+      "within150": 0.2955
+    },
+    {
+      "calibErr": 0.0373,
+      "cover80": 0.8375,
+      "k": 9,
+      "medianKm": 536.7,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2753.1,
+      "stateAcc": 0.3415,
+      "within150": 0.262
+    },
+    {
+      "calibErr": 0.0685,
+      "cover80": 0.8745,
+      "k": 9,
+      "medianKm": 854.8,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3420.5,
+      "stateAcc": 0.2295,
+      "within150": 0.185
+    },
+    {
+      "calibErr": 0.0398,
+      "cover80": 0.8325,
+      "k": 10,
+      "medianKm": 405.9,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2446.6,
+      "stateAcc": 0.3685,
+      "within150": 0.314
+    },
+    {
+      "calibErr": 0.0388,
+      "cover80": 0.839,
+      "k": 10,
+      "medianKm": 506.6,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2662.1,
+      "stateAcc": 0.3585,
+      "within150": 0.2765
+    },
+    {
+      "calibErr": 0.073,
+      "cover80": 0.8815,
+      "k": 10,
+      "medianKm": 853.2,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3440.2,
+      "stateAcc": 0.2305,
+      "within150": 0.1875
+    },
+    {
+      "calibErr": 0.0382,
+      "cover80": 0.826,
+      "k": 11,
+      "medianKm": 371.1,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2457.5,
+      "stateAcc": 0.372,
+      "within150": 0.338
+    },
+    {
+      "calibErr": 0.0422,
+      "cover80": 0.8415,
+      "k": 11,
+      "medianKm": 479.7,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2613.4,
+      "stateAcc": 0.3675,
+      "within150": 0.285
+    },
+    {
+      "calibErr": 0.0728,
+      "cover80": 0.8775,
+      "k": 11,
+      "medianKm": 877.0,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3471.4,
+      "stateAcc": 0.2245,
+      "within150": 0.1855
+    },
+    {
+      "calibErr": 0.0388,
+      "cover80": 0.821,
+      "k": 12,
+      "medianKm": 347.3,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2414.8,
+      "stateAcc": 0.388,
+      "within150": 0.3505
+    },
+    {
+      "calibErr": 0.0453,
+      "cover80": 0.8385,
+      "k": 12,
+      "medianKm": 431.4,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2598.7,
+      "stateAcc": 0.38,
+      "within150": 0.3045
+    },
+    {
+      "calibErr": 0.0732,
+      "cover80": 0.8775,
+      "k": 12,
+      "medianKm": 891.1,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3497.2,
+      "stateAcc": 0.217,
+      "within150": 0.1825
+    },
+    {
+      "calibErr": 0.0402,
+      "cover80": 0.8245,
+      "k": 13,
+      "medianKm": 323.8,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2381.1,
+      "stateAcc": 0.399,
+      "within150": 0.361
+    },
+    {
+      "calibErr": 0.0482,
+      "cover80": 0.8345,
+      "k": 13,
+      "medianKm": 393.0,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2533.0,
+      "stateAcc": 0.3955,
+      "within150": 0.316
+    },
+    {
+      "calibErr": 0.076,
+      "cover80": 0.8835,
+      "k": 13,
+      "medianKm": 794.1,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3250.9,
+      "stateAcc": 0.237,
+      "within150": 0.1855
+    },
+    {
+      "calibErr": 0.0452,
+      "cover80": 0.828,
+      "k": 14,
+      "medianKm": 291.0,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2299.2,
+      "stateAcc": 0.4135,
+      "within150": 0.373
+    },
+    {
+      "calibErr": 0.0487,
+      "cover80": 0.835,
+      "k": 14,
+      "medianKm": 360.6,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2436.6,
+      "stateAcc": 0.4175,
+      "within150": 0.3355
+    },
+    {
+      "calibErr": 0.078,
+      "cover80": 0.8855,
+      "k": 14,
+      "medianKm": 806.6,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3421.4,
+      "stateAcc": 0.236,
+      "within150": 0.1845
+    },
+    {
+      "calibErr": 0.0455,
+      "cover80": 0.826,
+      "k": 15,
+      "medianKm": 254.8,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2226.2,
+      "stateAcc": 0.4275,
+      "within150": 0.396
+    },
+    {
+      "calibErr": 0.0498,
+      "cover80": 0.8325,
+      "k": 15,
+      "medianKm": 339.5,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2395.3,
+      "stateAcc": 0.4295,
+      "within150": 0.35
+    },
+    {
+      "calibErr": 0.082,
+      "cover80": 0.889,
+      "k": 15,
+      "medianKm": 822.0,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3487.1,
+      "stateAcc": 0.2285,
+      "within150": 0.181
+    },
+    {
+      "calibErr": 0.0485,
+      "cover80": 0.8295,
+      "k": 16,
+      "medianKm": 239.7,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2245.7,
+      "stateAcc": 0.4375,
+      "within150": 0.4015
+    },
+    {
+      "calibErr": 0.0515,
+      "cover80": 0.8325,
+      "k": 16,
+      "medianKm": 328.4,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2358.7,
+      "stateAcc": 0.4395,
+      "within150": 0.355
+    },
+    {
+      "calibErr": 0.0823,
+      "cover80": 0.8895,
+      "k": 16,
+      "medianKm": 794.1,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3436.1,
+      "stateAcc": 0.233,
+      "within150": 0.184
+    },
+    {
+      "calibErr": 0.0485,
+      "cover80": 0.833,
+      "k": 17,
+      "medianKm": 220.9,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2223.8,
+      "stateAcc": 0.447,
+      "within150": 0.4135
+    },
+    {
+      "calibErr": 0.0517,
+      "cover80": 0.8295,
+      "k": 17,
+      "medianKm": 314.4,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2305.5,
+      "stateAcc": 0.4465,
+      "within150": 0.3635
+    },
+    {
+      "calibErr": 0.0842,
+      "cover80": 0.892,
+      "k": 17,
+      "medianKm": 816.1,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3491.0,
+      "stateAcc": 0.2255,
+      "within150": 0.1805
+    },
+    {
+      "calibErr": 0.0503,
+      "cover80": 0.8315,
+      "k": 18,
+      "medianKm": 208.6,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2223.8,
+      "stateAcc": 0.4585,
+      "within150": 0.425
+    },
+    {
+      "calibErr": 0.0522,
+      "cover80": 0.829,
+      "k": 18,
+      "medianKm": 281.6,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2288.0,
+      "stateAcc": 0.4575,
+      "within150": 0.3765
+    },
+    {
+      "calibErr": 0.0858,
+      "cover80": 0.8925,
+      "k": 18,
+      "medianKm": 839.7,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3507.0,
+      "stateAcc": 0.2205,
+      "within150": 0.18
+    },
+    {
+      "calibErr": 0.0505,
+      "cover80": 0.8315,
+      "k": 19,
+      "medianKm": 208.1,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2167.7,
+      "stateAcc": 0.449,
+      "within150": 0.4245
+    },
+    {
+      "calibErr": 0.051,
+      "cover80": 0.8245,
+      "k": 19,
+      "medianKm": 266.0,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2277.4,
+      "stateAcc": 0.471,
+      "within150": 0.3875
+    },
+    {
+      "calibErr": 0.0857,
+      "cover80": 0.892,
+      "k": 19,
+      "medianKm": 839.7,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3536.1,
+      "stateAcc": 0.218,
+      "within150": 0.178
+    },
+    {
+      "calibErr": 0.0517,
+      "cover80": 0.8345,
+      "k": 20,
+      "medianKm": 198.5,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 2108.0,
+      "stateAcc": 0.4645,
+      "within150": 0.432
+    },
+    {
+      "calibErr": 0.0495,
+      "cover80": 0.824,
+      "k": 20,
+      "medianKm": 263.6,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2193.8,
+      "stateAcc": 0.4805,
+      "within150": 0.3925
+    },
+    {
+      "calibErr": 0.087,
+      "cover80": 0.893,
+      "k": 20,
+      "medianKm": 847.2,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3469.3,
+      "stateAcc": 0.219,
+      "within150": 0.1805
+    },
+    {
+      "calibErr": 0.0512,
+      "cover80": 0.831,
+      "k": 21,
+      "medianKm": 185.0,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 1900.0,
+      "stateAcc": 0.478,
+      "within150": 0.451
+    },
+    {
+      "calibErr": 0.0482,
+      "cover80": 0.8185,
+      "k": 21,
+      "medianKm": 255.5,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2153.9,
+      "stateAcc": 0.4875,
+      "within150": 0.403
+    },
+    {
+      "calibErr": 0.0863,
+      "cover80": 0.892,
+      "k": 21,
+      "medianKm": 875.9,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3518.1,
+      "stateAcc": 0.215,
+      "within150": 0.1775
+    },
+    {
+      "calibErr": 0.0548,
+      "cover80": 0.8335,
+      "k": 22,
+      "medianKm": 177.3,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 1891.4,
+      "stateAcc": 0.483,
+      "within150": 0.456
+    },
+    {
+      "calibErr": 0.0482,
+      "cover80": 0.8165,
+      "k": 22,
+      "medianKm": 240.6,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 2125.7,
+      "stateAcc": 0.4955,
+      "within150": 0.412
+    },
+    {
+      "calibErr": 0.0873,
+      "cover80": 0.8935,
+      "k": 22,
+      "medianKm": 901.7,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3567.4,
+      "stateAcc": 0.214,
+      "within150": 0.178
+    },
+    {
+      "calibErr": 0.0553,
+      "cover80": 0.8345,
+      "k": 23,
+      "medianKm": 169.7,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 1837.1,
+      "stateAcc": 0.4925,
+      "within150": 0.4745
+    },
+    {
+      "calibErr": 0.0515,
+      "cover80": 0.8185,
+      "k": 23,
+      "medianKm": 218.5,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 1997.0,
+      "stateAcc": 0.508,
+      "within150": 0.426
+    },
+    {
+      "calibErr": 0.0872,
+      "cover80": 0.8915,
+      "k": 23,
+      "medianKm": 843.7,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3479.2,
+      "stateAcc": 0.225,
+      "within150": 0.1845
+    },
+    {
+      "calibErr": 0.0548,
+      "cover80": 0.833,
+      "k": 24,
+      "medianKm": 166.8,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 1837.1,
+      "stateAcc": 0.4985,
+      "within150": 0.477
+    },
+    {
+      "calibErr": 0.05,
+      "cover80": 0.813,
+      "k": 24,
+      "medianKm": 202.1,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 1965.7,
+      "stateAcc": 0.515,
+      "within150": 0.4395
+    },
+    {
+      "calibErr": 0.0878,
+      "cover80": 0.893,
+      "k": 24,
+      "medianKm": 875.0,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3536.1,
+      "stateAcc": 0.2295,
+      "within150": 0.1855
+    },
+    {
+      "calibErr": 0.0593,
+      "cover80": 0.836,
+      "k": 25,
+      "medianKm": 160.7,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 1779.0,
+      "stateAcc": 0.504,
+      "within150": 0.4845
+    },
+    {
+      "calibErr": 0.0493,
+      "cover80": 0.8135,
+      "k": 25,
+      "medianKm": 193.7,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 1970.8,
+      "stateAcc": 0.524,
+      "within150": 0.4495
+    },
+    {
+      "calibErr": 0.0893,
+      "cover80": 0.8935,
+      "k": 25,
+      "medianKm": 886.3,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3536.1,
+      "stateAcc": 0.2275,
+      "within150": 0.1835
+    },
+    {
+      "calibErr": 0.0578,
+      "cover80": 0.833,
+      "k": 26,
+      "medianKm": 159.0,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 1803.7,
+      "stateAcc": 0.51,
+      "within150": 0.487
+    },
+    {
+      "calibErr": 0.0493,
+      "cover80": 0.8115,
+      "k": 26,
+      "medianKm": 189.6,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 1876.9,
+      "stateAcc": 0.532,
+      "within150": 0.4595
+    },
+    {
+      "calibErr": 0.0883,
+      "cover80": 0.8935,
+      "k": 26,
+      "medianKm": 854.4,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3536.1,
+      "stateAcc": 0.2305,
+      "within150": 0.186
+    },
+    {
+      "calibErr": 0.0595,
+      "cover80": 0.8365,
+      "k": 27,
+      "medianKm": 158.8,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 1774.0,
+      "stateAcc": 0.5115,
+      "within150": 0.49
+    },
+    {
+      "calibErr": 0.0492,
+      "cover80": 0.809,
+      "k": 27,
+      "medianKm": 190.5,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 1903.2,
+      "stateAcc": 0.532,
+      "within150": 0.458
+    },
+    {
+      "calibErr": 0.088,
+      "cover80": 0.893,
+      "k": 27,
+      "medianKm": 872.4,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3567.4,
+      "stateAcc": 0.226,
+      "within150": 0.1825
+    },
+    {
+      "calibErr": 0.0627,
+      "cover80": 0.8395,
+      "k": 28,
+      "medianKm": 151.3,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 1787.8,
+      "stateAcc": 0.5215,
+      "within150": 0.499
+    },
+    {
+      "calibErr": 0.0508,
+      "cover80": 0.81,
+      "k": 28,
+      "medianKm": 188.3,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 1881.8,
+      "stateAcc": 0.5345,
+      "within150": 0.458
+    },
+    {
+      "calibErr": 0.0873,
+      "cover80": 0.8935,
+      "k": 28,
+      "medianKm": 891.8,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3594.5,
+      "stateAcc": 0.221,
+      "within150": 0.181
+    },
+    {
+      "calibErr": 0.0625,
+      "cover80": 0.8385,
+      "k": 29,
+      "medianKm": 151.1,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 1758.3,
+      "stateAcc": 0.518,
+      "within150": 0.4995
+    },
+    {
+      "calibErr": 0.0517,
+      "cover80": 0.812,
+      "k": 29,
+      "medianKm": 183.9,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 1851.5,
+      "stateAcc": 0.542,
+      "within150": 0.4605
+    },
+    {
+      "calibErr": 0.088,
+      "cover80": 0.895,
+      "k": 29,
+      "medianKm": 895.2,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3605.0,
+      "stateAcc": 0.219,
+      "within150": 0.1815
+    },
+    {
+      "calibErr": 0.063,
+      "cover80": 0.8405,
+      "k": 30,
+      "medianKm": 148.3,
+      "model": "net",
+      "n": 2000,
+      "p90Km": 1768.2,
+      "stateAcc": 0.524,
+      "within150": 0.502
+    },
+    {
+      "calibErr": 0.05,
+      "cover80": 0.811,
+      "k": 30,
+      "medianKm": 176.0,
+      "model": "bayes(rho=0)",
+      "n": 2000,
+      "p90Km": 1851.5,
+      "stateAcc": 0.5465,
+      "within150": 0.465
+    },
+    {
+      "calibErr": 0.089,
+      "cover80": 0.8925,
+      "k": 30,
+      "medianKm": 903.4,
+      "model": "bayes(rho=.177)",
+      "n": 2000,
+      "p90Km": 3607.9,
+      "stateAcc": 0.2205,
+      "within150": 0.1815
+    }
+  ],
+  "fixture": {
+    "answers": [
+      {
+        "choice": "b",
+        "question": "105"
+      },
+      {
+        "choice": "a",
+        "question": "74"
+      },
+      {
+        "choice": "f",
+        "question": "95"
+      },
+      {
+        "choice": "b",
+        "question": "99"
+      },
+      {
+        "choice": "a",
+        "question": "106"
+      },
+      {
+        "choice": "h",
+        "question": "110"
+      },
+      {
+        "choice": "a",
+        "question": "79"
+      },
+      {
+        "choice": "a",
+        "question": "64"
+      },
+      {
+        "choice": "f",
+        "question": "118"
+      },
+      {
+        "choice": "b",
+        "question": "58"
+      },
+      {
+        "choice": "b",
+        "question": "66"
+      },
+      {
+        "choice": "d",
+        "question": "76"
+      },
+      {
+        "choice": "f",
+        "question": "73"
+      },
+      {
+        "choice": "a",
+        "question": "65"
+      }
+    ],
+    "cell": {
+      "pittsburgh": 23040
+    },
+    "variants": {
+      "deployed": {
+        "area80Km2": 786763.5,
+        "mapCell": 20192,
+        "mapLat": 41.3261,
+        "mapLon": -81.6093,
+        "mapState": "OH",
+        "rho": 0,
+        "tau": 0.55,
+        "topCells": [
+          20192,
+          20191,
+          23040,
+          23039,
+          20604
+        ],
+        "topP": [
+          0.00255068,
+          0.0024982,
+          0.00239139,
+          0.00238001,
+          0.00229901
+        ],
+        "topPlaces": [
+          {
+            "name": "New Castle, PA",
+            "p": 0.022183
+          },
+          {
+            "name": "Bethel Park, PA",
+            "p": 0.020391
+          },
+          {
+            "name": "Pittsburgh, PA",
+            "p": 0.016724
+          }
+        ],
+        "topStates": [
+          {
+            "name": "OH",
+            "p": 0.316009
+          },
+          {
+            "name": "PA",
+            "p": 0.12906
+          },
+          {
+            "name": "IN",
+            "p": 0.077069
+          }
+        ]
+      },
+      "discounted": {
+        "area80Km2": 1752029.2,
+        "mapCell": 22285,
+        "mapLat": 40.6901,
+        "mapLon": -74.0105,
+        "mapState": "NY",
+        "rho": 0.177,
+        "tau": 0.174049,
+        "topCells": [
+          22285,
+          22286,
+          21878,
+          20192,
+          20191
+        ],
+        "topP": [
+          0.00092783,
+          0.00089912,
+          0.00086596,
+          0.00079771,
+          0.00079225
+        ],
+        "topPlaces": [
+          {
+            "name": "New Castle, PA",
+            "p": 0.005532
+          },
+          {
+            "name": "Bethel Park, PA",
+            "p": 0.005283
+          },
+          {
+            "name": "Baltimore, MD",
+            "p": 0.005032
+          }
+        ],
+        "topStates": [
+          {
+            "name": "OH",
+            "p": 0.095217
+          },
+          {
+            "name": "CA",
+            "p": 0.080169
+          },
+          {
+            "name": "PA",
+            "p": 0.059817
+          }
+        ]
+      }
+    }
+  },
+  "inventory": [
+    {
+      "path": "data/cambridge/answers.csv",
+      "rows": 807
+    },
+    {
+      "path": "data/cambridge/geo/index.csv",
+      "rows": 807
+    },
+    {
+      "path": "data/cambridge/hds_agreement.csv",
+      "rows": 95
+    },
+    {
+      "path": "data/cambridge/hds_crosswalk.csv",
+      "rows": 512
+    },
+    {
+      "path": "data/cambridge/questions.csv",
+      "rows": 180
+    },
+    {
+      "path": "data/census/counties.csv",
+      "rows": 3156
+    },
+    {
+      "path": "data/census/places.csv",
+      "rows": 4859
+    },
+    {
+      "path": "data/hds/answers.csv",
+      "rows": 697
+    },
+    {
+      "path": "data/hds/geo/index.csv",
+      "rows": 680
+    },
+    {
+      "path": "data/hds/geo/validation.csv",
+      "rows": 28513
+    },
+    {
+      "path": "data/hds/questions.csv",
+      "rows": 122
+    },
+    {
+      "path": "data/hds/state_n.csv",
+      "rows": 51
+    },
+    {
+      "path": "data/hds/state_n_by_question.csv",
+      "rows": 1612
+    },
+    {
+      "path": "data/hds/state_pct.csv",
+      "rows": 30197
+    },
+    {
+      "path": "data/model/accuracy_nullcheck.csv",
+      "rows": 6
+    },
+    {
+      "path": "data/model/accuracy_rho0.0.csv",
+      "rows": 20
+    },
+    {
+      "path": "data/model/accuracy_rho0.05.csv",
+      "rows": 20
+    },
+    {
+      "path": "data/model/accuracy_rho0.09.csv",
+      "rows": 20
+    },
+    {
+      "path": "data/model/accuracy_rho0.13.csv",
+      "rows": 20
+    },
+    {
+      "path": "data/model/accuracy_selfconsistency.csv",
+      "rows": 20
+    },
+    {
+      "path": "data/model/accuracy_ygdp.csv",
+      "rows": 5
+    },
+    {
+      "path": "data/model/bandwidth.csv",
+      "rows": 122
+    },
+    {
+      "path": "data/model/bandwidth_block14.csv",
+      "rows": 122
+    },
+    {
+      "path": "data/model/bandwidth_block40.csv",
+      "rows": 122
+    },
+    {
+      "path": "data/model/bandwidth_naive.csv",
+      "rows": 122
+    },
+    {
+      "path": "data/model/bandwidth_norake.csv",
+      "rows": 122
+    },
+    {
+      "path": "data/model/calibration_nullcheck.csv",
+      "rows": 35
+    },
+    {
+      "path": "data/model/calibration_ygdp.csv",
+      "rows": 35
+    },
+    {
+      "path": "data/model/headline_surface.csv",
+      "rows": 26
+    },
+    {
+      "path": "data/model/idiolect_mover_surface.csv",
+      "rows": 125
+    },
+    {
+      "path": "data/model/idiolect_pure_surface.csv",
+      "rows": 125
+    },
+    {
+      "path": "data/model/mover_mix.csv",
+      "rows": 12
+    },
+    {
+      "path": "data/model/mover_probe.csv",
+      "rows": 9
+    },
+    {
+      "path": "data/model/mover_ratio.csv",
+      "rows": 111
+    },
+    {
+      "path": "data/model/mover_ratio_rep.csv",
+      "rows": 48
+    },
+    {
+      "path": "data/model/mover_split.csv",
+      "rows": 222
+    },
+    {
+      "path": "data/model/mover_split_rep.csv",
+      "rows": 96
+    },
+    {
+      "path": "data/model/neural_backtest.csv",
+      "rows": 6
+    },
+    {
+      "path": "data/model/neural_curve.csv",
+      "rows": 90
+    },
+    {
+      "path": "data/model/order_curve.csv",
+      "rows": 180
+    },
+    {
+      "path": "data/model/question_order.csv",
+      "rows": 30
+    },
+    {
+      "path": "data/model/question_order_ratio.csv",
+      "rows": 90
+    },
+    {
+      "path": "data/model/question_signal.csv",
+      "rows": 122
+    },
+    {
+      "path": "data/model/surf00_surface.csv",
+      "rows": 24
+    },
+    {
+      "path": "data/model/surf10_surface.csv",
+      "rows": 24
+    },
+    {
+      "path": "data/model/surf20_surface.csv",
+      "rows": 24
+    },
+    {
+      "path": "data/model/surf30_surface.csv",
+      "rows": 24
+    },
+    {
+      "path": "data/model/tuning.csv",
+      "rows": 200
+    },
+    {
+      "path": "data/model/worstcorner_surface.csv",
+      "rows": 10
+    },
+    {
+      "path": "data/nullcheck/answers.csv",
+      "rows": 2400
+    },
+    {
+      "path": "data/nullcheck/people.csv",
+      "rows": 400
+    },
+    {
+      "path": "data/popvssoda/counties.csv",
+      "rows": 3141
+    },
+    {
+      "path": "data/popvssoda/states.csv",
+      "rows": 69
+    },
+    {
+      "path": "data/quiz/log.csv",
+      "rows": 0
+    },
+    {
+      "path": "data/selfconsistency/answers.csv",
+      "rows": 24000
+    },
+    {
+      "path": "data/selfconsistency/people.csv",
+      "rows": 1200
+    },
+    {
+      "path": "data/uwm/hds_crosswalk.csv",
+      "rows": 121
+    },
+    {
+      "path": "data/uwm/questions.csv",
+      "rows": 154
+    },
+    {
+      "path": "data/ygdp/answers.csv",
+      "rows": 6149
+    },
+    {
+      "path": "data/ygdp/crosswalk.csv",
+      "rows": 14
+    },
+    {
+      "path": "data/ygdp/people.csv",
+      "rows": 6629
+    },
+    {
+      "path": "data/ygdp/phenomena.csv",
+      "rows": 28
+    },
+    {
+      "path": "data/ygdp/respondents.csv",
+      "rows": 22102
+    }
+  ],
+  "isoglosses": {
+    "contrasts": [
+      {
+        "a": {
+          "choice": "f",
+          "label": "yinz",
+          "national": 0.37,
+          "survey": "yins"
+        },
+        "anchors": [
+          {
+            "lat": 40.4399,
+            "lon": -79.9757,
+            "name": "Pittsburgh",
+            "p": 0.7084,
+            "state": "PA"
+          },
+          {
+            "lat": 33.7629,
+            "lon": -84.4227,
+            "name": "Atlanta",
+            "p": 0.0007,
+            "state": "GA"
+          }
+        ],
+        "b": {
+          "choice": "i",
+          "label": "y'all",
+          "national": 13.99,
+          "survey": "y'all"
+        },
+        "id": "yinz",
+        "lineKm": 1207.0,
+        "note": "Two regional second persons plural, and the survey spells the first one yins. Western Pennsylvania keeps it, and the ground over which the odds turn over is narrower than the drive across the county.",
+        "question": "50",
+        "questionText": "What word(s) do you use to address a group of two or more people?",
+        "shareA": 0.0068,
+        "widthKm": 72.7
+      },
+      {
+        "a": {
+          "choice": "e",
+          "label": "neutral ground",
+          "national": 0.79,
+          "survey": "neutral ground"
+        },
+        "anchors": [
+          {
+            "lat": 30.0534,
+            "lon": -89.9345,
+            "name": "New Orleans",
+            "p": 0.8658,
+            "state": "LA"
+          },
+          {
+            "lat": 32.7933,
+            "lon": -96.7665,
+            "name": "Dallas",
+            "p": 0.0038,
+            "state": "TX"
+          }
+        ],
+        "b": {
+          "choice": "d",
+          "label": "island",
+          "national": 44.18,
+          "survey": "island"
+        },
+        "id": "neutral-ground",
+        "lineKm": 1316.4,
+        "note": "The grass down the middle of a street. New Orleans calls it neutral ground after the strip that separated the Creole and American halves of the city, and almost nowhere else does.",
+        "question": "61",
+        "questionText": "What do you call the area of grass that occurs in the middle of some streets?",
+        "shareA": 0.0113,
+        "widthKm": 79.3
+      },
+      {
+        "a": {
+          "choice": "a",
+          "label": "bubbler",
+          "national": 3.84,
+          "survey": "bubbler"
+        },
+        "anchors": [
+          {
+            "lat": 43.0633,
+            "lon": -87.9667,
+            "name": "Milwaukee",
+            "p": 0.6648,
+            "state": "WI"
+          },
+          {
+            "lat": 41.837,
+            "lon": -87.6849,
+            "name": "Chicago",
+            "p": 0.0294,
+            "state": "IL"
+          }
+        ],
+        "b": {
+          "choice": "d",
+          "label": "water fountain",
+          "national": 60.97,
+          "survey": "water fountain"
+        },
+        "id": "bubbler",
+        "lineKm": 1330.6,
+        "note": "Ninety miles of Lake Michigan shoreline separate Milwaukee from Chicago, and the word for a drinking fountain changes over them. The other bubbler country, around Providence, is a separate island a thousand miles away.",
+        "question": "103",
+        "questionText": "What do you call the thing from which you might drink water in a school?",
+        "shareA": 0.0136,
+        "widthKm": 94.7
+      },
+      {
+        "a": {
+          "choice": "c",
+          "label": "hoagie",
+          "national": 6.98,
+          "survey": "hoagie"
+        },
+        "anchors": [
+          {
+            "lat": 40.0094,
+            "lon": -75.1333,
+            "name": "Philadelphia",
+            "p": 0.606,
+            "state": "PA"
+          },
+          {
+            "lat": 40.6627,
+            "lon": -73.9387,
+            "name": "New York",
+            "p": 0.0605,
+            "state": "NY"
+          }
+        ],
+        "b": {
+          "choice": "a",
+          "label": "sub",
+          "national": 77.15,
+          "survey": "sub"
+        },
+        "id": "hoagie",
+        "lineKm": 1403.6,
+        "note": "Sub is the national default and wins nearly everywhere. Hoagie holds the Delaware Valley, and the line runs closer to Philadelphia than most Philadelphians would guess.",
+        "question": "64",
+        "questionText": "What do you call the long sandwich that contains cold cuts, lettuce, and so on?",
+        "shareA": 0.0116,
+        "widthKm": 123.8
+      },
+      {
+        "a": {
+          "choice": "b",
+          "label": "frappe",
+          "national": 2.37,
+          "survey": "frappe"
+        },
+        "anchors": [
+          {
+            "lat": 42.3385,
+            "lon": -71.0182,
+            "name": "Boston",
+            "p": 0.5176,
+            "state": "MA"
+          },
+          {
+            "lat": 40.6627,
+            "lon": -73.9387,
+            "name": "New York",
+            "p": 0.0117,
+            "state": "NY"
+          }
+        ],
+        "b": {
+          "choice": "a",
+          "label": "milkshake",
+          "national": 96.42,
+          "survey": "milkshake/shake"
+        },
+        "id": "frappe",
+        "lineKm": 217.6,
+        "note": "Milkshake is the answer for ninety-six per cent of the country. Frappe survives in eastern Massachusetts alone, which is why its boundary is short but not sharp: there is very little of it.",
+        "question": "63",
+        "questionText": "What do you call the drink made with milk and ice cream?",
+        "shareA": 0.0007,
+        "widthKm": 173.9
+      },
+      {
+        "a": {
+          "choice": "b",
+          "label": "pop",
+          "national": 25.08,
+          "survey": "pop"
+        },
+        "anchors": [
+          {
+            "lat": 41.837,
+            "lon": -87.6849,
+            "name": "Chicago",
+            "p": 0.6758,
+            "state": "IL"
+          },
+          {
+            "lat": 38.6357,
+            "lon": -90.2446,
+            "name": "St. Louis",
+            "p": 0.1485,
+            "state": "MO"
+          }
+        ],
+        "b": {
+          "choice": "a",
+          "label": "soda",
+          "national": 52.97,
+          "survey": "soda"
+        },
+        "id": "pop",
+        "lineKm": 14233.6,
+        "note": "The best known boundary in American English, and one of the softest. St. Louis is a soda island inside pop country, and the map shows the odds sliding rather than switching.",
+        "question": "105",
+        "questionText": "What is your generic term for a sweetened carbonated beverage?",
+        "shareA": 0.4201,
+        "widthKm": 265.8
+      },
+      {
+        "a": {
+          "choice": "a",
+          "label": "lightning bug",
+          "national": 29.07,
+          "survey": "lightning bug"
+        },
+        "anchors": [
+          {
+            "lat": 33.7629,
+            "lon": -84.4227,
+            "name": "Atlanta",
+            "p": 0.843,
+            "state": "GA"
+          },
+          {
+            "lat": 42.3385,
+            "lon": -71.0182,
+            "name": "Boston",
+            "p": 0.1515,
+            "state": "MA"
+          }
+        ],
+        "b": {
+          "choice": "b",
+          "label": "firefly",
+          "national": 30.43,
+          "survey": "firefly"
+        },
+        "id": "lightning-bug",
+        "lineKm": 12411.9,
+        "note": "An almost even national split, which is what makes it useless for locating anybody and interesting to look at: the country divides in half along a frontier hundreds of miles deep.",
+        "question": "65",
+        "questionText": "What do you call the insect that flies around in the summer and has a rear section that glows in the dark?",
+        "shareA": 0.4684,
+        "widthKm": 276.1
+      },
+      {
+        "a": {
+          "choice": "d",
+          "label": "catty-corner",
+          "national": 30.38,
+          "survey": "catty-corner"
+        },
+        "anchors": [
+          {
+            "lat": 33.7629,
+            "lon": -84.4227,
+            "name": "Atlanta",
+            "p": 0.7011,
+            "state": "GA"
+          },
+          {
+            "lat": 44.9633,
+            "lon": -93.2683,
+            "name": "Minneapolis",
+            "p": 0.0614,
+            "state": "MN"
+          }
+        ],
+        "b": {
+          "choice": "a",
+          "label": "kitty-corner",
+          "national": 49.53,
+          "survey": "kitty-corner"
+        },
+        "id": "catty-corner",
+        "lineKm": 8648.1,
+        "note": "The widest boundary published here, and close to no boundary at all. Both forms are used across most of the country; the preference drifts rather than changing.",
+        "question": "76",
+        "questionText": "What term do you use to refer to something that is across both streets from you at an intersection (or diagonally across from you in general)?",
+        "shareA": 0.4313,
+        "widthKm": 442.9
+      }
+    ],
+    "odds": 3
+  },
+  "models": {
+    "deployed": "bayes(rho=0)",
+    "discounted": "bayes(rho=.177)",
+    "net": "net"
+  },
+  "popVsSoda": {
+    "categorised": 294079,
+    "counties": 3076,
+    "offByOne": 1,
+    "sourceTotal": 294080
+  },
+  "quantisation": {
+    "games": 300,
+    "identicalPct": 87.7,
+    "maxKm": 61.2,
+    "moved": 37,
+    "questionsAsked": 14,
+    "worstRatio": 0.9712
+  },
+  "questions": [
+    {
+      "bits": 0.5804,
+      "choices": [
+        {
+          "id": "a",
+          "text": "soda"
+        },
+        {
+          "id": "b",
+          "text": "pop"
+        },
+        {
+          "id": "c",
+          "text": "coke"
+        },
+        {
+          "id": "d",
+          "text": "tonic"
+        },
+        {
+          "id": "e",
+          "text": "soft drink"
+        },
+        {
+          "id": "f",
+          "text": "lemonade"
+        },
+        {
+          "id": "g",
+          "text": "cocola"
+        },
+        {
+          "id": "h",
+          "text": "fizzy drink"
+        },
+        {
+          "id": "i",
+          "text": "dope"
+        },
+        {
+          "id": "j",
+          "text": "other"
+        }
+      ],
+      "id": "105",
+      "n": 1,
+      "text": "What is your generic term for a sweetened carbonated beverage?"
+    },
+    {
+      "bits": 0.4514,
+      "choices": [
+        {
+          "id": "a",
+          "text": "pill bug"
+        },
+        {
+          "id": "b",
+          "text": "doodle bug"
+        },
+        {
+          "id": "c",
+          "text": "potato bug"
+        },
+        {
+          "id": "d",
+          "text": "roly poly"
+        },
+        {
+          "id": "e",
+          "text": "sow bug"
+        },
+        {
+          "id": "f",
+          "text": "basketball bug"
+        },
+        {
+          "id": "g",
+          "text": "twiddle bug"
+        },
+        {
+          "id": "h",
+          "text": "roll-up bug"
+        },
+        {
+          "id": "i",
+          "text": "wood louse"
+        },
+        {
+          "id": "j",
+          "text": "millipede"
+        },
+        {
+          "id": "k",
+          "text": "centipede"
+        },
+        {
+          "id": "l",
+          "text": "I know what this creature is, but have no word for it"
+        }
+      ],
+      "id": "74",
+      "n": 2,
+      "text": "What do you call the little gray creature (that looks like an insect but is actually a crustacean) that rolls up into a ball when you touch it?"
+    },
+    {
+      "bits": 0.4033,
+      "choices": [
+        {
+          "id": "a",
+          "text": "New York City"
+        },
+        {
+          "id": "b",
+          "text": "Boston"
+        },
+        {
+          "id": "c",
+          "text": "DC"
+        },
+        {
+          "id": "d",
+          "text": "LA"
+        },
+        {
+          "id": "e",
+          "text": "Chicago"
+        },
+        {
+          "id": "f",
+          "text": "other"
+        }
+      ],
+      "id": "95",
+      "n": 3,
+      "text": "What is \"the City\"?"
+    },
+    {
+      "bits": 0.3675,
+      "choices": [
+        {
+          "id": "a",
+          "text": "frontage road"
+        },
+        {
+          "id": "b",
+          "text": "service road"
+        },
+        {
+          "id": "c",
+          "text": "access road"
+        },
+        {
+          "id": "d",
+          "text": "feeder road"
+        },
+        {
+          "id": "e",
+          "text": "gateway"
+        },
+        {
+          "id": "f",
+          "text": "we have them but I have no word for them"
+        },
+        {
+          "id": "g",
+          "text": "I've never heard of this concept"
+        },
+        {
+          "id": "h",
+          "text": "other"
+        }
+      ],
+      "id": "99",
+      "n": 4,
+      "text": "Which of these terms do you prefer for the small road parallel to the highway?"
+    },
+    {
+      "bits": 0.448,
+      "choices": [
+        {
+          "id": "a",
+          "text": "tp'ing"
+        },
+        {
+          "id": "b",
+          "text": "rolling"
+        },
+        {
+          "id": "c",
+          "text": "toilet papering"
+        },
+        {
+          "id": "d",
+          "text": "wrapping"
+        },
+        {
+          "id": "e",
+          "text": "papering"
+        },
+        {
+          "id": "f",
+          "text": "bog rolling"
+        },
+        {
+          "id": "g",
+          "text": "I have no word for this"
+        },
+        {
+          "id": "h",
+          "text": "other"
+        }
+      ],
+      "id": "106",
+      "n": 5,
+      "text": "What do you call the act of covering a house or area in front of a house with toilet paper?"
+    },
+    {
+      "bits": 0.3441,
+      "choices": [
+        {
+          "id": "a",
+          "text": "gate night"
+        },
+        {
+          "id": "b",
+          "text": "trick night"
+        },
+        {
+          "id": "c",
+          "text": "mischief night"
+        },
+        {
+          "id": "d",
+          "text": "cabbage night"
+        },
+        {
+          "id": "e",
+          "text": "goosy night"
+        },
+        {
+          "id": "f",
+          "text": "devil's night"
+        },
+        {
+          "id": "g",
+          "text": "devil's eve"
+        },
+        {
+          "id": "h",
+          "text": "I have no word for this"
+        },
+        {
+          "id": "i",
+          "text": "other"
+        }
+      ],
+      "id": "110",
+      "n": 6,
+      "text": "What do you call the night before Halloween?"
+    },
+    {
+      "bits": 0.3424,
+      "choices": [
+        {
+          "id": "a",
+          "text": "highway"
+        },
+        {
+          "id": "b",
+          "text": "freeway"
+        },
+        {
+          "id": "c",
+          "text": "parkway"
+        },
+        {
+          "id": "d",
+          "text": "turnpike"
+        },
+        {
+          "id": "e",
+          "text": "expressway"
+        },
+        {
+          "id": "f",
+          "text": "throughway/thru-way"
+        },
+        {
+          "id": "g",
+          "text": "a freeway is bigger than a highway"
+        },
+        {
+          "id": "h",
+          "text": "a freeway is free (i.e., doesn't charge tolls); a highway isn't"
+        },
+        {
+          "id": "i",
+          "text": "a freeway has limited access (no stop lights, no intersections), whereas a highway can have stop lights and intersections"
+        },
+        {
+          "id": "j",
+          "text": "other"
+        }
+      ],
+      "id": "79",
+      "n": 7,
+      "text": "What is your *general* term for a big road that you drive relatively fast on?"
+    },
+    {
+      "bits": 0.3095,
+      "choices": [
+        {
+          "id": "a",
+          "text": "sub"
+        },
+        {
+          "id": "b",
+          "text": "grinder"
+        },
+        {
+          "id": "c",
+          "text": "hoagie"
+        },
+        {
+          "id": "d",
+          "text": "hero"
+        },
+        {
+          "id": "e",
+          "text": "poor boy"
+        },
+        {
+          "id": "f",
+          "text": "bomber"
+        },
+        {
+          "id": "g",
+          "text": "Italian sandwich"
+        },
+        {
+          "id": "h",
+          "text": "baguette"
+        },
+        {
+          "id": "i",
+          "text": "sarney"
+        },
+        {
+          "id": "j",
+          "text": "I have no word for this"
+        },
+        {
+          "id": "k",
+          "text": "other"
+        }
+      ],
+      "id": "64",
+      "n": 8,
+      "text": "What do you call the long sandwich that contains cold cuts, lettuce, and so on?"
+    },
+    {
+      "bits": 0.2901,
+      "choices": [
+        {
+          "id": "a",
+          "text": "brew thru"
+        },
+        {
+          "id": "b",
+          "text": "party barn"
+        },
+        {
+          "id": "c",
+          "text": "bootlegger"
+        },
+        {
+          "id": "d",
+          "text": "beer barn"
+        },
+        {
+          "id": "e",
+          "text": "beverage barn"
+        },
+        {
+          "id": "f",
+          "text": "we have these in my area, but we have no special term for them"
+        },
+        {
+          "id": "g",
+          "text": "I have never heard of such a thing"
+        },
+        {
+          "id": "h",
+          "text": "other"
+        }
+      ],
+      "id": "118",
+      "n": 9,
+      "text": "What do you call a drive-through liquor store?"
+    },
+    {
+      "bits": 0.2628,
+      "choices": [
+        {
+          "id": "a",
+          "text": "tag sale"
+        },
+        {
+          "id": "b",
+          "text": "yard sale"
+        },
+        {
+          "id": "c",
+          "text": "garage sale"
+        },
+        {
+          "id": "d",
+          "text": "rummage sale"
+        },
+        {
+          "id": "e",
+          "text": "thrift sale"
+        },
+        {
+          "id": "f",
+          "text": "stoop sale"
+        },
+        {
+          "id": "g",
+          "text": "carport sale"
+        },
+        {
+          "id": "h",
+          "text": "sidewalk sale"
+        },
+        {
+          "id": "i",
+          "text": "jumble (sale)"
+        },
+        {
+          "id": "j",
+          "text": "car boot sale"
+        },
+        {
+          "id": "k",
+          "text": "car boot"
+        },
+        {
+          "id": "l",
+          "text": "patio sale"
+        }
+      ],
+      "id": "58",
+      "n": 10,
+      "text": "Which of these terms do you prefer for a sale of unwanted items on your porch, in your yard, etc.?"
+    },
+    {
+      "bits": 0.2764,
+      "choices": [
+        {
+          "id": "a",
+          "text": "crawfish"
+        },
+        {
+          "id": "b",
+          "text": "crayfish"
+        },
+        {
+          "id": "c",
+          "text": "craw"
+        },
+        {
+          "id": "d",
+          "text": "crowfish"
+        },
+        {
+          "id": "e",
+          "text": "crawdad"
+        },
+        {
+          "id": "f",
+          "text": "mudbug"
+        },
+        {
+          "id": "g",
+          "text": "I have no word for this critter"
+        },
+        {
+          "id": "h",
+          "text": "other"
+        }
+      ],
+      "id": "66",
+      "n": 11,
+      "text": "What do you call the miniature lobster that one finds in lakes and streams for example (a crustacean of the family Astacidae)?"
+    },
+    {
+      "bits": 0.2906,
+      "choices": [
+        {
+          "id": "a",
+          "text": "kitty-corner"
+        },
+        {
+          "id": "b",
+          "text": "kitacorner"
+        },
+        {
+          "id": "c",
+          "text": "catercorner"
+        },
+        {
+          "id": "d",
+          "text": "catty-corner"
+        },
+        {
+          "id": "e",
+          "text": "kitty cross"
+        },
+        {
+          "id": "f",
+          "text": "kitty wampus"
+        },
+        {
+          "id": "g",
+          "text": "I can only use \"diagonal\" for this"
+        },
+        {
+          "id": "h",
+          "text": "I have no term for this"
+        },
+        {
+          "id": "i",
+          "text": "other"
+        }
+      ],
+      "id": "76",
+      "n": 12,
+      "text": "What term do you use to refer to something that is across both streets from you at an intersection (or diagonally across from you in general)?"
+    },
+    {
+      "bits": 0.357,
+      "choices": [
+        {
+          "id": "a",
+          "text": "sneakers"
+        },
+        {
+          "id": "b",
+          "text": "shoes"
+        },
+        {
+          "id": "c",
+          "text": "gymshoes"
+        },
+        {
+          "id": "d",
+          "text": "sand shoes"
+        },
+        {
+          "id": "e",
+          "text": "jumpers"
+        },
+        {
+          "id": "f",
+          "text": "tennis shoes"
+        },
+        {
+          "id": "g",
+          "text": "running shoes"
+        },
+        {
+          "id": "h",
+          "text": "runners"
+        },
+        {
+          "id": "i",
+          "text": "trainers"
+        },
+        {
+          "id": "j",
+          "text": "I have no general word for this"
+        },
+        {
+          "id": "k",
+          "text": "other"
+        }
+      ],
+      "id": "73",
+      "n": 13,
+      "text": "What is your *general* term for the rubber-soled shoes worn in gym class, for athletic activities, etc.?"
+    },
+    {
+      "bits": 0.2543,
+      "choices": [
+        {
+          "id": "a",
+          "text": "lightning bug"
+        },
+        {
+          "id": "b",
+          "text": "firefly"
+        },
+        {
+          "id": "c",
+          "text": "I use lightning bug and firefly interchangeably"
+        },
+        {
+          "id": "d",
+          "text": "peenie wallie"
+        },
+        {
+          "id": "e",
+          "text": "I have no word for this"
+        },
+        {
+          "id": "f",
+          "text": "other"
+        }
+      ],
+      "id": "65",
+      "n": 14,
+      "text": "What do you call the insect that flies around in the summer and has a rear section that glows in the dark?"
+    },
+    {
+      "bits": 0.3659,
+      "choices": [
+        {
+          "id": "a",
+          "text": "you all"
+        },
+        {
+          "id": "b",
+          "text": "yous, youse"
+        },
+        {
+          "id": "c",
+          "text": "you lot"
+        },
+        {
+          "id": "d",
+          "text": "you guys"
+        },
+        {
+          "id": "e",
+          "text": "you 'uns"
+        },
+        {
+          "id": "f",
+          "text": "yins"
+        },
+        {
+          "id": "g",
+          "text": "you"
+        },
+        {
+          "id": "h",
+          "text": "other"
+        },
+        {
+          "id": "i",
+          "text": "y'all"
+        }
+      ],
+      "id": "50",
+      "n": 15,
+      "text": "What word(s) do you use to address a group of two or more people?"
+    },
+    {
+      "bits": 0.2716,
+      "choices": [
+        {
+          "id": "a",
+          "text": "rotary"
+        },
+        {
+          "id": "b",
+          "text": "roundabout"
+        },
+        {
+          "id": "c",
+          "text": "circle"
+        },
+        {
+          "id": "d",
+          "text": "traffic circle"
+        },
+        {
+          "id": "e",
+          "text": "traffic circus"
+        },
+        {
+          "id": "f",
+          "text": "I have no word for this"
+        },
+        {
+          "id": "g",
+          "text": "other"
+        }
+      ],
+      "id": "84",
+      "n": 16,
+      "text": "What do you call a traffic situation in which several roads meet in a circle and you have to get off at a certain point?"
+    },
+    {
+      "bits": 0.1443,
+      "choices": [
+        {
+          "id": "a",
+          "text": "mumblety-peg"
+        },
+        {
+          "id": "b",
+          "text": "mumbledy-peg"
+        },
+        {
+          "id": "c",
+          "text": "mumbly peg"
+        },
+        {
+          "id": "d",
+          "text": "mumbly pegs"
+        },
+        {
+          "id": "e",
+          "text": "mumblely peg (with 2 l's)"
+        },
+        {
+          "id": "f",
+          "text": "mumble peg"
+        },
+        {
+          "id": "g",
+          "text": "mummety-peg"
+        },
+        {
+          "id": "h",
+          "text": "mumble-the-peg"
+        },
+        {
+          "id": "i",
+          "text": "fumbledy peg"
+        },
+        {
+          "id": "j",
+          "text": "numblety peg"
+        },
+        {
+          "id": "k",
+          "text": "peggy"
+        },
+        {
+          "id": "l",
+          "text": "baseball jackknife"
+        }
+      ],
+      "id": "59",
+      "n": 17,
+      "text": "What do you call the game wherein the participants see who can throw a knife closest to the other person (or alternately, get a jackknife to stick into the ground or a piece of wood)?"
+    },
+    {
+      "bits": 0.1833,
+      "choices": [
+        {
+          "id": "a",
+          "text": "berm"
+        },
+        {
+          "id": "b",
+          "text": "parking"
+        },
+        {
+          "id": "c",
+          "text": "tree lawn"
+        },
+        {
+          "id": "d",
+          "text": "terrace"
+        },
+        {
+          "id": "e",
+          "text": "curb strip"
+        },
+        {
+          "id": "f",
+          "text": "beltway"
+        },
+        {
+          "id": "g",
+          "text": "verge"
+        },
+        {
+          "id": "h",
+          "text": "I have no word for this"
+        },
+        {
+          "id": "i",
+          "text": "other"
+        }
+      ],
+      "id": "60",
+      "n": 18,
+      "text": "What do you call the area of grass between the sidewalk and the road?"
+    },
+    {
+      "bits": 0.2703,
+      "choices": [
+        {
+          "id": "a",
+          "text": "gut"
+        },
+        {
+          "id": "b",
+          "text": "crypt course"
+        },
+        {
+          "id": "c",
+          "text": "crip course"
+        },
+        {
+          "id": "d",
+          "text": "bird"
+        },
+        {
+          "id": "e",
+          "text": "blow-off"
+        },
+        {
+          "id": "f",
+          "text": "meat"
+        },
+        {
+          "id": "g",
+          "text": "other"
+        }
+      ],
+      "id": "83",
+      "n": 19,
+      "text": "What do you call an easy course?"
+    },
+    {
+      "bits": 0.347,
+      "choices": [
+        {
+          "id": "a",
+          "text": "bubbler"
+        },
+        {
+          "id": "b",
+          "text": "water bubbler"
+        },
+        {
+          "id": "c",
+          "text": "drinking fountain"
+        },
+        {
+          "id": "d",
+          "text": "water fountain"
+        },
+        {
+          "id": "e",
+          "text": "other"
+        }
+      ],
+      "id": "103",
+      "n": 20,
+      "text": "What do you call the thing from which you might drink water in a school?"
+    },
+    {
+      "bits": 0.2185,
+      "choices": [
+        {
+          "id": "a",
+          "text": "rubberneck"
+        },
+        {
+          "id": "b",
+          "text": "rubbernecking"
+        },
+        {
+          "id": "c",
+          "text": "rubbernecking is the activity (slowing down and gawking) that causes the traffic jam, but I have no word for the traffic jam itself"
+        },
+        {
+          "id": "d",
+          "text": "gapers' block"
+        },
+        {
+          "id": "e",
+          "text": "gapers' delay"
+        },
+        {
+          "id": "f",
+          "text": "Lookie Lou"
+        },
+        {
+          "id": "g",
+          "text": "curiosity delay"
+        },
+        {
+          "id": "h",
+          "text": "gawk block"
+        },
+        {
+          "id": "i",
+          "text": "I have no word for this"
+        },
+        {
+          "id": "j",
+          "text": "other"
+        }
+      ],
+      "id": "107",
+      "n": 21,
+      "text": "What do you call a traffic jam caused by drivers slowing down to look at an accident or other diversion on the side of the road?"
+    },
+    {
+      "bits": 0.1694,
+      "choices": [
+        {
+          "id": "a",
+          "text": "spicket"
+        },
+        {
+          "id": "b",
+          "text": "spigot"
+        },
+        {
+          "id": "c",
+          "text": "I use both interchangeably"
+        },
+        {
+          "id": "d",
+          "text": "I say \"spicket\" but spell it \"spigot\""
+        },
+        {
+          "id": "e",
+          "text": "I use both with different meanings (please explain how in the comments box)"
+        },
+        {
+          "id": "f",
+          "text": "I don't use either version of this word"
+        },
+        {
+          "id": "g",
+          "text": "other"
+        }
+      ],
+      "id": "41",
+      "n": 22,
+      "text": "Do you use \"spigot\" or \"spicket\" to refer to a faucet or tap that water comes out of?"
+    },
+    {
+      "bits": 0.2899,
+      "choices": [
+        {
+          "id": "a",
+          "text": "sunshower"
+        },
+        {
+          "id": "b",
+          "text": "the wolf is giving birth"
+        },
+        {
+          "id": "c",
+          "text": "the devil is beating his wife"
+        },
+        {
+          "id": "d",
+          "text": "monkey's wedding"
+        },
+        {
+          "id": "e",
+          "text": "fox's wedding"
+        },
+        {
+          "id": "f",
+          "text": "pineapple rain"
+        },
+        {
+          "id": "g",
+          "text": "liquid sun"
+        },
+        {
+          "id": "h",
+          "text": "I have no term or expression for this"
+        },
+        {
+          "id": "i",
+          "text": "other"
+        }
+      ],
+      "id": "80",
+      "n": 23,
+      "text": "What do you call it when rain falls while the sun is shining?"
+    },
+    {
+      "bits": 0.2417,
+      "choices": [
+        {
+          "id": "a",
+          "text": "the subway"
+        },
+        {
+          "id": "b",
+          "text": "the L, or the El"
+        },
+        {
+          "id": "c",
+          "text": "the T"
+        },
+        {
+          "id": "d",
+          "text": "the metro"
+        },
+        {
+          "id": "e",
+          "text": "BART"
+        },
+        {
+          "id": "f",
+          "text": "other"
+        }
+      ],
+      "id": "104",
+      "n": 24,
+      "text": "What do you call a public railway system (normally underground)?"
+    },
+    {
+      "bits": 0.1508,
+      "choices": [
+        {
+          "id": "a",
+          "text": "crackling"
+        },
+        {
+          "id": "b",
+          "text": "sleep"
+        },
+        {
+          "id": "c",
+          "text": "sleeper"
+        },
+        {
+          "id": "d",
+          "text": "sleepy"
+        },
+        {
+          "id": "e",
+          "text": "sleepies"
+        },
+        {
+          "id": "f",
+          "text": "sleepy seed"
+        },
+        {
+          "id": "g",
+          "text": "sleepy bugs"
+        },
+        {
+          "id": "h",
+          "text": "eye booger"
+        },
+        {
+          "id": "i",
+          "text": "eye shit"
+        },
+        {
+          "id": "j",
+          "text": "eye crunchie"
+        },
+        {
+          "id": "k",
+          "text": "eye crusties"
+        },
+        {
+          "id": "l",
+          "text": "sand"
+        }
+      ],
+      "id": "82",
+      "n": 25,
+      "text": "What do you call the gooey or dry matter that collects in the corners of your eyes, especially while you are sleeping?"
+    },
+    {
+      "bits": 0.1999,
+      "choices": [
+        {
+          "id": "a",
+          "text": "[pi:k\u00e6n] with stress on the first syllable (\"PEE-can\")"
+        },
+        {
+          "id": "b",
+          "text": "[pi:k\u00e6n] with stress on the second syllable (\"pee-CAN\")"
+        },
+        {
+          "id": "c",
+          "text": "[pi:k\u0251n] with stress on the first syllable (\"PEE-Kahn\")"
+        },
+        {
+          "id": "d",
+          "text": "[pi:k\u0251n] with stress on the second syllable (\"pee-KAHN\")"
+        },
+        {
+          "id": "e",
+          "text": "[p\u026ak\u00e6n] (\"pick Ann\")"
+        },
+        {
+          "id": "f",
+          "text": "[p\u026ak\u0251n] (\"pick Ahn\")"
+        },
+        {
+          "id": "g",
+          "text": "I pronounce it differently when it's alone than when it's in a compound like \"pecan pie\" (please state how you pronounce the two variants in the comments box)"
+        },
+        {
+          "id": "h",
+          "text": "other"
+        }
+      ],
+      "id": "21",
+      "n": 26,
+      "text": "pecan"
+    },
+    {
+      "bits": 0.1889,
+      "choices": [
+        {
+          "id": "a",
+          "text": "[\u0251] as in \"ah\""
+        },
+        {
+          "id": "b",
+          "text": "[\u00e6] as in \"ant\""
+        },
+        {
+          "id": "c",
+          "text": "[\u0254] as in \"caught\""
+        },
+        {
+          "id": "d",
+          "text": "I have the same vowel in \"ah\", \"caught\", and \"aunt\""
+        },
+        {
+          "id": "e",
+          "text": "I pronounce it the same as \"ain't\""
+        },
+        {
+          "id": "f",
+          "text": "I use [\u0251/\u0254] when referring to the general concept of an aunt, but [\u00e6] when referring to a specific person by name."
+        },
+        {
+          "id": "g",
+          "text": "I use [\u00e6] when referring to the general concept of an aunt, but [\u0251/\u0254] when referring to a specific person by name."
+        },
+        {
+          "id": "h",
+          "text": "other"
+        }
+      ],
+      "id": "1",
+      "n": 27,
+      "text": "aunt"
+    },
+    {
+      "bits": 0.1722,
+      "choices": [
+        {
+          "id": "a",
+          "text": "boulevard"
+        },
+        {
+          "id": "b",
+          "text": "midway"
+        },
+        {
+          "id": "c",
+          "text": "traffic island"
+        },
+        {
+          "id": "d",
+          "text": "island"
+        },
+        {
+          "id": "e",
+          "text": "neutral ground"
+        },
+        {
+          "id": "f",
+          "text": "I have no word for this"
+        },
+        {
+          "id": "g",
+          "text": "other"
+        }
+      ],
+      "id": "61",
+      "n": 28,
+      "text": "What do you call the area of grass that occurs in the middle of some streets?"
+    },
+    {
+      "bits": 0.1161,
+      "choices": [
+        {
+          "id": "a",
+          "text": "waterbug"
+        },
+        {
+          "id": "b",
+          "text": "Jesus bug"
+        },
+        {
+          "id": "c",
+          "text": "waterstrider"
+        },
+        {
+          "id": "d",
+          "text": "strider"
+        },
+        {
+          "id": "e",
+          "text": "water-spider"
+        },
+        {
+          "id": "f",
+          "text": "watercrawler"
+        },
+        {
+          "id": "g",
+          "text": "water beetle"
+        },
+        {
+          "id": "h",
+          "text": "backstrider"
+        },
+        {
+          "id": "i",
+          "text": "skimmer"
+        },
+        {
+          "id": "j",
+          "text": "I have no word for this"
+        },
+        {
+          "id": "k",
+          "text": "other"
+        }
+      ],
+      "id": "102",
+      "n": 29,
+      "text": "What do you call the insect that looks like a large thin spider and skitters along the top of water?"
+    },
+    {
+      "bits": 0.1429,
+      "choices": [
+        {
+          "id": "a",
+          "text": "trash can"
+        },
+        {
+          "id": "b",
+          "text": "garbage can"
+        },
+        {
+          "id": "c",
+          "text": "rubbish bin"
+        },
+        {
+          "id": "d",
+          "text": "waste(paper) basket"
+        },
+        {
+          "id": "e",
+          "text": "These words refer to different things"
+        },
+        {
+          "id": "f",
+          "text": "other"
+        }
+      ],
+      "id": "97",
+      "n": 30,
+      "text": "Which of these terms do you prefer?"
+    }
+  ],
+  "recovery": {
+    "comparisons": 28513,
+    "mae": 5.6,
+    "modalAgreement": 87.6,
+    "r": 0.955
+  },
+  "recoveryStrip": {
+    "answer": "pop",
+    "choice": "b",
+    "colour": "blue",
+    "inkedPixels": 9894,
+    "question": "105",
+    "stages": [
+      {
+        "file": "0_published.png",
+        "kind": "rgb",
+        "name": "As published",
+        "note": "One dot per respondent who said \u201cpop\u201d, plotted at their ZIP centroid. This image is the whole surviving record; the coordinates behind it were never released."
+      },
+      {
+        "file": "1_ink.png",
+        "kind": "mask",
+        "name": "Ink, un-blended",
+        "note": "Each dot was drawn in a known colour over white and antialiased, so an edge pixel is a mixture of the two. Solving that mixture recovers what fraction of the pixel was covered, and rejects basemap grey and other answers' colours."
+      },
+      {
+        "file": "2_density.png",
+        "kind": "mask",
+        "name": "Density, saturation corrected",
+        "note": "Where respondents are dense the dots merge and coverage saturates, which flattens cities. Treating respondents as Poisson within a small window, expected coverage is 1\u2212e^(\u2212\u03bb), so \u2212ln(1\u2212f) undoes it and gives back relative density."
+      },
+      {
+        "file": "3_surface.png",
+        "kind": "mask",
+        "name": "What the model uses",
+        "note": "Smoothed at a bandwidth chosen by cross-validation, restricted to land, and turned into a probability of this answer given the place. This is the surface the quiz above adds up."
+      }
+    ]
+  },
+  "tuning": {
+    "gridMinimum": 0.71826,
+    "logloss": 0.7234
+  }
+}

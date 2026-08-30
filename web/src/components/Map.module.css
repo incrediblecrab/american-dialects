@@ -1,0 +1,27 @@
+.figure {
+  margin: 0;
+}
+
+.wrap {
+  position: relative;
+  width: 100%;
+  background: var(--paper-sunk);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  margin-top: var(--sp-3);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  line-height: 1.5;
+  color: var(--ink-3);
+  text-wrap: pretty;
+}

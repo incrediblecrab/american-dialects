@@ -1,0 +1,66 @@
+.ladder {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  counter-reset: rung;
+}
+
+.rung {
+  padding: var(--sp-5) 0;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  gap: var(--sp-2);
+}
+
+@media (min-width: 52rem) {
+  .rung {
+    grid-template-columns: 13rem minmax(0, 1fr);
+    column-gap: var(--sp-6);
+    align-items: start;
+  }
+  .tier,
+  .tierWarn {
+    grid-row: span 2;
+  }
+}
+
+.tier,
+.tierWarn {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  line-height: 1.35;
+  color: var(--ink-3);
+  padding-top: 0.35em;
+}
+
+.tierWarn {
+  color: var(--warn);
+}
+
+.claim {
+  margin: 0;
+  font-size: var(--step-1);
+  line-height: 1.22;
+}
+
+.detail {
+  margin: 0;
+  color: var(--ink-2);
+  font-size: var(--step--1);
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+.wall {
+  border-top-color: var(--warn);
+}
+
+.wall .claim {
+  color: var(--ink);
+}

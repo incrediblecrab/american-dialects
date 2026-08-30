@@ -65,13 +65,25 @@ KS = [5, 8, 12, 16, 20]
 
 
 def deployed_questions(n=20, path=None):
-    path = path or DATA / "model" / "question_order.csv"
+    """The first n questions of the deployed ordering.
+
+    Raises when the ordering file is shorter than n rather than returning a
+    short list. Silently truncating is worse than failing here: a caller asking
+    for thirty questions from a twenty-row file would get twenty, and a curve
+    computed over that would report k=21..30 as flat when in fact no new
+    question was ever added.
+    """
+    path = Path(path) if path else DATA / "model" / "question_order.csv"
     out = []
     with open(path, encoding="utf-8") as f:
         for r in csv.DictReader(f):
             out.append(r["question"])
             if len(out) >= n:
                 break
+    if len(out) < n:
+        raise ValueError(
+            f"{path.name} has {len(out)} questions, {n} requested. "
+            f"Re-derive a longer ordering with choose.py --questions {n}.")
     return out
 
 

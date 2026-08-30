@@ -1,0 +1,122 @@
+uwm_question,hds_question,ratio,confidence,method,uwm_text,hds_text
+543,1,0.82,medium,contain,How do you pronounce aunt?,aunt
+150,3,0.5769,low,sm,How do you pronounce the first vowel in bouquet?,"the first vowel in ""Bowie knife"""
+102,4,0.82,medium,contain,How do you pronounce caramel?,caramel
+153,5,0.8684,high,sm,How do you pronounce the vowel in the second syllable of cauliflower?,"the vowel in the second syllable of ""cauliflower"""
+351,6,0.82,medium,contain,How do you pronounce the last vowel sound in centaur?,"the last vowel in ""centaur"""
+175,7,0.3636,low,sm,How do you pronounce almond?,coupon
+25,8,0.4,low,sm,Do you pronounce “which” and “witch” the same?,Craig (the name)
+26,9,0.3478,low,sm,How do you pronounce younger?,crayon
+300,10,0.4359,low,sm,"When a small sharp fragment of wood gets stuck in your finger, you have a —",creek (a small body of running water)
+18,11,0.6087,low,sm,How do you pronounce the first vowel in sorry?,"the first vowel in ""Florida"""
+467,12,0.3846,low,sm,How do you pronounce asterisk?,flourish
+351,13,0.5263,low,sm,How do you pronounce the last vowel sound in centaur?,"the last vowel in ""handkerchief"""
+302,14,0.4286,low,sm,What is a waterbug?,lawyer
+102,15,0.6512,low,sm,How do you pronounce caramel?,How do you pronounce Mary/merry/marry?
+160,16,0.5,low,sm,How do you pronounce vase?,mayonnaise
+113,17,0.6122,low,sm,How do you pronounce the first vowel in treasure?,"the first vowel in ""miracle"""
+427,18,0.3704,low,sm,"I know you think I broke your favorite vase intentionally, but I swear I did it ….",mischievous vs. mischievious
+461,19,0.5079,low,sm,How do you pronounce the last vowel sound in turbine?,"the final vowel in ""Monday,"" ""Friday,"" etc."
+51,20,0.625,low,sm,How do you pronounce the second vowel in again?,"the second vowel in ""pajamas"""
+301,21,0.5,low,sm,What is a spa?,pecan
+123,22,0.82,reject,contain,What about “used to could” to mean “used to be able to” (as in “I used to could recite the entire poem from memory”)?,poem
+343,23,0.82,reject,contain,What do you call a small hard rubber ball that is designed to bounce really high?,really
+351,24,0.4407,low,sm,How do you pronounce the last vowel sound in centaur?,realtor (a real estate agent)
+174,25,0.6087,low,sm,How do you pronounce the vowel in room and broom?,"roof, room, broom, root"
+26,26,0.5556,low,sm,How do you pronounce younger?,"route (as in, ""the route from one place to another"")"
+18,27,0.6364,low,sm,How do you pronounce the first vowel in sorry?,"the first vowel in ""syrup"""
+25,28,0.7556,reject,sm,Do you pronounce “which” and “witch” the same?,"Do you pronounce ""cot"" and ""caught"" the same?"
+175,29,0.82,medium,contain,How do you pronounce almond?,almond
+466,30,0.82,medium,contain,How do you pronounce the “s” in anniversary?,"the ""s"" in ""anniversary"""
+467,31,0.82,medium,contain,How do you pronounce asterisk?,asterisk
+315,32,0.82,medium,contain,How do you pronounce candidate?,candidate
+63,33,0.4167,low,sm,How do you pronounce sure?,"the ""s"" in ""chromosome"""
+251,34,0.4,low,sm,How do you pronounce cement?,et cetera
+287,35,0.5283,low,sm,How do you pronounce the last consonant in blouse?,"the final consonant in ""garage"""
+346,36,0.82,reject,contain,What’s the difference between a supermarket and a grocery store?,"the ""c"" in ""grocery"""
+357,37,0.3704,low,sm,Do you pronounce the word “across” as “acrost”?,"huge, humor, humongous, human..."
+466,38,0.4286,low,sm,How do you pronounce the “s” in anniversary?,"the ""s"" in ""nursery"""
+113,39,0.3774,low,sm,How do you pronounce the first vowel in treasure?,"the ""s"" in the last name of Elvis Presley"
+391,40,0.82,reject,contain,"What do you call the athletic activity where you run from one end of the gym/field/court one quarter of the way to the other end, and back, and then halfway across and back, then three quarters of the way and back, and then all the way to the other end and back?",quarter
+138,41,0.4156,low,sm,What do you call the thing from which you might drink water in a school?,"Do you use ""spigot"" or ""spicket"" to refer to a faucet or tap that water comes out of?"
+71,42,0.82,medium,contain,How do you pronounce strength?,strength
+287,43,0.5385,low,sm,How do you pronounce the last consonant in blouse?,"the final consonant in ""Texas"""
+229,44,0.5,low,sm,Would you say “where are you at?” to mean “where are you?,cream cheese
+151,45,0.4545,low,sm,How do you pronounce bag?,insurance
+40,46,0.4286,low,sm,What do you call the level of a building that is partly or entirely underground?,New Haven (the city in Connecticut where Yale University is located)
+149,47,0.4375,low,sm,"What does “wait on” mean, as in “We’re waiting on you”?",Thanksgiving
+423,48,0.82,medium,contain,How do you pronounce umbrella?,umbrella
+434,49,0.4,low,sm,Which term do you use for a small harmless striped snake?,I ____ her lifeless body from the pool
+130,50,0.8406,medium,sm,"What do you use to address a group of two or more people (as in, “what are … doing?”)?",What word(s) do you use to address a group of two or more people?
+511,51,0.4634,low,sm,Which of the following elements of meaning does the word swarthy contain for you?,"Would you say ""Are you coming with?"" as a full sentence, to mean ""Are you coming with us?"""
+229,52,1.0,verbatim,sm,Would you say “where are you at?” to mean “where are you?,"Would you say ""where are you at?"" to mean ""where are you?"""
+329,53,0.3626,low,sm,Which sounds better: “I don’t have any cash to hand right now” or “I don’t have any cash at hand right now”?,"Modals are words like ""can,"" ""could,"" ""might,"" ""ought to,"" and so on. Can you use more than one modal at a time? (e.g., ""I might could do that"" to mean ""I might be able to do that""; or ""I used to could do that"" to mean ""I used to be able to do that"")"
+94,54,1.0,verbatim,sm,"He used to nap on the couch, but he sprawls out in that new lounge chair anymore.","He used to nap on the couch, but he sprawls out in that new lounge chair anymore"
+95,55,1.0,verbatim,sm,I do exclusively figurative paintings anymore.,I do exclusively figurative paintings anymore
+96,56,1.0,verbatim,sm,Pantyhose are so expensive anymore that I just try to get a good suntan and forget about it.,Pantyhose are so expensive anymore that I just try to get a good suntan and forget about it.
+97,57,1.0,verbatim,sm,Forget the nice clothes anymore (referring to babies eating messily after a certain age),Forget the nice clothes anymore (referring to babies eating messily after a certain age)
+340,58,0.481,low,sm,Which of these terms would you use to mean “make a u-turn”?,"Which of these terms do you prefer for a sale of unwanted items on your porch, in your yard, etc.?"
+490,59,0.3402,low,sm,Do you use any of the following terms to refer to a certain kind of white t-shirt? Plase use the comments box to describe more completely exactly what kind of shirt it refers to.,"What do you call the game wherein the participants see who can throw a knife closest to the other person (or alternately, get a jackknife to stick into the ground or a piece of wood)?"
+346,60,0.4737,low,sm,What’s the difference between a supermarket and a grocery store?,What do you call the area of grass between the sidewalk and the road?
+264,61,1.0,verbatim,sm,What do you call the area of grass that occurs in the middle of some streets?,What do you call the area of grass that occurs in the middle of some streets?
+267,62,0.4,low,sm,What do you call a car in which you have to step on the clutch and fiddle with a lever to change gears?,What do you call the long narrow place in the middle of a divided highway?
+84,63,0.4923,low,sm,What do you call the little sweet pellets that you might put on ice cream?,What do you call the drink made with milk and ice cream?
+511,64,0.4222,low,sm,Which of the following elements of meaning does the word swarthy contain for you?,"What do you call the long sandwich that contains cold cuts, lettuce, and so on?"
+526,65,0.4314,low,sm,What do you call the citrus fruit that looks like an orange but is smaller and more sour?,What do you call the insect that flies around in the summer and has a rear section that glows in the dark?
+97,66,0.4,low,sm,Forget the nice clothes anymore (referring to babies eating messily after a certain age),What do you call the miniature lobster that one finds in lakes and streams for example (a crustacean of the family Astacidae)?
+206,67,0.371,low,sm,"What do you call the sweetish-tasting, orange-colored, potato-shaped vegetable?",What do you call the kind of spider (or spider-like creature) that has an oval-shaped body and extremely long legs?
+228,68,0.4314,low,sm,How do you pronounce the plural of bath?,What nicknames do/did you use for your maternal grandmother?
+149,69,0.4375,low,sm,"What does “wait on” mean, as in “We’re waiting on you”?",What about your paternal grandmother (is there a distinction?)
+397,70,0.4783,low,sm,Do you use the term “bear claw” for a kind of pastry?,What do/did you call your maternal grandfather?
+397,71,0.4783,low,sm,Do you use the term “bear claw” for a kind of pastry?,paternal grandfather?
+136,72,0.4045,low,sm,What do you call the long item of furniture with space for three or four people?,What do you call the big clumps of dust that gather under furniture and in corners?
+31,73,0.4404,low,sm,What is your general term for carbonated water with no sweetener?,"What is your *general* term for the rubber-soled shoes worn in gym class, for athletic activities, etc.?"
+526,74,0.4167,low,sm,What do you call the citrus fruit that looks like an orange but is smaller and more sour?,What do you call the little gray creature (that looks like an insect but is actually a crustacean) that rolls up into a ball when you touch it?
+392,75,0.5783,low,sm,What do you call the wheeled contraption you push a baby around in?,What do you call the wheeled contraption in which you carry groceries at the supermarket?
+92,76,1.0,verbatim,sm,What term do you use to refer to something that is across both streets from you at an intersection (or diagonally across from you in general)?,What term do you use to refer to something that is across both streets from you at an intersection (or diagonally across from you in general)?
+141,77,0.4819,low,sm,What do you call the act of covering a house or area in front of a house with toilet paper?,What do you call the activity of driving around in circles in a car?
+264,78,0.4533,low,sm,What do you call the area of grass that occurs in the middle of some streets?,What do you call paper that has already been used for something or is otherwise imperfect?
+31,79,0.5854,low,sm,What is your general term for carbonated water with no sweetener?,What is your *general* term for a big road that you drive relatively fast on?
+140,80,1.0,verbatim,sm,What do you call it when rain falls while the sun is shining?,What do you call it when rain falls while the sun is shining?
+88,81,0.449,low,sm,"What do you call an enclosed structure that you park your car in, beside your house or attached to it?","When you are cold, and little points of skin begin to come on your arms and legs, you have-"
+140,82,0.3711,low,sm,What do you call it when rain falls while the sun is shining?,"What do you call the gooey or dry matter that collects in the corners of your eyes, especially while you are sleeping?"
+272,83,0.4516,low,sm,What do you call a set of 52 playing cards?,What do you call an easy course?
+346,84,0.4037,low,sm,What’s the difference between a supermarket and a grocery store?,What do you call a traffic situation in which several roads meet in a circle and you have to get off at a certain point?
+141,85,0.4412,low,sm,What do you call the act of covering a house or area in front of a house with toilet paper?,What is the thing that women use to tie their hair?
+274,86,0.4706,low,sm,What does the word spendthrift refer to?,Do you use the word cruller?
+397,87,1.0,verbatim,sm,Do you use the term “bear claw” for a kind of pastry?,"Do you use the term ""bear claw"" for a kind of pastry?"
+393,88,0.4174,low,sm,What do you call the thing with a wheel at the front and two handles at the back that you lift and push to move heavy loads?,What do you call someone who is the opposite of pigeon-toed (i.e. when they walk their feet point outwards)?
+397,89,0.3721,low,sm,Do you use the term “bear claw” for a kind of pastry?,"Can you call coleslaw ""slaw""?"
+401,90,0.4348,low,sm,Would you use the word “spendy” to mean “expensive”?,What do you call the box you bury a dead person in?
+304,91,0.4301,low,sm,"Would you say “tump over” to mean “fall over” (when something isn’t balanced, for example)?","Do you say ""vinegar and oil"" or ""oil and vinegar"" for the type of salad dressing?"
+97,92,0.3906,low,sm,Forget the nice clothes anymore (referring to babies eating messily after a certain age),What do you call it when a driver changes over one or more lanes way too quickly?
+292,93,0.3488,low,sm,What term do you use for a single eyebrow that spans both eyes and connects above the nose?,"When you stand outside with a long line of people waiting to get in somewhere, are you standing ""in line"" or ""on line"" (as in, ""I stood ___ in the cold for two hours before they opened the doors"")?"
+84,94,0.4156,low,sm,What do you call the little sweet pellets that you might put on ice cream?,"Do you say ""frosting"" or ""icing"" for the sweet spread one puts on a cake?"
+336,95,0.82,reject,contain,What do you call a narrow passageway between buildings in the city?,"What is ""the City""?"
+346,96,0.4675,low,sm,What’s the difference between a supermarket and a grocery store?,What is the distinction between dinner and supper?
+436,97,0.82,reject,contain,"Which of these terms do you prefer for the tall container in your kitchen in which you might throw away, for example, waste from cooking?",Which of these terms do you prefer?
+436,98,0.82,reject,contain,"Which of these terms do you prefer for the tall container in your kitchen in which you might throw away, for example, waste from cooking?",Which of these terms do you prefer?
+436,99,0.5238,low,sm,"Which of these terms do you prefer for the tall container in your kitchen in which you might throw away, for example, waste from cooking?",Which of these terms do you prefer for the small road parallel to the highway?
+272,100,0.4737,low,sm,What do you call a set of 52 playing cards?,Do you cut or mow the lawn or grass?
+229,101,0.4186,low,sm,Would you say “where are you at?” to mean “where are you?,Do you pass in homework or hand in homework?
+333,102,1.0,verbatim,sm,What do you call the insect that looks like a large thin spider and skitters along the top of water?,What do you call the insect that looks like a large thin spider and skitters along the top of water?
+138,103,1.0,verbatim,sm,What do you call the thing from which you might drink water in a school?,What do you call the thing from which you might drink water in a school?
+40,104,0.5238,low,sm,What do you call the level of a building that is partly or entirely underground?,What do you call a public railway system (normally underground)?
+31,105,0.6173,low,sm,What is your general term for carbonated water with no sweetener?,What is your generic term for a sweetened carbonated beverage?
+141,106,1.0,verbatim,sm,What do you call the act of covering a house or area in front of a house with toilet paper?,What do you call the act of covering a house or area in front of a house with toilet paper?
+277,107,0.3946,low,sm,"Would you say “stoop” to mean “the front steps of a building, where the front door opens onto the sidewalk”?",What do you call a traffic jam caused by drivers slowing down to look at an accident or other diversion on the side of the road?
+151,108,0.5455,low,sm,How do you pronounce bag?,What vowel do you use in bag?
+271,109,0.4944,low,sm,What do you call the container with a handle that you might use to transport water?,What do you call the paper container in which you might bring home items you bought at the store?
+142,110,1.0,verbatim,sm,What do you call the night before Halloween?,What do you call the night before Halloween?
+380,111,1.0,verbatim,sm,What do you call the end of a loaf of bread?,What do you call the end of a loaf of bread?
+465,112,0.3402,low,sm,How do you pronounce anecdote (the word meaning “a brief and amusing story”)?,How do you pronounce the word for the type of drug that acts as central nervous system depressant and is used as a sedative or hypnotic? (Please do not look up the word in a dictionary before answering this question.)
+464,113,0.5946,low,sm,How do you pronounce the “ph” in amphitheatre?,amphitheater
+71,114,0.32,low,sm,How do you pronounce strength?,citizen
+465,115,0.431,low,sm,How do you pronounce anecdote (the word meaning “a brief and amusing story”)?,"What do you call a point that is purely academic, or that cannot be settled and isn't worth discussing further?"
+465,116,0.6,low,sm,How do you pronounce anecdote (the word meaning “a brief and amusing story”)?,"How do you pronounce the -sp- sequence in ""thespian"" (the word meaning ""actor"")?"
+40,117,1.0,verbatim,sm,What do you call the level of a building that is partly or entirely underground?,What do you call the level of a building that is partly or entirely underground?
+334,118,1.0,verbatim,sm,What do you call a drive-through liquor store?,What do you call a drive-through liquor store?
+330,119,1.0,verbatim,sm,What do you call food that you buy at a restaurant but then eat at home?,What do you call food that you buy at a restaurant but then eat at home?
+272,120,0.4444,low,sm,What do you call a set of 52 playing cards?,What do you say when you want to lay claim to the front seat of a car?
+397,121,0.44,low,sm,Do you use the term “bear claw” for a kind of pastry?,What word do you use for gawking at someone in a lustful way?
+49,122,0.3889,low,sm,What temperature is “tea”?,"Do you say ""expecially"", or ""especially""?"

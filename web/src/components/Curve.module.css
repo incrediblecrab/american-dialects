@@ -1,0 +1,139 @@
+.figure {
+  margin: 0;
+  display: grid;
+  gap: var(--sp-5);
+}
+
+@media (min-width: 56rem) {
+  .figure {
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    align-items: center;
+    gap: var(--sp-6);
+  }
+}
+
+/* Vertical drags still scroll the page; horizontal ones move the marker.
+ * Without this a finger on the chart does nothing at all. */
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  touch-action: pan-y;
+}
+
+/* The svg carries a font-size in real pixels, set from the measured width, and
+ * these inherit it. Anything absolute here would be a user unit and would
+ * shrink with the box. */
+.grid {
+  stroke: var(--rule);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.axis,
+.unit {
+  fill: var(--ink-3);
+  font-family: var(--font-data);
+  font-size: 1em;
+  font-variant-numeric: tabular-nums;
+}
+
+.unit {
+  font-family: var(--font-ui);
+  font-size: 0.91em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.marker {
+  stroke: var(--ink-3);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+  vector-effect: non-scaling-stroke;
+}
+
+.line {
+  fill: none;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.line.ink {
+  stroke: var(--ink-2);
+}
+.line.accent {
+  stroke: var(--accent);
+}
+.line.warn {
+  stroke: var(--warn);
+}
+
+.dot.ink {
+  fill: var(--ink-2);
+}
+.dot.accent {
+  fill: var(--accent);
+}
+.dot.warn {
+  fill: var(--warn);
+}
+
+.dot {
+  stroke: var(--paper);
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+}
+
+.legend {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+}
+
+.key {
+  display: grid;
+  grid-template-columns: 10px 1fr auto;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  transform: translateY(1px);
+}
+
+.swatch.ink {
+  background: var(--ink-2);
+}
+.swatch.accent {
+  background: var(--accent);
+}
+.swatch.warn {
+  background: var(--warn);
+}
+
+.name {
+  color: var(--ink-2);
+  line-height: 1.25;
+}
+
+.value {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.hint {
+  margin: var(--sp-3) 0 0;
+  font-size: var(--step--2);
+  line-height: 1.45;
+  color: var(--ink-3);
+  min-height: 3em;
+}

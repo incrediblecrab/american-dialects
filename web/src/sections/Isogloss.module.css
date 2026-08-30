@@ -1,0 +1,280 @@
+/* The picker reads as a plate legend: words set in the prose face, each with
+ * the width of its own boundary beside it, so the list is itself the finding.
+ * Running down it goes from the sharpest boundary in the survey to one that is
+ * barely there. */
+.picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  padding-bottom: var(--sp-5);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: var(--sp-6);
+}
+
+.word,
+.wordOn {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+  font-family: var(--font-prose);
+  font-size: var(--step-0);
+  line-height: 1.2;
+  padding: var(--sp-2) var(--sp-3);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    border-color var(--fast) var(--ease),
+    color var(--fast) var(--ease),
+    background-color var(--fast) var(--ease);
+}
+
+.word {
+  color: var(--ink-2);
+}
+
+.word:hover {
+  border-color: var(--rule-strong);
+  color: var(--ink);
+}
+
+.wordOn {
+  color: var(--paper);
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.wordKm {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--step--2);
+  opacity: 0.66;
+}
+
+.wordKm::after {
+  content: " km";
+  letter-spacing: 0.02em;
+}
+
+.panel {
+  display: grid;
+  gap: var(--sp-6);
+  align-items: start;
+}
+
+@media (min-width: 60rem) {
+  .panel {
+    grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.65fr);
+    gap: var(--sp-7);
+  }
+}
+
+.skeleton {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1.77;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  background: var(--paper-sunk);
+  color: var(--ink-3);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+}
+
+.readout {
+  font-family: var(--font-ui);
+}
+
+.legend {
+  margin: 0;
+  display: grid;
+  gap: 0;
+}
+
+.legend > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-2) 0;
+}
+
+.legend dt {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+  font-family: var(--font-prose);
+  font-size: var(--step-1);
+  color: var(--ink);
+}
+
+.legend dd {
+  margin: 0;
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--step--1);
+  color: var(--ink-3);
+}
+
+/* The two map inks. These swatches are not a copy of the fill colour, they are
+ * the definition of it: the renderer reads its computed background back out of
+ * them, so the legend and the map cannot disagree. Mixing toward paper is what
+ * keeps a contrast like hoagie, where one word holds ninety-nine per cent of
+ * the country, from printing as a solid dark continent. */
+.swatchA,
+.swatchB {
+  flex: none;
+  align-self: center;
+  width: 0.95rem;
+  height: 0.95rem;
+  border: 1px solid var(--paper-sunk);
+}
+
+.swatchA {
+  background: var(--iso-a);
+  background: color-mix(in srgb, var(--iso-a) 58%, var(--paper));
+}
+
+.swatchB {
+  background: var(--iso-b);
+  background: color-mix(in srgb, var(--iso-b) 58%, var(--paper));
+}
+
+.legendNote {
+  margin: var(--sp-2) 0 var(--sp-6);
+  font-size: var(--step--2);
+  line-height: 1.5;
+  color: var(--ink-3);
+  text-wrap: pretty;
+}
+
+.headline {
+  border-top: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
+  padding: var(--sp-4) 0;
+}
+
+.big {
+  display: block;
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--step-3);
+  line-height: 1;
+  color: var(--ink);
+}
+
+.bigLabel {
+  display: block;
+  margin-top: var(--sp-2);
+  font-size: var(--step--2);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.stats {
+  margin: 0;
+  display: grid;
+  gap: 0;
+}
+
+.stats > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding: var(--sp-3) 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.stats dt {
+  font-size: var(--step--2);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.stats dd {
+  margin: 0;
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--step--1);
+  text-align: right;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+/* Scoped to .stats dd for the same reason Mistake.module.css scopes its own:
+   an unscoped rule loses to the element selector above and the tie between the
+   readout and the two sides of the map silently disappears. */
+.stats dd.valA {
+  color: var(--iso-a);
+}
+
+.stats dd.valB {
+  color: var(--iso-b);
+}
+
+/* No overflow clip here. It would round the two fills for free, but it also
+ * eats the focus ring of whichever half has focus, and a keyboard reader then
+ * cannot tell which drawing convention they are about to choose. The children
+ * carry the rounding themselves instead. */
+.toggle {
+  display: flex;
+  margin-top: var(--sp-5);
+  max-width: 26rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+}
+
+.mode,
+.modeOn {
+  flex: 1;
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  line-height: 1.3;
+  padding: var(--sp-3) var(--sp-2);
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color var(--med) var(--ease),
+    color var(--med) var(--ease);
+}
+
+.toggle > :first-child {
+  border-radius: 2px 0 0 2px;
+}
+
+.toggle > :last-child {
+  border-radius: 0 2px 2px 0;
+}
+
+.mode {
+  background: none;
+  color: var(--ink-3);
+}
+
+.mode:hover {
+  color: var(--ink);
+}
+
+/* Selected state was a solid --ink fill, which in dark mode is a near-white
+ * slab that pulled the eye harder than the map it is a control for. The tinted
+ * surface still reads as selected against its unfilled sibling without
+ * competing with the graphic. */
+.modeOn {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+
+.toggleNote {
+  margin: var(--sp-3) 0 0;
+  max-width: 30rem;
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  line-height: 1.55;
+  color: var(--ink-3);
+  min-height: 2.8em;
+  text-wrap: pretty;
+}

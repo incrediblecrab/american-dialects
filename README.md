@@ -31,11 +31,34 @@ The interesting part is that it works from data nobody published. The 2013 New Y
 | `data/ygdp/people.csv` | 6,629 | de-duplicated respondents, raised location verified |
 | `data/ygdp/crosswalk.csv` | 14 | YGDP↔Harvard question mapping: 5 accepted, 9 rejected with reasons |
 | `data/model/likelihood.npz` | 680×50,888 | fitted `log P(answer \| cell)` over US land |
-| `data/model/question_order.csv` | 20 | greedy question ordering and its learning curve |
+| `data/model/question_order.csv` | 30 | greedy question ordering and its learning curve |
 | `data/model/headline_surface.csv` | 26 | accuracy vs. *k* on stress-tested simulated respondents |
 | `data/model/neural_net.pt` | 8,177,664 | trained weights of the discriminative model |
 | `data/model/neural_pool.npz` | 400,000 | simulated training people, plus the 1024 output clusters |
-| `data/model/neural_curve.csv` | 60 | accuracy vs. *k* for all three models on identical people |
+| `data/model/neural_curve.csv` | 90 | accuracy vs. *k* for all three models on identical people |
+| `data/model/mover_split.csv` | 222 | every model scored separately on people who moved and people who did not |
+| `data/model/mover_ratio.csv` | 111 | whether any model's posterior widens for a mover — none does |
+| `data/model/mover_probe.csv` | 9 | mover status is not recoverable from the answers, with a positive control |
+| `data/model/mover_mix.csv` | 12 | the admixture weight that would fix it, swept and scored |
+| `data/model/mover_split_rep.csv` | 96 | the split repeated at an independent seed |
+| `data/model/mover_ratio_rep.csv` | 48 | the ratios repeated at an independent seed |
+| `data/model/question_signal.csv` | 122 | per question, the bits about place against the bits about the person |
+| `data/model/question_order_ratio.csv` | 90 | three alternative question orderings, none of which beat the deployed one |
+| `data/model/order_curve.csv` | 180 | those orderings raced against the deployed one on identical people |
+| `data/uwm/questions.csv` | 154 | UWM Dialect Survey maps, scraped and then abandoned — see below |
+| `data/uwm/hds_crosswalk.csv` | 121 | UWM↔Harvard candidate matches, hand-checked: 17 verbatim, 28 valid |
+
+### what a dialect boundary is worth measuring
+
+The published site draws eight real isoglosses, and drawing them turns out to make something measurable that a printed atlas hides. Subtracting one recovered surface from another gives the odds of one word against another at every point; the contour where the odds are even is the boundary, and the ground over which those odds swing from three-to-one to three-to-one is its width. Those widths run from 73 km for *yinz* in western Pennsylvania to 443 km for *catty-corner*, which is to say the last is barely a boundary at all — yet an atlas prints both as the same confident line. Because the surfaces are smoothed, each width is an upper bound on how sharp the real boundary is; see [findings.md](findings.md).
+
+### a survey that could not be recovered
+
+The project went looking for a third survey to use as a control arm, because Cambridge-vs-Harvard confounds elapsed time with population and method, and a survey run one to three years after Harvard would separate them. The **UWM Dialect Survey** (Vaux & Samuels, 2004–2006, republished as map images from 2018) looked like that survey. It is not usable, and the reasons are worth stating because they are a clean illustration of what makes pixel recovery possible in the first place.
+
+The Harvard maps are recoverable because a dot is a countable object with a known meaning: one dot, one respondent, at a ZIP centroid. The UWM maps are smooth diverging colour surfaces carrying **no legend of any kind** — so a colour cannot be turned into a proportion, because the range it spans is unknown — and **86 of the 154 published questions do not say which answer choice each image belongs to**. Either problem alone is fatal, and neither is in the images to be extracted. `scrape/uwm.py`, `scrape/uwm_crosswalk.py` and `data/uwm/inventory.md` are kept so that the finding is reproducible and the work is not repeated; `todo.md` records what would reopen it.
+
+One number from the planning stage deserves correcting in public. The Harvard overlap was scoped at "at least 79 questions" from matching truncated URL slugs, and described as a floor. Matching full question text and then hand-reading every candidate pair gives **17 verbatim matches and 28 valid ones**, with 8 false positives struck out. The floor was an overestimate by nearly a factor of three.
 
 ## the Harvard Dialect Survey geography
 
@@ -89,15 +112,18 @@ Everything above factorises the likelihood across questions, which is the assump
 
 **What it buys.** On 2,000 held-out simulated people with a real idiolect and 15% movers but no surface error, scored against both Bayes configurations on identical people and the identical ordering:
 
-| questions | net | Bayes ρ = 0 | Bayes ρ = 0.177 (deployed) |
+| questions | net | Bayes ρ = 0 (deployed) | Bayes ρ = 0.177 (the old discount) |
 |---|---|---|---|
 | 5 | 654 km | 685 | 897 |
-| 12 | **343 km** | 444 | 760 |
-| 20 | **199 km** | 264 | 847 |
+| 12 | **347 km** | 431 | 891 |
+| 14 | **291 km** | 361 | 807 |
+| 30 | **148 km** | 176 | 903 |
 
-The network with **five** questions beats the deployed model with any number of questions. It also settles what the project set out to ask: **twelve was never derived** — it came from the New York Times quiz format — and it is the optimum only for the deployed configuration, which bottoms at eleven-to-twelve and then loses 88 km by twenty as the discount outruns the evidence. Both correctly specified models are still improving at the twenty-question measurement cap. For the network, 90% of the achievable reduction arrives by fourteen questions, which is also the optimum if a question is priced at 30 km. **Fourteen, provisionally**, pending a question ordering re-derived without the discount.
+The network with **five** questions beats the discounted model with any number of questions — 654 km against a best-ever 794. It also settles what the project set out to ask: **twelve was never derived**, it came from the New York Times quiz format, and it is not optimal for anything. The discounted configuration bottoms out at thirteen questions and then climbs 109 km by thirty as the discount outruns the evidence; both correctly specified models fall monotonically and are **still improving at thirty**, with no turnaround anywhere in the measured range.
 
-**Not ready to ship**, and the reasons are specific. It has never been trained against wrong surfaces, which is the failure `TAU_BASE` exists to absorb. Its question ordering is inherited from the model it beats. The sweep caps at twenty because `question_order.csv` has twenty rows. And it trades a little modal-state accuracy for its distance advantage — 46.5% against 48.0% at twenty questions — because 1024 clusters blur state boundaries that Bayes resolves at full cell resolution.
+That last fact is why fourteen is a judgement rather than a derivation. There is no interior minimum to find, so the stopping point comes from a stated rule about diminishing returns. Priced at 30 km of error per question asked, the deployed Bayesian model's optimum is fourteen; requiring 90% of the reduction available by thirty, it is nineteen. The network answers the same two rules with eleven and sixteen. **Fourteen** is the priced optimum of the model actually deployed and sits inside the network's bracket. An earlier draft justified fourteen by noting that the two rules agreed on it — they no longer do, and that agreement turned out to be an artefact of the twenty-question measurement cap.
+
+**Not ready to ship**, and the reasons are specific. It has never been trained against wrong surfaces, which is the failure `TAU_BASE` exists to absorb. Its question ordering is inherited from the model it beats. And it trades a little modal-state accuracy for its distance advantage — 46.5% against 48.0% at twenty questions — because 1024 clusters blur state boundaries that Bayes resolves at full cell resolution.
 
 ### what is and is not validated
 
@@ -113,14 +139,15 @@ This is the part worth reading carefully.
 | answers are not independent | within-person residual correlation +0.177 after conditioning on location, n=349 | **measured** |
 | ...but discounting the likelihood for it makes things worse | ρ = 0 beats every positive discount on median error in 253/253 matched comparisons, over people simulated with real idiolects, 15% mobility and 0–30pp of surface error | **measured in simulation** |
 | the base temper `TAU_BASE = 0.55` is right | optimal on log score and coverage at the surface-error level the Cambridge comparison independently measured; agrees with the unrelated YGDP differential-coverage fit | **measured in simulation** |
-| dropping the independence assumption beats patching it | a discriminative net halves deployed error at equal quiz length (343 km vs 760 at *k*=12) and beats the deployed model's best-ever accuracy using five questions | **measured in simulation** |
-| twelve questions is the right quiz length | it is optimal only for the deployed configuration, which stops improving at *k*=12 and degrades to *k*=20; correctly specified models are still improving at the measurement cap | **disconfirmed in simulation** |
+| dropping the independence assumption beats patching it | a discriminative net cuts the discounted model's error by 61% at equal quiz length (347 km vs 891 at *k*=12) and beats its best-ever accuracy using five questions | **measured in simulation** |
+| twelve questions is the right quiz length | it is optimal for nothing; the discounted model bottoms at *k*=13 and degrades thereafter, and both correctly specified models are still improving at *k*=30 | **disconfirmed in simulation** |
+| the second survey's disagreement is change, not method | a survey close enough in time that real change should be near zero would separate the two; the UWM Dialect Survey was the candidate, was scraped in full, and its maps carry no legend and often no answer label, so it cannot be recovered | **attempted, not obtained** |
 | *k* questions place you within *x* km | — | **not measured** |
 | "80% confident" is right 80% of the time | — | **not measured on real people** |
 
 The last two are the ones the project set out to establish, and they cannot currently be established from public data. **No public dataset has real people, with known hometowns, answering many dialect questions.** This is load-bearing — everything simulated rather than measured is simulated because of it — so it was re-checked on August 29, 2026 against DARE, YGDP, IDEA, the Speech Accent Archive, CORE, TalkBank and the crowdsourced surveys, and it still holds; see *the field as of August 2026* under [sources](#sources). YGDP is the closest and it fails twice over: its overlap with the Harvard question set is only two distinct constructions, which beat the population prior by 0.06 nats and 25 km — two syntactic questions cannot locate anyone. And its respondents are not a population sample, so the prior *alone* covers them 63/88/97% of the time at nominal 50/80/95. That sampling skew is larger than the effect being measured.
 
-Simulation cannot close that gap but it can be made much less circular. `model/nullcheck.py` builds people who obey the model exactly, and a curve drawn on them is the model's belief about its own competence — that world does not merely fail to inform, it structurally hides the assumption most likely to be wrong. `model/idiolect.py` builds people who break the model on purpose, in three ways whose magnitudes are pinned to measurements: a within-person idiolect bisected until it exhibits the correlation YGDP measured, a mobile fraction raised somewhere other than where they are recorded, and surfaces wrong by a smooth spatially correlated field calibrated against the Harvard-versus-Cambridge disagreement. On those people, with the correlation discount off, twenty questions give a median error of 329 km, 42% of states, and credible regions covering within four points of nominal at every length. The shapes of those three violations are still assumptions, so this is a stress test rather than a validation.
+Simulation cannot close that gap but it can be made much less circular. `model/nullcheck.py` builds people who obey the model exactly, and a curve drawn on them is the model's belief about its own competence — that world does not merely fail to inform, it structurally hides the assumption most likely to be wrong. `model/idiolect.py` builds people who break the model on purpose, in three ways whose magnitudes are pinned to measurements: a within-person idiolect bisected until it exhibits the correlation YGDP measured, a mobile fraction raised somewhere other than where they are recorded, and surfaces wrong by a smooth spatially correlated field calibrated against the Harvard-versus-Cambridge disagreement. On those people, with the correlation discount off, twenty questions give a median error of 329 km, 42% of states, and credible regions covering within four points of nominal at every length — though that last figure is a population average that later turned out to conceal two opposite failures, and [findings.md](findings.md) now says so. The shapes of those three violations are still assumptions, so this is a stress test rather than a validation.
 
 `model/nullcheck.py` also serves as the control that keeps the calibrator honest: on people who obey the model exactly it recovers tau = 1, eps = 0, coverage .510/.800/.955 and a flat PIT histogram. So a tau below 1 on real people is signal, not instrument bias.
 
@@ -135,32 +162,54 @@ cd site
 ../.venv/bin/python server.py        # then http://localhost:8000
 ```
 
-It loads the model once (about three seconds) and holds it in memory, so every question after that is instant: choosing the next question takes 40 ms and recomputing the posterior 340 ms. Questions are picked adaptively — each one is whichever remaining question would tell the model most about *this* player given what they have already said — so no two games ask the same twelve. Number keys pick answers, and there is a "Guess now" affordance on every screen, because a party trick should never feel like a form.
+It loads the model once (about three seconds) and holds it in memory, so every question after that is instant: choosing the next question takes 40 ms and recomputing the posterior 340 ms. Questions are picked adaptively — each one is whichever remaining question would tell the model most about *this* player given what they have already said — so no two games ask the same fourteen. Number keys pick answers, and there is a "Guess now" affordance on every screen, because a party trick should never feel like a form.
 
-**Two things the site does not yet reflect.** It runs the Bayes model with `RHO = 0.177` and it asks a hardcoded twelve questions, and the analysis has since undercut both. The discount is the largest single source of error in the system, and twelve is the right stopping point only *because* of the discount — the deployed configuration stops improving at twelve, while a correctly specified model is still improving at twenty. Fourteen is the current recommendation. Neither change has been made, because both alter deployed behaviour.
+**Both of the changes the analysis called for have now been made.** It runs the Bayes model with `RHO = 0` and it asks a hardcoded fourteen questions. The discount was the largest single source of error in the system, and twelve was the right stopping point only *because* of the discount — the discounted configuration stops improving at thirteen questions, while a correctly specified model is still improving at thirty. The two constants had to move together, because raising the question count while the discount was still active would have made the model worse rather than better.
 
 The result screen draws the posterior over all 50,888 land cells as a single image: grey country, blue where the belief is. The raw posterior is far too peaked to look at directly, so it is normalised by its maximum and raised to a fractional power, which lifts the shoulders back into view without changing the ordering.
 
 Every finished game is appended to `data/quiz/log.csv` in exactly the format `calibrate.py --set quiz` expects, so playing the web version feeds the one measurement this project still lacks.
 
-**The map is also the clearest illustration of the finding above.** The same twelve answers, drawn twice — on the left the deployed `RHO = 0.177`, on the right `RHO = 0`:
+**The map is also the clearest illustration of the finding above.** One worked example, drawn twice. The speaker gives the most common Pittsburgh answer to each of the fourteen questions the quiz asks, and the same fourteen answers are scored under the discount that shipped and under the value deployed now:
 
-| | 80% region | top three metros |
-|---|---|---|
-| `RHO = 0.177` (deployed) | 1,315,932 km² | Chicago 4.5%, New York 4.4%, Worcester 3.7% |
-| `RHO = 0` (recommended) | **333,927 km²** | Worcester 10.3%, Springfield 9.7%, Milwaukee 7.8% |
+| | 80% region | modal state | top three metros |
+|---|---|---|---|
+| `RHO = 0.177` (the old discount) | 1,752,029 km² | NY | New Castle 0.6%, Bethel Park 0.5%, Baltimore 0.5% |
+| `RHO = 0` (deployed) | **786,764 km²** | OH | New Castle 2.2%, Bethel Park 2.0%, Pittsburgh 1.7% |
 
-Discounted, the posterior is tempered so hard it slides back onto the population prior, and the map is a picture of where Americans live — Los Angeles, Phoenix, Houston, Miami, all lit up by answers that said nothing about them. Undiscounted, the same evidence resolves to a contiguous Great Lakes and New England corridor four times smaller. That is what "the discount slides the region toward cities rather than widening it around the evidence" looks like when you draw it.
+Discounted, the posterior is tempered so hard it slides back onto the population prior: the region is 965,266 km² larger, the modal state moves from the Ohio–Pennsylvania border to New York, and the strongest place in the country is claimed at 0.6% — barely a preference at all. Undiscounted, the same evidence concentrates on the western Pennsylvania corridor and names Pittsburgh's own suburbs.
+
+The sharper version of the same fact is what happens as the questions accumulate. Under the discount the 80% region stops moving after the fourth question and sits between 1.68 and 1.83 million km² for every quiz length from four to twenty; under `RHO = 0` it keeps contracting. The discounted model is not being cautious. It has stopped listening.
+
+This is a worked example, not a headline result — one speaker profile, chosen because Pittsburgh has the sharpest lexical signature in the survey and so makes any error in the chain visible. It is exported by `model/export_web.py`, reproduced live in the browser on the published site, and `check.py` asserts that the two areas above are the two areas the site computes.
+
+### the published site
+
+`web/` is the public version, built with Astro and deployed to GitHub Pages by `.github/workflows/pages.yml`. It is a static build with no server behind it: the model runs in the browser, and every figure in the prose is baked in at build time from `web/src/content/generated.json`.
+
+```
+cd web
+npm install
+npm run dev                          # then http://localhost:4321/american-dialects/
+npm run build                        # type-checks, then writes web/dist
+npm run verify                       # asserts the browser model matches model/infer.py
+```
+
+Only the parts that do something ship JavaScript. The quiz, the isogloss plate, the discount slider and the two charts are hydrated islands; the prose sections are rendered to HTML at build time and ship none. The charts use `d3-scale` and `d3-shape` for their scales, ticks and path geometry, and the maps are drawn straight to canvas, because a projection that is already gridded into 50,888 cells has nothing to gain from a selection layer.
+
+The page ships one colour scheme. It reproduces a printed artifact from 2003 — a white sheet with blue dots on it — and on a dark ground that sheet reads as a hole burned in the page rather than as a document.
 
 ## running it
 
 Every number quoted in this README, in `findings.md` and in `eli5.md` is recomputed from the tracked CSVs by `check.py`, which also verifies that the deployed constants are each defined in exactly one place and that the prose still describes them correctly. It loads no model and takes about a second.
 
+For the figures it validates it checks *every* printed copy, not merely that a correct one exists somewhere. The distinction is not pedantic. These documents repeat their headline numbers, several of them half a dozen times each, and a check satisfied by finding one good copy is blind to a second copy that has drifted away from it — which is very close to the failure that actually happened here once before, when the worked example in the prose turned out to be a different worked example from the one the code produced. So each validated figure also carries the number of times it is quoted, and matching is done on number boundaries rather than on substrings, since a figure that gains a digit is a different figure and should not pass by being a prefix of itself. The cost is that editing prose around a validated number means updating a count; that is the intended bargain, and this paragraph broke the rule while being written, which is the sort of thing that argues for keeping it.
+
 ```
-./.venv/bin/python check.py       # 48 checks; -v to see the passing ones too
+./.venv/bin/python check.py       # 79 checks; -v to see the passing ones too
 ```
 
-This exists because the report is long and its numbers were typed in by hand. It has already caught one: the README claimed 12 rows for a crosswalk that has 14. More importantly, `RHO`, `TAU_BASE` and `N_QUESTIONS` are each described in prose in several places, so changing one of them silently falsifies several documents at once — `check.py` turns that into a failing check instead of a stale sentence.
+This exists because the report is long and its numbers were typed in by hand. It has already caught several: the README claimed 12 rows for a crosswalk that has 14, and it claimed this suite ran 48 checks when it had grown past sixty — a stale sentence sitting inside the paragraph explaining that stale sentences are what the script prevents. More importantly, `RHO`, `TAU_BASE` and `N_QUESTIONS` are each described in prose in several places, so changing one of them silently falsifies several documents at once — `check.py` turns that into a failing check instead of a stale sentence.
 
 ```
 python3 -m venv .venv && ./.venv/bin/pip install -r requirements.txt

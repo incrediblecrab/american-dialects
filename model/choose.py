@@ -74,13 +74,29 @@ class Selector:
         """Simulated respondents: a true home cell, drawn by population."""
         return rng.choice(len(self.cells), size=m, p=self.prior)
 
-    def order(self, k=25, m=400, tau=None, verbose=True):
+    def order(self, k=25, m=400, tau=None, rho=None, verbose=True, score=None):
         """Greedy fixed ordering, scored on simulated respondents.
 
         The running posterior is discounted with the same k-dependent tau the
         deployed model uses, because selection sees redundancy only through the
         posterior; an undiscounted posterior collapses early and then reports
         every remaining question as uninformative for the wrong reason.
+
+        `rho` overrides the module-level RHO for the discount schedule only.
+        This exists because the ordering and the discount are entangled: the
+        deployed ordering was derived under RHO = 0.177, and findings.md shows
+        that discount is itself the largest single source of error. Re-deriving
+        the ordering under the discount it disproves would bake the error in
+        again, so the two have to be able to move independently.
+
+        `score(question, bits) -> float` replaces bits as the greedy objective.
+        The default is bits itself, so the deployed ordering is unaffected. It
+        exists so that an alternative selection criterion can be tried against
+        an ordering derived by identical machinery on identical personas, with
+        the criterion as the only difference; model/order_compare.py uses it to
+        rank on the regional-signal-to-idiolect ratio. The reported `bits` is
+        always the information, whatever the ordering was chosen on, so the two
+        files stay readable side by side.
         """
         rng = np.random.default_rng(SEED)
         truth = self.personas(m, rng)
@@ -96,11 +112,14 @@ class Selector:
                   f"{'sc km':>10} {'sc state %':>12}")
         for step in range(1, k + 1):
             info = self.information(w, remaining)
-            best = max(remaining, key=lambda q: float(info[q].mean()))
-            gained = float(info[best].mean())
+            bits = {q: float(info[q].mean()) for q in remaining}
+            best = max(remaining,
+                       key=lambda q: score(q, bits[q]) if score else bits[q])
+            gained = bits[best]
 
             p = self.p[best]
-            step_tau = tau_for(step) / tau_for(step - 1) if tau is None else tau
+            step_tau = (tau_for(step, rho=rho) / tau_for(step - 1, rho=rho)
+                        if tau is None else tau)
             for i in range(m):
                 probs = p[:, truth[i]].astype(np.float64)
                 probs = probs / probs.sum()
@@ -144,21 +163,29 @@ def main():
     ap.add_argument("--stride", type=int, default=2)
     ap.add_argument("--tau", type=float, default=None,
                     help="flat tau; default is the k-dependent tau_for(k)")
+    ap.add_argument("--rho", type=float, default=None,
+                    help="override RHO in the discount schedule; --rho 0 turns "
+                         "the design-effect discount off")
+    ap.add_argument("--out", type=str, default=None,
+                    help="write here instead of data/model/question_order.csv")
     args = ap.parse_args()
 
     g = Geolocator()
     s = Selector(g, cell_stride=args.stride)
+    import infer
     print(f"{len(s.cells)} cells, {len(s.t.questions)} questions, "
           f"{args.personas} simulated respondents, "
-          f"tau={args.tau if args.tau else 'auto'}\n")
-    picked, curve, h0 = s.order(k=args.questions, m=args.personas, tau=args.tau)
+          f"tau={args.tau if args.tau else 'auto'}, "
+          f"rho={infer.RHO if args.rho is None else args.rho}\n")
+    picked, curve, h0 = s.order(k=args.questions, m=args.personas, tau=args.tau,
+                                rho=args.rho)
 
     import csv
     import sys
     from pathlib import Path
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scrape"))
     from common import DATA
-    out = DATA / "model" / "question_order.csv"
+    out = Path(args.out) if args.out else DATA / "model" / "question_order.csv"
     texts = {}
     with open(DATA / "hds" / "questions.csv", encoding="utf-8") as f:
         for r in csv.DictReader(f):

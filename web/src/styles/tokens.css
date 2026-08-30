@@ -1,0 +1,148 @@
+/* The whole design system. Only global.css imports this.
+ *
+ * The reference is a mid-century linguistic atlas: warm paper, dark ink, and
+ * colour reserved almost entirely for the maps. The page is deliberately quiet
+ * so that the one saturated thing on screen is always the data.
+ *
+ * Two accents, and they carry meaning rather than decoration. Cartographic
+ * blue is the model working. Rust is the model being wrong -- it belongs to
+ * the design-effect discount, the mistake this project found in itself, and it
+ * appears nowhere else. A reader who notices only that pattern has still
+ * learned something true.
+ *
+ * There is no CSS framework here on purpose. A default utility palette is what
+ * makes unrelated sites look like each other.
+ */
+
+:root {
+  /* ---------------------------------------------------------- paper and ink */
+  --paper: #faf7f1;
+  --paper-sunk: #f2ecdf;
+  --paper-raised: #fffdf8;
+  --ink: #17150f;
+  --ink-2: #4c463a;
+  /* The quietest ink still has to be read. It carries the captions, the
+   * eyebrows and two long paragraphs in Act V, so it is held at 4.5:1 against
+   * both paper tones rather than at whatever looked restrained on a bright
+   * desk. It was #7e7667, which was 3.8:1 on the sunk paper of the colophon. */
+  --ink-3: #726a5b;
+  --rule: #e2d9c8;
+  --rule-strong: #c6bba3;
+
+  /* --------------------------------------------------------------- accents */
+  --accent: #1c4e80;
+  --accent-deep: #0f2f52;
+  --accent-soft: #d3e2f0;
+
+  /* The two sides of an isogloss. These exist because the second word used to
+   * be painted in --ink-2, which is a colour for body text: it has to be a
+   * quiet warm grey to sit under prose, and a quiet warm grey spread over the
+   * ninety-odd per cent of the country that says "y'all" reads as dead ground
+   * rather than as an answer. A diverging pair needs two colours of roughly
+   * equal weight and clearly different hue, meeting at paper in the middle,
+   * so that neither side looks like the absence of the other.
+   *
+   * Weight here means measured lightness, not impression. The first pair was
+   * L* 32 against 47, so the warm side carried half again the visual mass of
+   * the cool one and the map tipped toward it. These sit at L* 73 and 72.
+   * They are also deliberately pale: shade() drives the fill to full colour
+   * wherever the odds pass about 3 to 1, which for a contrast as lopsided as
+   * yinz against y'all is most of the country, so full colour has to be a
+   * wash rather than a slab or the map becomes one flat block. */
+  --iso-a: #8fb8da;
+  --iso-b: #d6a87a;
+  --warn: #9d3d1c;
+  --warn-soft: #f2dcd1;
+
+  /* The map ramp, paper at the bottom end so low mass fades into the page
+   * rather than sitting on it as a visible floor. Consumed by canvas code,
+   * which cannot read a CSS gradient, so the same stops are mirrored in
+   * model/ramp.ts and that file is the one the renderer reads. */
+  /* Density ramp. The stops are read by model/ramp.ts and interpolated to 256
+     steps, so this is the only place the map palette is defined.
+
+     The previous ramp was a single blue hue, and measuring it explained why it
+     looked washed out: chroma ran [9, 12, 26, 36, 29], so the lower half of
+     every surface was effectively grey. Lightness was never the problem, it
+     was already monotonic. A diffuse surface like the population prior puts
+     most of its cells in that low half, which is precisely where the old ramp
+     had no colour to spend. These stops hold even lightness steps and carry
+     chroma from the first level, peaking at 78 rather than 36. */
+  --map-0: #efe8d8;
+  --map-1: #efb02e;
+  --map-2: #e8801c;
+  --map-3: #cc3018;
+  --map-4: #8c0026;
+
+  /* ------------------------------------------------------------------ type */
+  --font-prose: "Iowan Old Style", "Palatino Linotype", Palatino,
+    "Book Antiqua", Charter, "Bitstream Charter", Georgia, serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-data: ui-monospace, "SF Mono", SFMono-Regular, "JetBrains Mono", Menlo,
+    Consolas, monospace;
+
+  /* Floor raised from 0.72rem: at phone widths this step bottomed out at
+     11.57px, and it carries the Limits tier badges and the isogloss chip
+     sub-labels, which are prose rather than ornament. The top of the ramp is
+     unchanged, so desktop is untouched. */
+  --step--2: clamp(0.75rem, 0.7rem + 0.1vw, 0.78rem);
+  --step--1: clamp(0.82rem, 0.79rem + 0.14vw, 0.9rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.12rem);
+  --step-1: clamp(1.19rem, 1.12rem + 0.34vw, 1.4rem);
+  --step-2: clamp(1.42rem, 1.31rem + 0.55vw, 1.76rem);
+  --step-3: clamp(1.69rem, 1.51rem + 0.87vw, 2.2rem);
+  --step-4: clamp(2.01rem, 1.73rem + 1.35vw, 2.75rem);
+  --step-5: clamp(2.4rem, 1.97rem + 2.06vw, 3.44rem);
+
+  /* --------------------------------------------------------------- spacing */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4.5rem;
+  --sp-9: 7rem;
+
+  --measure: 34rem;
+  --wide: 62rem;
+
+  --radius: 3px;
+  --radius-lg: 5px;
+
+  /* Shadows are nearly absent. On paper, depth comes from rules and tone. */
+  --shadow: 0 1px 2px rgb(23 21 15 / 0.06), 0 4px 14px rgb(23 21 15 / 0.05);
+
+  /* ---------------------------------------------------------------- motion */
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --fast: 140ms;
+  --med: 260ms;
+  --slow: 520ms;
+}
+
+/* One scheme, on purpose.
+ *
+ * This page reproduces a printed artifact from 2003: a white sheet with blue
+ * dots on it. On a dark ground that sheet is not a document, it is a hole
+ * burned in the page, and no amount of matting fixes an image whose own
+ * background is the brightest thing on screen. A dark scheme also meant a
+ * second full palette, a second map ramp and a second diverging pair, each
+ * of which had to be kept in step with the first. Light-only removes the
+ * defect and the duplicate together. */
+
+/* Motion in this project is only ever explanatory: a posterior contracting,
+ * ink un-blending, two maps crossfading. When it is switched off, none of
+ * that meaning is lost, because every animated state is also readable as a
+ * static one. So this can be a blunt global rule without hiding anything. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

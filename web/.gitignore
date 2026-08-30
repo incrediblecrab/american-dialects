@@ -1,0 +1,27 @@
+# Installed by npm ci, from package-lock.json.
+node_modules/
+
+# Built by npm run build, and rebuilt by .github/workflows/pages.yml on every
+# push. Nothing reads it that does not also build it.
+dist/
+
+# Types and settings Astro regenerates on every dev start and build.
+.astro/
+
+# --------------------------------------------------------------------------
+# Deliberately NOT ignored, though it looks like build output:
+#
+#   public/data/          5.9 MB of quantised surfaces, cells and the manifest
+#   src/content/generated.json
+#
+# Both are written by model/export_web.py, which needs likelihood.npz and the
+# scraped GIFs -- around 210 MB of gitignored intermediates that CI does not
+# have and should not rebuild. Tracking the exporter's output is what lets the
+# Pages workflow build the site without any of them.
+#
+# The cost is that a research change does not reach the site until
+# export_web.py is re-run and its output committed. check.py enforces this:
+# "site, generated.json agrees with the data" fails whenever the JSON and the
+# tracked CSVs disagree, so a stale export is a failing check rather than a
+# quietly wrong page.
+# --------------------------------------------------------------------------

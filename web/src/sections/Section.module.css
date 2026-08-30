@@ -1,0 +1,86 @@
+.section {
+  padding: var(--sp-8) 0;
+  border-top: 1px solid var(--rule);
+}
+
+.head {
+  width: min(100% - 2.5rem, var(--measure));
+  margin-inline: auto;
+}
+
+.wide {
+  width: min(100% - 2.5rem, var(--wide));
+  margin-inline: auto;
+}
+
+.act {
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  font-weight: 600;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 var(--sp-3);
+}
+
+.title {
+  font-size: var(--step-3);
+  margin: 0 0 var(--sp-4);
+}
+
+.body {
+  width: min(100% - 2.5rem, var(--measure));
+  margin-inline: auto;
+  color: var(--ink-2);
+}
+
+.body strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.figure {
+  margin: var(--sp-6) 0 0;
+}
+
+.pull {
+  margin: var(--sp-6) auto;
+  width: min(100% - 2.5rem, var(--measure));
+  padding-left: var(--sp-4);
+  border-left: 2px solid var(--warn);
+  font-size: var(--step-1);
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+.stat {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.94em;
+  color: var(--ink);
+}
+
+.tableWrap {
+  margin-top: var(--sp-5);
+  overflow-x: auto;
+}
+
+.no {
+  color: var(--warn);
+  font-weight: 600;
+}
+
+.yes {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.note {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  line-height: 1.6;
+  color: var(--ink-3);
+  border-top: 1px solid var(--rule);
+  padding-top: var(--sp-4);
+  margin-top: var(--sp-5);
+}

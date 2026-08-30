@@ -1,0 +1,190 @@
+/* An archival plate and the three pictures recovered from it.
+ *
+ * The published map is a 456x200 GIF and that is the whole surviving artefact,
+ * so there is no higher resolution to reach for. It is therefore treated the
+ * way a newspaper treats a scanned document: mounted rather than stretched,
+ * sized to something close to its own resolution, and captioned. Blowing it to
+ * the full column width buys nothing but bigger pixels.
+ */
+
+.figure {
+  margin: 0;
+}
+
+/* The mount. In dark mode the published stage is a white rectangle, and a
+ * white rectangle dropped straight onto a near-black page reads as a hole
+ * punched in the layout. Framing it -- a raised mat, a hairline, real padding
+ * -- makes it read as a document sitting on the page, which is what it is. */
+.mount {
+  max-width: 46rem;
+  margin-inline: auto;
+  padding: var(--sp-4);
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+}
+
+.plate {
+  position: relative;
+  aspect-ratio: 456 / 200;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--paper-sunk);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* The published stage is upscaled about 1.6x from its native grid. Smoothing
+ * it would turn hard-edged dots into blurred lozenges and quietly imply a
+ * resolution that was never there. Act II claims the geography survived only
+ * as pixels, so the pixels are drawn as pixels. The recovered stages are
+ * continuous fields and are smoothed. */
+.pixels {
+  image-rendering: pixelated;
+}
+
+.smooth {
+  image-rendering: auto;
+}
+
+/* The outgoing stage, held above the incoming one and faded out. The whole
+ * point of the act is watching ink turn into a surface, so the transition is
+ * the argument rather than decoration. */
+.ghost {
+  z-index: 1;
+  opacity: 1;
+  transition: opacity var(--slow) var(--ease);
+}
+
+.ghostOut {
+  opacity: 0;
+}
+
+/* Labelled on the graphic, the way a chart is, so the picture is still legible
+ * when it is screenshotted away from its caption. */
+.tag {
+  position: absolute;
+  z-index: 2;
+  top: var(--sp-2);
+  left: var(--sp-2);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6ch;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  border: 1px solid var(--rule);
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  color: var(--ink-2);
+  backdrop-filter: blur(3px);
+}
+
+.tagN {
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-3);
+}
+
+.loading {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--ink-3);
+}
+
+/* A segmented progress rule rather than a row of pills. The rule carries the
+ * state, so the label underneath can stay quiet type instead of becoming a
+ * filled blue button. */
+.controls {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: var(--sp-3);
+  max-width: 46rem;
+  margin: var(--sp-5) auto 0;
+}
+
+.step,
+.stepOn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: var(--sp-3) 0 0;
+  background: none;
+  border: 0;
+  border-top: 2px solid var(--rule);
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  line-height: 1.3;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition:
+    color var(--fast) var(--ease),
+    border-color var(--fast) var(--ease);
+}
+
+.step:hover {
+  color: var(--ink-2);
+  border-top-color: var(--ink-3);
+}
+
+.stepOn {
+  color: var(--ink);
+  border-top-color: var(--accent);
+}
+
+.n {
+  display: block;
+  font-family: var(--font-data);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--step--2);
+  color: var(--ink-3);
+  margin-bottom: 0.15rem;
+}
+
+.stepOn .n {
+  color: var(--accent);
+}
+
+.caption {
+  margin: var(--sp-5) auto 0;
+  max-width: 46rem;
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  line-height: 1.55;
+  color: var(--ink-2);
+  min-height: 4.5em;
+  text-wrap: pretty;
+}
+
+.source {
+  display: block;
+  margin-top: var(--sp-3);
+  font-size: var(--step--2);
+  color: var(--ink-3);
+}
+
+/* On a phone four steps across is four one-word columns. Stack them into two
+ * rows instead of letting the labels shred. */
+@media (max-width: 33rem) {
+  .controls {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ghost {
+    transition: none;
+  }
+}

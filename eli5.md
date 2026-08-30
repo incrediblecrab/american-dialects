@@ -52,7 +52,7 @@ The fix that was applied was: turn the volume down on *all* the evidence, and tu
 
 That fix is wrong, and it took a long time to see why. It's like noticing that one actor in a movie is too loud and responding by turning down the whole TV. You do fix the loud actor. You also make the dialogue you actually needed inaudible. Real repeated evidence gets quieted, but so does genuinely new evidence — and the questions had already been deliberately chosen *not* to repeat each other.
 
-**The symptom was unmistakable once we looked for it: the model got worse the more you told it.** Past about twelve questions, extra answers actively made the guess less accurate. A model that gets dumber when you give it more information is broken. That's not a subtle statistical concern; that's an alarm.
+**The symptom was unmistakable once we looked for it: the model got worse the more you told it.** Past about thirteen questions, extra answers actively made the guess less accurate. A model that gets dumber when you give it more information is broken. That's not a subtle statistical concern; that's an alarm.
 
 Turning that correction off entirely made the model roughly **three times more precise**. It was tested against simulated people deliberately built to break the model in three different ways at once, at many different severities: **253 comparisons, and turning it off won all 253.**
 
@@ -62,15 +62,15 @@ The lesson isn't "don't correct for things." The measurement that motivated the 
 
 The NYT quiz asked about twelve questions. This project inherited that number without ever checking it. Everyone just... kept using twelve.
 
-So we finally measured it. Ask 1 question, 2, 3, up to 20, and see how the error actually falls.
+So we finally measured it. Ask 1 question, 2, 3, up to 30, and see how the error actually falls.
 
-It turns out **twelve was the right answer for the broken model, and only for the broken model.** The broken version stops improving at eleven or twelve and then gets *worse* — by twenty questions it's 88 km worse than it was at twelve. Of course it stops at twelve. It's turning its own volume down faster than the questions can inform it.
+It turns out **twelve was the right answer for the broken model, and only for the broken model.** The broken version stops improving at thirteen questions and then gets *worse* — by thirty questions it's 109 km worse than it was at its best. Of course it stops early. It's turning its own volume down faster than the questions can inform it.
 
-Fix the model and the curve just keeps descending. At twenty questions — the furthest we can currently measure — it's still improving, with no flattening out.
+Fix the model and the curve just keeps descending. At thirty questions — the furthest we can currently measure — it's still improving, with no flattening out.
 
 Twelve was never a fact about how people talk. It was a fact about a bug.
 
-The current honest recommendation is **fourteen**, which is where you've collected 90% of the accuracy that's realistically available, and also where the tradeoff lands if you assume people get bored. That number is provisional — the measurement stops at twenty because the list of ranked questions is only twenty long, and the good models hadn't stopped improving there.
+The quiz now asks **fourteen**, and it's worth being straight about where that number comes from: it is a judgement, not a discovery. Because the fixed model never stops improving, there's no "best" length to find. Fourteen is what you get if you assume each extra question has to save you about 30 km to be worth the annoyance of answering it. If you instead ask where you've collected 90% of the available accuracy, the answer is nineteen. Fourteen is the shorter of the two defensible answers, and a quiz someone actually finishes is worth more than one they abandon.
 
 ## the second model
 
@@ -86,7 +86,7 @@ Isn't that circular — training a model on data made by the other model? It wou
 
 The honest limit: **it can't learn anything the fake people don't contain.** It's a better reader of the same maps, not a source of new knowledge about American English.
 
-**It works.** At the same twelve questions, it cuts the typical error from 760 km down to 343 km. The sharper way to say it: **the neural network using five questions beats the old deployed model using any number of questions at all.**
+**It works.** At the same twelve questions, it cuts the broken model's typical error from 891 km down to 347 km. The sharper way to say it: **the neural network using five questions beats the broken model using any number of questions at all.** Against the fixed model the margin is smaller but it holds everywhere — 291 km against 361 at the fourteen questions the quiz asks.
 
 Picking the right model matters far more than asking more questions.
 
@@ -96,7 +96,7 @@ This is the part that matters, and it's the part most projects skip.
 
 **Solidly established:** the pixel reconstruction works (r = 0.955 against the survey's own published numbers). The reconstructed maps beat a no-geography baseline on 294,079 completely separate responses. A totally different survey, run years later on different people, asked the same 122 questions and published its own dot maps — reconstructing those independently and comparing agrees far above chance, and every famous dialect boundary shows up in both.
 
-**Established but only in simulation:** everything about accuracy — the "343 km at twelve questions" type of claim. Those are measured against people we invented. We invented them to be difficult, and their flaws are sized to match real measurements, but they're still invented.
+**Established but only in simulation:** everything about accuracy — the "291 km at fourteen questions" type of claim. Those are measured against people we invented. We invented them to be difficult, and their flaws are sized to match real measurements, but they're still invented.
 
 **Not established at all: how well this works on a real human being.** No public dataset has real people, with known hometowns, answering many dialect questions. The closest one overlaps with our questions on exactly two topics, and two questions can't locate anybody.
 

@@ -1,21 +1,31 @@
 n,question,bits,entropy,selfconsistency_km,selfconsistency_state_acc,text
 1,105,0.5811458826065063,12.354144096374512,991.2291259765625,0.1275,What is your generic term for a sweetened carbonated beverage?
-2,74,0.3923184275627136,12.035652160644531,803.1281127929688,0.155,What do you call the little gray creature (that looks like an insect but is actually a crustacean) that rolls up into a ball when you touch it?
-3,95,0.3438696265220642,11.735004425048828,625.663818359375,0.255,"What is ""the City""?"
-4,99,0.3184930682182312,11.42713737487793,577.535888671875,0.295,Which of these terms do you prefer for the small road parallel to the highway?
-5,106,0.2839319705963135,11.169342994689941,468.047119140625,0.3475,What do you call the act of covering a house or area in front of a house with toilet paper?
-6,110,0.24839584529399872,10.959731101989746,463.886474609375,0.3825,What do you call the night before Halloween?
-7,79,0.23652957379817963,10.736379623413086,402.434814453125,0.38,What is your *general* term for a big road that you drive relatively fast on?
-8,64,0.20368336141109467,10.596410751342773,375.05426025390625,0.4125,"What do you call the long sandwich that contains cold cuts, lettuce, and so on?"
-9,118,0.1964028775691986,10.360343933105469,274.29510498046875,0.4775,What do you call a drive-through liquor store?
-10,103,0.16978077590465546,10.199555397033691,246.67123413085938,0.4925,What do you call the thing from which you might drink water in a school?
-11,73,0.15836527943611145,10.023927688598633,231.0520782470703,0.4875,"What is your *general* term for the rubber-soled shoes worn in gym class, for athletic activities, etc.?"
-12,58,0.1447860151529312,9.869163513183594,236.53091430664062,0.4975,"Which of these terms do you prefer for a sale of unwanted items on your porch, in your yard, etc.?"
-13,76,0.13863806426525116,9.725236892700195,213.00875854492188,0.5125,What term do you use to refer to something that is across both streets from you at an intersection (or diagonally across from you in general)?
-14,66,0.13228970766067505,9.608471870422363,215.81446838378906,0.5125,What do you call the miniature lobster that one finds in lakes and streams for example (a crustacean of the family Astacidae)?
-15,50,0.12173683196306229,9.479774475097656,204.2421875,0.5475,What word(s) do you use to address a group of two or more people?
-16,65,0.11514663696289062,9.371590614318848,186.9731903076172,0.555,What do you call the insect that flies around in the summer and has a rear section that glows in the dark?
-17,84,0.11027538031339645,9.289045333862305,173.49156188964844,0.565,What do you call a traffic situation in which several roads meet in a circle and you have to get off at a certain point?
-18,59,0.10353061556816101,9.172040939331055,163.67286682128906,0.58,"What do you call the game wherein the participants see who can throw a knife closest to the other person (or alternately, get a jackknife to stick into the ground or a piece of wood)?"
-19,83,0.09737935662269592,9.061844825744629,149.93438720703125,0.5825,What do you call an easy course?
-20,60,0.09403681010007858,8.959687232971191,146.59906005859375,0.6025,What do you call the area of grass between the sidewalk and the road?
+2,74,0.3923184275627136,11.963787078857422,781.73291015625,0.1475,What do you call the little gray creature (that looks like an insect but is actually a crustacean) that rolls up into a ball when you touch it?
+3,95,0.337261438369751,11.60235595703125,655.1702880859375,0.255,"What is ""the City""?"
+4,99,0.3131372332572937,11.254813194274902,564.5797119140625,0.3025,Which of these terms do you prefer for the small road parallel to the highway?
+5,106,0.2753479778766632,10.981391906738281,456.18206787109375,0.34,What do you call the act of covering a house or area in front of a house with toilet paper?
+6,110,0.23925289511680603,10.753583908081055,486.78924560546875,0.3725,What do you call the night before Halloween?
+7,79,0.223755344748497,10.527888298034668,396.3193359375,0.385,What is your *general* term for a big road that you drive relatively fast on?
+8,64,0.19543609023094177,10.384163856506348,385.8662109375,0.405,"What do you call the long sandwich that contains cold cuts, lettuce, and so on?"
+9,118,0.188354954123497,10.145560264587402,275.7486877441406,0.4675,What do you call a drive-through liquor store?
+10,58,0.15968281030654907,9.989083290100098,268.613037109375,0.475,"Which of these terms do you prefer for a sale of unwanted items on your porch, in your yard, etc.?"
+11,66,0.15029321610927582,9.8278226852417,270.056640625,0.4625,What do you call the miniature lobster that one finds in lakes and streams for example (a crustacean of the family Astacidae)?
+12,76,0.14120365679264069,9.684837341308594,225.03329467773438,0.5175,What term do you use to refer to something that is across both streets from you at an intersection (or diagonally across from you in general)?
+13,73,0.13346870243549347,9.539937019348145,188.0697021484375,0.535,"What is your *general* term for the rubber-soled shoes worn in gym class, for athletic activities, etc.?"
+14,65,0.12410537898540497,9.415390968322754,186.20333862304688,0.5425,What do you call the insect that flies around in the summer and has a rear section that glows in the dark?
+15,50,0.11727453023195267,9.28403091430664,155.8268280029297,0.5675,What word(s) do you use to address a group of two or more people?
+16,84,0.11101017147302628,9.174275398254395,160.26222229003906,0.5525,What do you call a traffic situation in which several roads meet in a circle and you have to get off at a certain point?
+17,59,0.10181940346956253,9.070209503173828,152.98219299316406,0.5625,"What do you call the game wherein the participants see who can throw a knife closest to the other person (or alternately, get a jackknife to stick into the ground or a piece of wood)?"
+18,60,0.09637009352445602,8.965245246887207,157.62149047851562,0.58,What do you call the area of grass between the sidewalk and the road?
+19,83,0.09227316081523895,8.877769470214844,150.58148193359375,0.5925,What do you call an easy course?
+20,103,0.08689820021390915,8.78183364868164,145.79937744140625,0.6075,What do you call the thing from which you might drink water in a school?
+21,107,0.08332805335521698,8.682374000549316,129.74407958984375,0.615,What do you call a traffic jam caused by drivers slowing down to look at an accident or other diversion on the side of the road?
+22,41,0.0757792592048645,8.609757423400879,122.11149597167969,0.64,"Do you use ""spigot"" or ""spicket"" to refer to a faucet or tap that water comes out of?"
+23,80,0.07364169508218765,8.542874336242676,119.26387786865234,0.635,What do you call it when rain falls while the sun is shining?
+24,104,0.07156140357255936,8.482568740844727,114.93727111816406,0.65,What do you call a public railway system (normally underground)?
+25,82,0.0674968808889389,8.405226707458496,109.96731567382812,0.6575,"What do you call the gooey or dry matter that collects in the corners of your eyes, especially while you are sleeping?"
+26,21,0.06279551982879639,8.347208023071289,106.17549896240234,0.68,pecan
+27,1,0.059148989617824554,8.284212112426758,101.77043151855469,0.6825,aunt
+28,61,0.056649696081876755,8.234241485595703,99.0185546875,0.715,What do you call the area of grass that occurs in the middle of some streets?
+29,102,0.0534224696457386,8.195764541625977,99.57078552246094,0.6975,What do you call the insect that looks like a large thin spider and skitters along the top of water?
+30,97,0.051053646951913834,8.149930000305176,94.78695678710938,0.71,Which of these terms do you prefer?
