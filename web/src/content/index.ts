@@ -69,3 +69,27 @@ export function km2(n: number): string {
 export function pct(x: number, dp = 0): string {
   return `${(x * 100).toFixed(dp)}%`;
 }
+
+/**
+ * What the question-count curve actually does, computed rather than asserted.
+ *
+ * Act IV's argument rests on the discounted model getting worse as it is given
+ * more evidence. That is a claim about the data, so it is derived here and the
+ * prose reads the result. If a re-run of the curve ever removes the upturn,
+ * the sentence that describes it disappears with it instead of becoming a
+ * confident statement about something that is no longer true.
+ */
+export const twelve = (() => {
+  const discounted = curveFor(MODELS.discounted);
+  const correct = curveFor(MODELS.deployed);
+  const net = curveFor(MODELS.net);
+  const best = discounted.reduce((a, b) => (b.medianKm < a.medianKm ? b : a));
+  const end = discounted[discounted.length - 1];
+  return {
+    best,
+    end,
+    turnsUp: end.medianKm > best.medianKm,
+    correctEnd: correct[correct.length - 1],
+    netEnd: net[net.length - 1],
+  };
+})();

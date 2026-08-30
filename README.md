@@ -197,6 +197,10 @@ npm run verify                       # asserts the browser model matches model/i
 
 Only the parts that do something ship JavaScript. The quiz, the isogloss plate, the discount slider and the two charts are hydrated islands; the prose sections are rendered to HTML at build time and ship none. The charts use `d3-scale` and `d3-shape` for their scales, ticks and path geometry, and the maps are drawn straight to canvas, because a projection that is already gridded into 50,888 cells has nothing to gain from a selection layer.
 
+The prose acts are written in MDX, so the essay is edited as Markdown rather than as JSX. `web/src/components/prose/` holds the wrappers that give it the page's typography — the section frame, the reading measure, the full-bleed figure, the claim ladder in Act V, and `Stat`, which is how a number reaches the page. Interactive components are imported into the MDX and given a client directive there, which is why `Recovery.mdx` can put a scrubber in the middle of a paragraph without becoming a component itself.
+
+Two rules that fall out of this and are worth knowing before editing an `.mdx` file. Numbers still come only from `generated.json`; `check.py` scans `.mdx` alongside `.ts`, `.tsx` and `.astro` and fails on any generated figure typed into the prose. And Markdown on its own line is block content, so a wrapper meant to hold prose has to be a `div` — a `p` wrapping Markdown's own `p` is invalid, and a browser closes the outer one early, which strips the styling from the text it was marking.
+
 The page ships one colour scheme. It reproduces a printed artifact from 2003 — a white sheet with blue dots on it — and on a dark ground that sheet reads as a hole burned in the page rather than as a document.
 
 ## running it

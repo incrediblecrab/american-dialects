@@ -573,11 +573,13 @@ def check_site_quotes_no_typed_numbers(flat):
     mechanical: if a number is in generated.json, the site must read it from
     there, not spell it.
 
-    Astro files are scanned on the same terms as the components. The page is
-    now part markup and part island, and a figure typed into a .astro template
-    reaches a reader exactly as a figure typed into a .tsx one does, so a scan
-    that stopped at TypeScript would have left the whole static half of the
-    page unguarded.
+    Astro and MDX files are scanned on the same terms as the components. The
+    page is now part markup, part prose and part island, and a figure typed
+    into a .astro template or an .mdx paragraph reaches a reader exactly as a
+    figure typed into a .tsx one does, so a scan that stopped at TypeScript
+    would have left the whole static half of the page unguarded. MDX matters
+    most of the three: it is the file a writer edits, which makes it the file
+    where spelling a number out is the tempting thing to do.
     """
     if flat is None:
         record(SKIP, "site, no component retypes a generated figure",
@@ -589,7 +591,7 @@ def check_site_quotes_no_typed_numbers(flat):
                and k.rsplit(".", 1)[-1] not in NOT_A_FIGURE
                and not any(s in k for s in NOT_A_FIGURE_PATH)}
     files = sorted(p for p in SITE_SRC.rglob("*")
-                   if p.suffix in (".ts", ".tsx", ".astro"))
+                   if p.suffix in (".ts", ".tsx", ".astro", ".mdx"))
     if not files:
         record(SKIP, "site, no component retypes a generated figure", "web/src has no sources")
         return

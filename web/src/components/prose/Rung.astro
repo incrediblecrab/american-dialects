@@ -1,0 +1,25 @@
+---
+/**
+ * One rung of the ladder: what produced a claim, the claim, and the detail.
+ *
+ * The tier is named for its evidence rather than for how confident it sounds,
+ * which is the whole design of Act V. `warn` marks the bottom rung, where the
+ * evidence runs out entirely, and it changes both the tier colour and the rule
+ * above it -- one flag, because those two must never disagree.
+ */
+import styles from "../../sections/Limits.module.css";
+
+interface Props {
+  tier: string;
+  claim: string;
+  warn?: boolean;
+}
+
+const { tier, claim, warn = false } = Astro.props;
+---
+
+<li class={warn ? `${styles.rung} ${styles.wall}` : styles.rung}>
+  <p class={warn ? styles.tierWarn : styles.tier}>{tier}</p>
+  <h3 class={styles.claim}>{claim}</h3>
+  <div class={styles.detail}><slot /></div>
+</li>

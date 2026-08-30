@@ -19,12 +19,12 @@
  */
 import Shell from "../layouts/Shell.astro";
 import Quiz from "../sections/Quiz";
-import Recovery from "../sections/Recovery";
+import Recovery from "../sections/Recovery.mdx";
 import Isogloss from "../sections/Isogloss";
 import Mistake from "../sections/Mistake";
-import Twelve from "../sections/Twelve";
-import Limits from "../sections/Limits";
-import Colophon from "../sections/Colophon";
+import Twelve from "../sections/Twelve.mdx";
+import Limits from "../sections/Limits.mdx";
+import Colophon from "../sections/Colophon.mdx";
 
 const title =
   "Where you learned to talk — recovering American dialect geography";
@@ -35,10 +35,10 @@ const description =
 <Shell title={title} description={description}>
   <main>
     <Quiz client:load />
-    <Recovery client:visible />
+    <Recovery />
     <Isogloss client:visible />
     <Mistake client:visible />
-    <Twelve client:visible />
+    <Twelve />
     <Limits />
   </main>
   <Colophon />

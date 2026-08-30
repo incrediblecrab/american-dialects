@@ -64,3 +64,17 @@
 .wall .claim {
   color: var(--ink);
 }
+
+/*
+ * The detail under each rung is written as Markdown now, so it arrives as one
+ * or more <p> rather than as the single styled paragraph it used to be. Zero
+ * the margins the global sheet gives them and space any second paragraph
+ * deliberately -- which the previous single-paragraph markup could not do.
+ */
+.detail > p {
+  margin: 0;
+}
+
+.detail > p + p {
+  margin-top: var(--sp-3);
+}

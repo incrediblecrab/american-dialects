@@ -1,0 +1,17 @@
+---
+/**
+ * The caveat that closes a section, set below a rule and in the UI face.
+ *
+ * Every act that makes a claim ends with the thing that claim does not cover.
+ * Giving that its own component is what keeps it from being optional.
+ *
+ * It is a <div> rather than a <p> because the text inside is Markdown, and
+ * Markdown emits its own paragraphs. A <p> wrapping a <p> is invalid, and a
+ * browser resolves it by closing the outer one early -- which silently strips
+ * the note styling from the very text it was meant to mark. The div also lets
+ * a note run to two paragraphs, which the old markup could not.
+ */
+import s from "../../sections/Section.module.css";
+---
+
+<div class={s.note}><slot /></div>

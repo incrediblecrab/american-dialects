@@ -1,0 +1,26 @@
+---
+/**
+ * A number, in the data face, with tabular figures so columns of them line up.
+ *
+ * Pass a plain count as `n` and it is formatted with thousands separators.
+ * Anything needing a unit or a different precision comes in through the slot
+ * already formatted by one of the helpers in content -- km(), pct(), oneDp.
+ * Either way the value arrives from generated.json. Nothing here is typed.
+ */
+import s from "../../sections/Section.module.css";
+import { int } from "../../content";
+
+interface Props {
+  n?: number;
+}
+
+const { n } = Astro.props;
+---
+
+{
+  n === undefined ? (
+    <span class={s.stat}><slot /></span>
+  ) : (
+    <span class={s.stat}>{int.format(n)}</span>
+  )
+}

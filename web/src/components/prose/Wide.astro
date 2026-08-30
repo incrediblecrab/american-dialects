@@ -1,0 +1,13 @@
+---
+/**
+ * A figure at full width, wider than the prose it interrupts.
+ *
+ * The map is the hero on this page, so it is allowed out of the reading
+ * column while the text around it is not.
+ */
+import s from "../../sections/Section.module.css";
+---
+
+<div class={s.wide}>
+  <div class={s.figure}><slot /></div>
+</div>

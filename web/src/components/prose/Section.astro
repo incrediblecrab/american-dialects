@@ -1,0 +1,26 @@
+---
+/**
+ * The frame every act sits in.
+ *
+ * The prose that goes inside is written as Markdown, which emits bare <p> and
+ * <h3> with no way to attach a class. That is the point: these wrappers own
+ * the measure and the rules, so the essay can be edited as an essay.
+ */
+import s from "../../sections/Section.module.css";
+
+interface Props {
+  id: string;
+  act?: string;
+  title: string;
+}
+
+const { id, act, title } = Astro.props;
+---
+
+<section class={s.section} id={id}>
+  <div class={s.head}>
+    {act && <p class={s.act}>{act}</p>}
+    <h2 class={s.title} set:html={title} />
+  </div>
+  <slot />
+</section>

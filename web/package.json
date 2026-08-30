@@ -11,6 +11,7 @@
     "verify": "node scripts/verify-port.mjs"
   },
   "dependencies": {
+    "@astrojs/mdx": "^7.0.8",
     "@astrojs/react": "^6.0.4",
     "astro": "^7.2.9",
     "d3-array": "^3.2.4",

@@ -84,3 +84,16 @@
   padding-top: var(--sp-4);
   margin-top: var(--sp-5);
 }
+
+/*
+ * A note now wraps Markdown, so its text arrives as <p> children rather than
+ * as the note element itself. Zero their margins so the note keeps the exact
+ * spacing it had as a single paragraph, and space a second one deliberately.
+ */
+.note > p {
+  margin: 0;
+}
+
+.note > p + p {
+  margin-top: var(--sp-3);
+}
