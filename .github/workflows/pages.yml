@@ -56,7 +56,12 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "22"
+          # Must stay on the same npm major that generated package-lock.json.
+          # npm 10 and npm 11 hoist transitive dependencies differently, so a
+          # lockfile written by one is rejected as out of sync by `npm ci` on
+          # the other even when every platform's binaries are present in it.
+          # Node 24 ships npm 11; Node 22 ships npm 10.
+          node-version: "24"
           cache: npm
           cache-dependency-path: web/package-lock.json
 
