@@ -298,7 +298,7 @@ export default function Quiz() {
                   file with nowhere to send it, which is why the accuracy above
                   was measured on simulated speakers and not on the people who
                   play this —{" "}
-                  <a href="#limits">what that does and does not establish</a>.
+                  <a href="/american-dialects/limits/">what that does and does not establish</a>.
                 </p>
               </Share>
 

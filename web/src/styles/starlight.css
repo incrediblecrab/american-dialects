@@ -70,15 +70,12 @@
   color-scheme: light;
 }
 
-/* The chrome is UI; the essay is a research report and keeps its serif. */
+/* The chrome is UI; Starlight's own sans carries the prose, as it does in its
+   docs. The serif that used to sit here was a choice this project made alone,
+   and the request was the standard. */
 :root {
   --sl-font: var(--font-ui);
   --sl-font-system: var(--font-ui);
-  --sl-content-width: 50rem;
-}
-
-.sl-markdown-content {
-  font-family: var(--font-prose);
 }
 
 /* There is one palette, so a control promising a second one would be a lie. */

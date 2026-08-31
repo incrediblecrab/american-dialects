@@ -10,7 +10,7 @@ import {
   tauUsed,
   topPlaces,
 } from "../model/posterior";
-import { constants, content, int, km2, pct } from "../content";
+import { constants, content, km2, pct } from "../content";
 import s from "./Section.module.css";
 import styles from "./Mistake.module.css";
 
@@ -77,25 +77,6 @@ export default function Mistake() {
 
   return (
     <section className={s.section} id="mistake">
-      <div className={s.body}>
-        <p>
-          Treating {int.format(constants.nQuestions)} answers from one person as{" "}
-          {int.format(constants.nQuestions)} independent pieces of evidence is
-          wrong, and obviously so. People are idiosyncratic: someone who says{" "}
-          <em>yinz</em> is more likely to say <em>redd up</em> for reasons that
-          have nothing to do with adding new information about where they live.
-          Counting both at full strength overstates the case twice.
-        </p>
-        <p>
-          So the model discounted for it. The size of the discount was not
-          guessed — it was measured, from the residual correlation between
-          answers after location is accounted for, and it came out at{" "}
-          <span className={s.stat}>{constants.legacyRho}</span>. That
-          measurement is not in dispute. What was wrong was applying it as if
-          the discount scaled the whole likelihood.
-        </p>
-      </div>
-
       <div className={s.wide}>
         <div className={styles.panel}>
           <div className={styles.mapSide}>
@@ -206,26 +187,6 @@ export default function Mistake() {
         </div>
       </div>
 
-      <div className={s.body}>
-        <p>
-          The discount belongs on the <em>evidence</em>, not on the answer.
-          Scaling the entire likelihood does not just weaken the update; past a
-          point it drags the posterior back toward the prior, which is a
-          statement about where people live rather than about how anyone talks.
-          Watch the confidence rather than the name. The best guess survives the
-          discount — it is the same town either way — but the belief behind it
-          collapses to a fraction of its strength, and the strongest point on
-          the map crosses two states to New York City. The model has not become
-          appropriately unsure. It has been talked out of what it knew.
-        </p>
-        <p className={s.note}>
-          This is stated plainly because it is the most useful thing here. The
-          error was not carelessness; it came from doing the extra, correct
-          thing of measuring a real effect, and then applying the measurement in
-          the wrong place. A model with no idiolect correction at all was better
-          than the one that shipped, and that is the model running here now.
-        </p>
-      </div>
     </section>
   );
 }

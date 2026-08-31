@@ -150,25 +150,6 @@ export default function Isogloss() {
 
   return (
     <section className={s.section} id="isoglosses">
-      <div className={s.body}>
-        <p>
-          An <strong>isogloss</strong> is the line where one word gives way to
-          another. It is the oldest object in dialect geography and the reason
-          anybody wanted the survey's sub-state detail in the first place,
-          because the lines that matter run <em>through</em> states rather than
-          between them. No table of state percentages can put a boundary
-          between Milwaukee and Chicago; a surface can.
-        </p>
-        <p>
-          Drawing one takes two words, not one. A single answer's map is a heat
-          map — it says where a word is common, which is mostly a picture of
-          where people live. Subtracting one recovered surface from the other
-          gives the odds of the first word against the second at every point in
-          the country, and the contour where those odds are even is the
-          isogloss.
-        </p>
-      </div>
-
       <div className={s.wide}>
         <div className={styles.picker} role="group" aria-label="Contrast">
           {list.map((c, i) => (
@@ -310,7 +291,7 @@ export default function Isogloss() {
           on how abrupt the real thing is. And the recovery is validated only
           at the state level, so a line drawn inside Pennsylvania is exactly
           the claim this project cannot yet check.{" "}
-          <a href="#limits">That is taken up at the end</a>.
+          <a href="/american-dialects/limits/">That is taken up at the end</a>.
         </p>
       </div>
     </section>
