@@ -43,7 +43,7 @@
 
 /* The published stage is upscaled about 1.6x from its native grid. Smoothing
  * it would turn hard-edged dots into blurred lozenges and quietly imply a
- * resolution that was never there. Act II claims the geography survived only
+ * resolution that was never there. The recovery page claims the geography survived only
  * as pixels, so the pixels are drawn as pixels. The recovered stages are
  * continuous fields and are smoothed. */
 .pixels {

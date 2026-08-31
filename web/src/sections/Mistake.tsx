@@ -17,7 +17,7 @@ import styles from "./Mistake.module.css";
 const MAX_RHO = 0.25;
 
 /**
- * Act III. The correction that was the largest source of error.
+ * The correction that was the largest source of error.
  *
  * The slider runs the real model, not a lookup between two stored pictures.
  * The claim being made is that one parameter moves the answer this much, and

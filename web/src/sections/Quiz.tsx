@@ -52,7 +52,7 @@ function caveat(row: CurveRow | undefined): string {
 }
 
 /**
- * Act I. The quiz, run entirely in the browser.
+ * The quiz, run entirely in the browser.
  *
  * The questions come in the published ordering rather than being chosen
  * adaptively. That is a deliberate loss: adaptive selection is measurably

@@ -73,7 +73,7 @@ export function pct(x: number, dp = 0): string {
 /**
  * What the question-count curve actually does, computed rather than asserted.
  *
- * Act IV's argument rests on the discounted model getting worse as it is given
+ * The question-count argument rests on the discounted model getting worse as it is given
  * more evidence. That is a claim about the data, so it is derived here and the
  * prose reads the result. If a re-run of the curve ever removes the upturn,
  * the sentence that describes it disappears with it instead of becoming a
