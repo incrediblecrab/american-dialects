@@ -84,6 +84,8 @@ export default function Mistake() {
               <MapView
                 cells={payload.cells}
                 posterior={view?.p ?? null}
+                places={payload.manifest.places}
+                legend={["less likely", "more likely"]}
                 markers={
                   view ? [{ lat: view.lat, lon: view.lon, tone: "accent" }] : []
                 }

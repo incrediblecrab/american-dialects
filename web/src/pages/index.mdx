@@ -1,9 +1,12 @@
 ---
 title: A map of how America talks, recovered from a picture of itself
 description: In 2013 a newspaper quiz asked fourteen questions and guessed where you grew up. The data underneath it was never released. Only pictures of it were.
+layout: ../layouts/Base.astro
+hero: true
 ---
 
-import Quiz from "../../sections/Quiz";
+import Quiz from "../sections/Quiz";
+import Onward from "../components/Onward.astro";
 
 {/*
   The quiz, run entirely in the browser.
@@ -14,3 +17,5 @@ import Quiz from "../../sections/Quiz";
 */}
 
 <Quiz client:load />
+
+<Onward />

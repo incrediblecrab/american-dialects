@@ -127,6 +127,51 @@ td {
   vertical-align: top;
 }
 
+/* -------------------------------------------------------------- article flow
+
+   The docs theme used to supply all of this. Now that the pages are plain
+   routes, the document itself has to say how a chapter is set.
+
+   Only the text elements are held to a reading measure. Figures, islands and
+   anything else the MDX drops in keep the full column, which is the whole
+   reason the column is wider than the measure in the first place: the map is
+   the point, and it should not be indented to match a paragraph. */
+.flow > p,
+.flow > ul,
+.flow > ol,
+.flow > blockquote,
+.flow > table,
+.flow > h2,
+.flow > h3,
+.flow > h4 {
+  max-width: var(--measure);
+}
+
+.flow > h2 {
+  margin: var(--sp-7) 0 var(--sp-3);
+}
+
+.flow > h3 {
+  margin: var(--sp-6) 0 var(--sp-2);
+}
+
+.flow > ul,
+.flow > ol {
+  margin: 0 0 var(--sp-4);
+  padding-left: 1.15em;
+}
+
+.flow li {
+  margin-bottom: var(--sp-2);
+}
+
+.flow > blockquote {
+  margin: var(--sp-5) 0;
+  padding-left: var(--sp-4);
+  border-left: 2px solid var(--rule-strong);
+  color: var(--ink-2);
+}
+
 /* -------------------------------------------------------------- primitives */
 
 .wrap {

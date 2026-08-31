@@ -1,14 +1,13 @@
 ---
 title: The data was never published. The pictures were.
 description: The Harvard Dialect Survey released one image per answer and nothing else. The geography is recoverable from those images, and checks out against numbers the recovery never saw.
-sidebar:
-  order: 2
+layout: ../layouts/Base.astro
 ---
 
-import Scrubber from "../../components/Scrubber";
-import Wide from "../../components/prose/Wide.astro";
-import Stat from "../../components/prose/Stat.astro";
-import { content, oneDp, recovery, recoveryStrip } from "../../content";
+import Scrubber from "../components/Scrubber";
+import Wide from "../components/prose/Wide.astro";
+import Stat from "../components/prose/Stat.astro";
+import { content, oneDp, recovery, recoveryStrip } from "../content";
 
 export const strip = recoveryStrip;
 

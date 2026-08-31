@@ -6,8 +6,10 @@
   display: grid;
   gap: var(--sp-6);
   align-items: start;
-  width: min(100% - 2.5rem, var(--wide));
-  margin-inline: auto;
+  /* Width is the layout's job now that this is not inside a docs theme.
+     Setting it again here inset the quiz a couple of rem from the header and
+     footer, which read as a mistake rather than as a margin. */
+  width: 100%;
 }
 
 /* The opening screen is the quiz itself rather than an essay in front of it.
@@ -67,9 +69,11 @@
 
 .h1 {
   margin: 0 0 var(--sp-4);
-  font-size: var(--step-5);
-  line-height: 1.03;
-  letter-spacing: -0.025em;
+  /* A step down from the largest ramp size: this column is about 26rem, and
+     at --step-5 the headline broke to five lines of three words. */
+  font-size: var(--step-4);
+  line-height: 1.06;
+  letter-spacing: -0.022em;
   text-wrap: balance;
 }
 

@@ -1,0 +1,166 @@
+---
+/**
+ * Where the reader goes after the quiz.
+ *
+ * The quiz is the reason a stranger arrives and the reason they tell anyone
+ * else, but it is the least original thing here: a newspaper did it first and
+ * did it for a bigger audience. What is actually new is underneath it, so the
+ * page cannot simply end when the map is drawn.
+ *
+ * The order is deliberate and it is not the order the work happened in. The
+ * mistake comes first because it is the only finding that would still be worth
+ * publishing if the quiz did not exist. The recovery comes second because it
+ * is what makes the mistake credible -- a negative result about a model is
+ * only interesting once you believe the data under it. Everything else follows.
+ *
+ * Every figure is computed from the generated content, including the ratio,
+ * which is why there is arithmetic here rather than a number.
+ */
+import { content, km2, oneDp } from "../content";
+
+const { deployed, discounted } = content.fixture.variants;
+const ratio = discounted.area80Km2 / deployed.area80Km2;
+const base = import.meta.env.BASE_URL;
+
+const chapters = [
+  {
+    href: `${base}mistake/`,
+    kicker: "The finding",
+    title: "The most careful thing in the model was the worst thing in it.",
+    body:
+      `A correction for the fact that one person's answers are not independent ` +
+      `was derived properly and measured honestly. Switching it on makes the ` +
+      `model ${oneDp.format(ratio)} times vaguer: the same answers go from ` +
+      `${km2(deployed.area80Km2)} of country to ${km2(discounted.area80Km2)}.`,
+  },
+  {
+    href: `${base}recovery/`,
+    kicker: "The method",
+    title: "The data was never published. The pictures were.",
+    body:
+      `One image per answer, dots on a map, no table behind them. The ` +
+      `geography is still recoverable from those pixels, and it agrees with ` +
+      `state percentages the recovery never saw at r = ${content.recovery.r}.`,
+  },
+  {
+    href: `${base}questions/`,
+    kicker: "The inherited number",
+    title: "Nobody ever worked out how many questions it should ask.",
+    body:
+      `Twelve is not a fact about language. It is an interface decision from ` +
+      `2013 that has been repeated since as though it were one.`,
+  },
+];
+
+const more = [
+  { href: `${base}isogloss/`, label: "Isoglosses — where one word gives way to another" },
+  { href: `${base}limits/`, label: "What is known, and what is only hoped" },
+  { href: `${base}colophon/`, label: "Colophon — sources and how the numbers are made" },
+];
+---
+
+<section class="onward">
+  <p class="rubric">Then keep reading</p>
+  <ol class="chapters">
+    {
+      chapters.map((c) => (
+        <li>
+          <a href={c.href}>
+            <span class="kicker">{c.kicker}</span>
+            <h2>{c.title}</h2>
+            <p>{c.body}</p>
+          </a>
+        </li>
+      ))
+    }
+  </ol>
+  <ul class="more">
+    {more.map((m) => (
+      <li>
+        <a href={m.href}>{m.label}</a>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .onward {
+    /* No rule here: the quiz section above already closes with one, and two
+       parallel rules a few rem apart read as a rendering fault. */
+    margin-top: var(--sp-6);
+    padding-top: 0;
+  }
+
+  .rubric {
+    margin: 0 0 var(--sp-5);
+    font-family: var(--font-ui);
+    font-size: var(--step--2);
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .chapters {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--sp-5);
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  }
+
+  .chapters a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    border-top: 2px solid var(--ink);
+    padding-top: var(--sp-3);
+  }
+
+  /* The rule over each column is the only ornament. It thickens on hover
+     rather than the card lifting or tinting, because a shadow here would be
+     the one piece of product-landing-page vocabulary on the page. */
+  .chapters a:hover h2 {
+    color: var(--accent);
+  }
+
+  .kicker {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: var(--step--2);
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: var(--sp-2);
+  }
+
+  .chapters h2 {
+    font-size: var(--step-1);
+    line-height: 1.2;
+    margin: 0 0 var(--sp-3);
+    transition: color var(--fast) var(--ease);
+  }
+
+  .chapters p {
+    margin: 0;
+    color: var(--ink-2);
+    font-size: var(--step--1);
+    line-height: 1.55;
+  }
+
+  .more {
+    list-style: none;
+    margin: var(--sp-6) 0 0;
+    padding: 0;
+    display: grid;
+    gap: var(--sp-2);
+    font-family: var(--font-ui);
+    font-size: var(--step--1);
+  }
+  .more a {
+    color: var(--accent);
+  }
+</style>

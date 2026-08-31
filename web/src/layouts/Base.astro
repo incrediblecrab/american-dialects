@@ -1,0 +1,225 @@
+---
+/**
+ * The shell every page is drawn in.
+ *
+ * This replaces Starlight, which was the wrong frame for the work. A docs
+ * theme is built for a reader who arrives knowing what they want and needs to
+ * find it: a persistent tree of every page, a search field, a rail of the
+ * headings on this one. All of that is machinery for looking things up, and
+ * none of it is machinery for being convinced of something. Wrapping a single
+ * argument in it framed a piece of research as an API manual, and pushed the
+ * one thing worth looking at -- the map -- into a third of the width.
+ *
+ * So there is no sidebar and no search. There is a line back to the top, the
+ * page, and a footer that says where everything came from. Navigation between
+ * chapters happens at the end of a chapter, which is where a reader of an
+ * essay actually wants it.
+ */
+import "../styles/global.css";
+
+interface Props {
+  frontmatter?: {
+    title?: string;
+    description?: string;
+    /** Suppresses the article header, for pages that open with an island. */
+    hero?: boolean;
+  };
+  title?: string;
+  description?: string;
+  hero?: boolean;
+}
+
+const fm = Astro.props.frontmatter ?? {};
+const title = Astro.props.title ?? fm.title ?? "American dialects";
+const description = Astro.props.description ?? fm.description ?? "";
+const hero = Astro.props.hero ?? fm.hero ?? false;
+
+const base = import.meta.env.BASE_URL;
+const REPO = "https://github.com/incrediblecrab/american-dialects";
+const site = "American dialects";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title === site ? title : `${title} — ${site}`}</title>
+    {description ? <meta name="description" content={description} /> : null}
+    <meta property="og:title" content={title} />
+    {description ? <meta property="og:description" content={description} /> : null}
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href={`${base}favicon.svg`} />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to the content</a>
+
+    <header class="top">
+      <a class="wordmark" href={base}>{site}</a>
+      <nav class="topnav">
+        <a href={`${base}mistake/`}>The mistake</a>
+        <a href={`${base}recovery/`}>Method</a>
+        <a href={REPO}>Code</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      {
+        hero ? null : (
+          <header class="head">
+            <h1>{title}</h1>
+            {description ? <p class="standfirst">{description}</p> : null}
+          </header>
+        )
+      }
+      <div class="flow">
+        <slot />
+      </div>
+    </main>
+
+    <footer class="foot">
+      <div class="footgrid">
+        <section>
+          <h2>Where the data came from</h2>
+          <ul>
+            <li>
+              Harvard Dialect Survey (2003), Bert Vaux and Scott Golder — published
+              answer maps and state percentages.
+            </li>
+            <li>
+              Cambridge Survey of World Englishes — the same question set, a later
+              and differently recruited population.
+            </li>
+            <li>US Census — population, used as the prior over where people live.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>This page</h2>
+          <ul>
+            <li><a href={REPO}>Source and analysis code</a></li>
+            <li><a href={`${base}colophon/`}>Colophon and full method</a></li>
+            <li><a href={`${base}limits/`}>What is known, and what is not</a></li>
+            <li><a href={`${REPO}/issues`}>Corrections</a></li>
+          </ul>
+        </section>
+      </div>
+      <p class="fine">
+        Every figure on this site is generated from the tracked data, not typed in
+        by hand. Nothing you answer is recorded or sent anywhere; the model runs
+        in your browser.
+      </p>
+    </footer>
+  </body>
+</html>
+
+<style>
+  .skip {
+    position: absolute;
+    left: -9999px;
+  }
+  .skip:focus {
+    left: var(--sp-3);
+    top: var(--sp-3);
+    z-index: 10;
+    background: var(--paper-raised);
+    padding: var(--sp-2) var(--sp-3);
+    border: 1px solid var(--rule);
+  }
+
+  .top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    max-width: var(--wide);
+    margin: 0 auto;
+    padding: var(--sp-4) var(--sp-4) 0;
+  }
+
+  .wordmark {
+    font-family: var(--font-ui);
+    font-size: var(--step--1);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    text-decoration: none;
+  }
+
+  .topnav {
+    display: flex;
+    gap: var(--sp-4);
+    font-family: var(--font-ui);
+    font-size: var(--step--1);
+  }
+  .topnav a {
+    color: var(--ink-3);
+    text-decoration: none;
+  }
+  .topnav a:hover {
+    color: var(--accent);
+  }
+
+  main {
+    max-width: var(--wide);
+    margin: 0 auto;
+    padding: 0 var(--sp-4) var(--sp-7);
+  }
+
+  /* The article header. A standfirst rather than a subtitle: it carries the
+     claim, so it is set close to body size and in the prose face, not shrunk
+     into a caption. */
+  .head {
+    max-width: var(--measure);
+    margin: var(--sp-7) 0 var(--sp-6);
+  }
+  .head h1 {
+    font-size: var(--step-4);
+  }
+  .standfirst {
+    margin: var(--sp-3) 0 0;
+    color: var(--ink-2);
+    font-size: var(--step-1);
+    line-height: 1.5;
+  }
+
+  .foot {
+    border-top: 1px solid var(--rule);
+    max-width: var(--wide);
+    margin: 0 auto;
+    padding: var(--sp-6) var(--sp-4) var(--sp-7);
+    font-family: var(--font-ui);
+    font-size: var(--step--1);
+    color: var(--ink-3);
+  }
+  .footgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--sp-5);
+  }
+  .foot h2 {
+    font-family: var(--font-ui);
+    font-size: var(--step--2);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-3);
+    margin: 0 0 var(--sp-2);
+  }
+  .foot ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: var(--sp-2);
+    line-height: 1.45;
+  }
+  .foot a {
+    color: var(--accent);
+  }
+  .fine {
+    margin: var(--sp-5) 0 0;
+    max-width: var(--measure);
+    line-height: 1.5;
+  }
+</style>

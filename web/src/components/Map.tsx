@@ -1,8 +1,18 @@
 import { useEffect, useMemo, useRef } from "react";
 import type { Cells } from "../model/payload";
-import { buildBorders, displayAspect, project } from "../model/geometry";
+import { buildBorders } from "../model/geometry";
+import { buildLookup, makeAlbers } from "../model/albers";
 import { buildRamp, inkColour } from "../model/ramp";
+import { pickLabels, type Place } from "../model/labels";
 import styles from "./Map.module.css";
+
+/**
+ * Resolution of the reprojected raster, independent of how big the map is
+ * drawn. Fixing it means the lookup table survives every resize and is built
+ * once for the life of the component; the canvas then scales this up, which
+ * is the same thing the unprojected version did with the raw grid.
+ */
+const RASTER_W = 912;
 
 export interface Marker {
   lat: number;
@@ -30,6 +40,12 @@ interface Props {
   shading?: Uint8ClampedArray | null;
   overlays?: Overlay[];
   markers?: Marker[];
+  /** Cities to name. Passing the full population-sorted list is correct; the
+   * map decides how many of them fit at the width it turns out to have. */
+  places?: Place[];
+  /** Ends of the scale, e.g. ["less likely", "more likely"]. Omitted on maps
+   * whose fill is not a scale, such as the isogloss plates. */
+  legend?: [string, string];
   /** Lifts the shoulders of a very peaked posterior into view. */
   gamma?: number;
   caption?: string;
@@ -63,6 +79,8 @@ export default function Map({
   shading = null,
   overlays = [],
   markers = [],
+  places = [],
+  legend,
   gamma = 0.4,
   caption,
   className,
@@ -70,8 +88,48 @@ export default function Map({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
 
-  const borders = useMemo(() => buildBorders(cells), [cells]);
-  const aspect = useMemo(() => displayAspect(cells), [cells]);
+  const albers = useMemo(() => makeAlbers(cells), [cells]);
+  const aspect = albers.aspect;
+  const raster = useMemo(() => {
+    const h = Math.round(RASTER_W / albers.aspect);
+    return { w: RASTER_W, h, lut: buildLookup(cells, albers, RASTER_W, h) };
+  }, [cells, albers]);
+
+  /**
+   * Borders, projected once into [0,1] and kept there.
+   *
+   * Their geometry never changes, only the size they are drawn at, so putting
+   * the trigonometry in a memo means a redraw is a multiply per endpoint
+   * rather than a projection per endpoint.
+   */
+  const borders = useMemo(() => {
+    const grid = buildBorders(cells);
+    const conv = (seg: Float32Array) => {
+      const out = new Float32Array(seg.length);
+      for (let i = 0; i < seg.length; i += 2) {
+        const p = albers.fromGrid(seg[i], seg[i + 1]);
+        out[i] = p.x;
+        out[i + 1] = p.y;
+      }
+      return out;
+    };
+    return { state: conv(grid.state), coast: conv(grid.coast) };
+  }, [cells, albers]);
+
+  /** Callers hand overlays in grid coordinates, same as the borders were. */
+  const projectedOverlays = useMemo(
+    () =>
+      overlays.map((o) => {
+        const out = new Float32Array(o.segments.length);
+        for (let i = 0; i < o.segments.length; i += 2) {
+          const p = albers.fromGrid(o.segments[i], o.segments[i + 1]);
+          out[i] = p.x;
+          out[i + 1] = p.y;
+        }
+        return { ...o, segments: out };
+      }),
+    [overlays, albers],
+  );
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -90,13 +148,15 @@ export default function Map({
       if (!ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      const { rows, cols } = cells;
-      const img = new ImageData(cols, rows);
+      const { w, h, lut } = raster;
+      const img = new ImageData(w, h);
       const px = img.data;
 
       if (shading) {
-        for (let i = 0; i < cells.count; i++) {
-          const o = (cells.cellY[i] * cols + cells.cellX[i]) * 4;
+        for (let p = 0; p < lut.length; p++) {
+          const i = lut[p];
+          if (i < 0) continue;
+          const o = p * 4;
           px[o] = shading[i * 3];
           px[o + 1] = shading[i * 3 + 1];
           px[o + 2] = shading[i * 3 + 2];
@@ -110,10 +170,20 @@ export default function Map({
             if (posterior[i] > max) max = posterior[i];
           }
         }
-        for (let i = 0; i < cells.count; i++) {
-          const v = posterior && max > 0 ? (posterior[i] / max) ** gamma : 0;
-          const s = Math.min(255, Math.max(0, Math.round(v * 255))) * 3;
-          const o = (cells.cellY[i] * cols + cells.cellX[i]) * 4;
+        // Resolve each cell's ramp position once. Several output pixels fall
+        // in the same cell, and the power is far more expensive than a lookup.
+        const idx = new Uint8Array(cells.count);
+        if (posterior && max > 0) {
+          for (let i = 0; i < cells.count; i++) {
+            const v = (posterior[i] / max) ** gamma;
+            idx[i] = Math.min(255, Math.max(0, Math.round(v * 255)));
+          }
+        }
+        for (let p = 0; p < lut.length; p++) {
+          const i = lut[p];
+          if (i < 0) continue;
+          const s = idx[i] * 3;
+          const o = p * 4;
           px[o] = ramp[s];
           px[o + 1] = ramp[s + 1];
           px[o + 2] = ramp[s + 2];
@@ -122,16 +192,16 @@ export default function Map({
       }
 
       const small = document.createElement("canvas");
-      small.width = cols;
-      small.height = rows;
+      small.width = w;
+      small.height = h;
       small.getContext("2d")!.putImageData(img, 0, 0);
 
       ctx.imageSmoothingEnabled = true;
       ctx.imageSmoothingQuality = "high";
       ctx.drawImage(small, 0, 0, canvas.width, canvas.height);
 
-      const sx = canvas.width / cols;
-      const sy = canvas.height / rows;
+      const sx = canvas.width;
+      const sy = canvas.height;
       const line = (seg: Float32Array, width: number, colour: string) => {
         ctx.beginPath();
         for (let i = 0; i < seg.length; i += 4) {
@@ -144,10 +214,61 @@ export default function Map({
       };
       line(borders.state, 0.5, inkColour(0.22));
       line(borders.coast, 0.9, inkColour(0.5));
-      for (const o of overlays) line(o.segments, o.width, o.colour);
+      for (const o of projectedOverlays) line(o.segments, o.width, o.colour);
+
+      /**
+       * City names.
+       *
+       * How many fit is a property of the rendered width, not of the data, so
+       * the choice is made here rather than by the caller: the same map in a
+       * phone column and in a full-bleed figure wants seven names and sixteen.
+       * Text is stroked in the paper colour before it is filled, which is the
+       * cheap version of a halo and the only thing that keeps a name legible
+       * where it crosses from pale fill onto the dark end of the ramp.
+       */
+      if (places.length) {
+        const narrow = cssW < 380;
+        const mid = cssW < 560;
+        const css = getComputedStyle(document.documentElement);
+        const fontSize = Math.max(9, Math.min(12.5, cssW / 48)) * dpr;
+        ctx.font = `500 ${fontSize}px ${css.getPropertyValue("--font-ui").trim()}`;
+        ctx.textBaseline = "middle";
+        ctx.lineJoin = "round";
+        const chosen = pickLabels(
+          places,
+          albers.forward,
+          narrow ? 7 : mid ? 11 : 16,
+          narrow ? 0.16 : mid ? 0.115 : 0.085,
+          narrow ? 0.08 : mid ? 0.06 : 0.046,
+          markers.map((m) => albers.forward(m.lat, m.lon)),
+        );
+        const dot = Math.max(1.4, fontSize * 0.16);
+        const gap = dot * 2.4;
+        const paper = css.getPropertyValue("--paper").trim();
+        for (const l of chosen) {
+          const x = l.x * sx;
+          const y = l.y * sy;
+          ctx.beginPath();
+          ctx.arc(x, y, dot, 0, Math.PI * 2);
+          ctx.fillStyle = inkColour(0.55);
+          ctx.fill();
+          // Flip to the left rather than run a name off the edge. Measured,
+          // not guessed from the position: "Jacksonville" and "Reno" overflow
+          // from very different places.
+          const width = ctx.measureText(l.name).width;
+          const right = x + gap + width < sx - 4 * dpr;
+          ctx.textAlign = right ? "left" : "right";
+          const tx = right ? x + gap : x - gap;
+          ctx.lineWidth = 3 * dpr;
+          ctx.strokeStyle = paper;
+          ctx.strokeText(l.name, tx, y);
+          ctx.fillStyle = inkColour(0.75);
+          ctx.fillText(l.name, tx, y);
+        }
+      }
 
       for (const m of markers) {
-        const p = project(cells, m.lat, m.lon);
+        const p = albers.forward(m.lat, m.lon);
         const x = p.x * sx;
         const y = p.y * sy;
         const r = 4.5 * dpr;
@@ -171,13 +292,32 @@ export default function Map({
     const ro = new ResizeObserver(draw);
     ro.observe(wrap);
     return () => ro.disconnect();
-  }, [cells, posterior, shading, overlays, markers, gamma, borders, aspect]);
+  }, [
+    cells,
+    posterior,
+    shading,
+    projectedOverlays,
+    markers,
+    places,
+    gamma,
+    borders,
+    aspect,
+    albers,
+    raster,
+  ]);
 
   return (
     <figure className={`${styles.figure} ${className ?? ""}`}>
       <div ref={wrapRef} className={styles.wrap}>
         <canvas ref={canvasRef} className={styles.canvas} />
       </div>
+      {legend ? (
+        <div className={styles.legend}>
+          <span>{legend[0]}</span>
+          <span className={styles.ramp} aria-hidden="true" />
+          <span>{legend[1]}</span>
+        </div>
+      ) : null}
       {caption ? <figcaption className={styles.caption}>{caption}</figcaption> : null}
     </figure>
   );

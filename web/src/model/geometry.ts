@@ -54,39 +54,3 @@ export function buildBorders(cells: Cells): Borders {
   }
   return { state: Float32Array.from(state), coast: Float32Array.from(coast) };
 }
-
-/**
- * Display aspect ratio: width divided by height.
- *
- * The grid is stored on equal steps of latitude and longitude, so drawing it
- * one cell to one pixel is a plate carree projection, which stretches the
- * United States about 29% too wide. Correcting by the cosine of the middle
- * latitude costs nothing and is the difference between a map that looks right
- * and one that looks subtly wrong in a way most people feel but cannot name.
- */
-export function displayAspect(cells: Cells): number {
-  const north = cells.lats[0];
-  const south = cells.lats[cells.lats.length - 1];
-  const west = cells.lons[0];
-  const east = cells.lons[cells.lons.length - 1];
-  const mid = ((north + south) / 2) * (Math.PI / 180);
-  return (Math.abs(east - west) * Math.cos(mid)) / Math.abs(north - south);
-}
-
-/** Grid coordinates of a latitude and longitude, for placing a marker. */
-export function project(
-  cells: Cells,
-  lat: number,
-  lon: number,
-): { x: number; y: number } {
-  const n = cells.lats.length;
-  const m = cells.lons.length;
-  const top = cells.lats[0];
-  const dLat = cells.lats[1] - cells.lats[0];
-  const left = cells.lons[0];
-  const dLon = cells.lons[1] - cells.lons[0];
-  return {
-    x: Math.min(m, Math.max(0, (lon - left) / dLon + 0.5)),
-    y: Math.min(n, Math.max(0, (lat - top) / dLat + 0.5)),
-  };
-}

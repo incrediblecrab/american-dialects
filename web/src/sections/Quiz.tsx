@@ -176,6 +176,7 @@ export default function Quiz() {
       cells: payload.cells,
       posterior: post,
       marker: { lat: result.lat, lon: result.lon },
+      places: payload.manifest.places,
       kicker: "Where do you talk like?",
       strap:
         "Harvard Dialect Survey, 2003. Its geography was recovered from the " +
@@ -202,6 +203,8 @@ export default function Quiz() {
             <MapView
               cells={payload.cells}
               posterior={post}
+              places={payload.manifest.places}
+              legend={["less likely", "more likely"]}
               markers={
                 result ? [{ lat: result.lat, lon: result.lon, tone: "accent" }] : []
               }
@@ -224,11 +227,15 @@ export default function Quiz() {
           {stage === "intro" ? (
             <div className={styles.intro}>
               <p className={styles.kicker}>Harvard Dialect Survey · 2003</p>
+              <h1 className={styles.h1}>
+                You remember the quiz. This is what was underneath it.
+              </h1>
               <p className={styles.lede}>
                 In 2013 a newspaper quiz asked{" "}
                 {int.format(constants.nQuestions)} questions and guessed where
-                you grew up. Almost everyone who played remembers it. The data
-                underneath it was never released. Only pictures of it were.
+                you grew up. Almost everyone who played remembers it. Only
+                pictures of the survey underneath it were ever released. The map
+                on the left was recovered from those pictures.
               </p>
               <button
                 className={styles.primary}

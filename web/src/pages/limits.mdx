@@ -1,14 +1,13 @@
 ---
 title: What is known, and what is only hoped.
 description: The claims are sorted by what produced them, so the line between evidence and self-agreement is drawn explicitly rather than left to the reader.
-sidebar:
-  order: 6
+layout: ../layouts/Base.astro
 ---
 
-import Stat from "../../components/prose/Stat.astro";
-import Ladder from "../../components/prose/Ladder.astro";
-import Rung from "../../components/prose/Rung.astro";
-import s from "../../sections/Section.module.css";
+import Stat from "../components/prose/Stat.astro";
+import Ladder from "../components/prose/Ladder.astro";
+import Rung from "../components/prose/Rung.astro";
+import s from "../sections/Section.module.css";
 import {
   constants,
   content,
@@ -19,7 +18,7 @@ import {
   quantisation,
   recovery,
   tuning,
-} from "../../content";
+} from "../content";
 
 export const cov = curveAt(MODELS.deployed, constants.nQuestions);
 

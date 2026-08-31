@@ -1,14 +1,13 @@
 ---
 title: Nobody ever worked out how many questions it should ask.
 description: Twelve is not a finding about language. It is an interface decision from 2013, inherited ever since as though it were a property of the problem.
-sidebar:
-  order: 5
+layout: ../layouts/Base.astro
 ---
 
-import Curve from "../../components/Curve";
-import Wide from "../../components/prose/Wide.astro";
-import Stat from "../../components/prose/Stat.astro";
-import { constants, kMax, km, MODELS, twelve } from "../../content";
+import Curve from "../components/Curve";
+import Wide from "../components/prose/Wide.astro";
+import Stat from "../components/prose/Stat.astro";
+import { constants, kMax, km, MODELS, twelve } from "../content";
 
 export const series = [
   { model: MODELS.deployed, label: "Bayes, no idiolect discount", tone: "accent" },

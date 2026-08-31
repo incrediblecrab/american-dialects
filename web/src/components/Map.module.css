@@ -25,3 +25,42 @@
   color: var(--ink-3);
   text-wrap: pretty;
 }
+
+/**
+ * The scale.
+ *
+ * A gradient built from the same --map-* properties the canvas ramp reads, so
+ * the bar cannot drift from the fill it is explaining. It carries no numbers:
+ * the posterior is rescaled by its own maximum and raised to a power before
+ * it is drawn, so a tick reading "0.004" would be true of the data and
+ * meaningless about the picture. Ends only, which is what the bar can honestly
+ * claim -- darker is more.
+ */
+.legend {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin-top: var(--sp-3);
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.ramp {
+  flex: 1 1 auto;
+  min-width: 3rem;
+  max-width: 14rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--rule);
+  background: linear-gradient(
+    to right,
+    var(--map-0),
+    var(--map-1),
+    var(--map-2),
+    var(--map-3),
+    var(--map-4)
+  );
+}

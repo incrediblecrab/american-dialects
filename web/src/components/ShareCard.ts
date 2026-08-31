@@ -20,8 +20,10 @@
  */
 
 import type { Cells } from "../model/payload";
-import { buildBorders, displayAspect, project } from "../model/geometry";
+import { buildBorders } from "../model/geometry";
+import { buildLookup, makeAlbers } from "../model/albers";
 import { buildRamp, inkColour } from "../model/ramp";
+import { pickLabels, type Place } from "../model/labels";
 
 export interface CardRow {
   label: string;
@@ -32,6 +34,8 @@ export interface CardSpec {
   cells: Cells;
   posterior: Float64Array;
   marker: { lat: number; lon: number };
+  /** Population-sorted places; the card names as many as fit. */
+  places: Place[];
   /** Small tracked capitals at the top. */
   kicker: string;
   /** One line of prose under the kicker, saying what this is. */
@@ -57,6 +61,8 @@ const PAD = 34;
 const INNER = W - PAD * 2;
 const LABEL_COL = 124;
 const GAMMA = 0.4;
+/** Reprojection raster for the card, same idea as Map.tsx's. */
+const CARD_RASTER_W = 912;
 
 const TYPE = {
   kicker: 11,
@@ -106,19 +112,28 @@ function drawMap(
   h: number,
 ) {
   const { cells, posterior } = spec;
-  const { rows, cols } = cells;
   const ramp = buildRamp();
-  const img = new ImageData(cols, rows);
+  const albers = makeAlbers(cells);
+  const rw = CARD_RASTER_W;
+  const rh = Math.round(rw / albers.aspect);
+  const lut = buildLookup(cells, albers, rw, rh);
+  const img = new ImageData(rw, rh);
   const px = img.data;
 
   let max = 0;
   for (let i = 0; i < posterior.length; i++) {
     if (posterior[i] > max) max = posterior[i];
   }
+  const idx = new Uint8Array(cells.count);
   for (let i = 0; i < cells.count; i++) {
     const v = max > 0 ? (posterior[i] / max) ** GAMMA : 0;
-    const s = Math.min(255, Math.max(0, Math.round(v * 255))) * 3;
-    const o = (cells.cellY[i] * cols + cells.cellX[i]) * 4;
+    idx[i] = Math.min(255, Math.max(0, Math.round(v * 255)));
+  }
+  for (let p = 0; p < lut.length; p++) {
+    const i = lut[p];
+    if (i < 0) continue;
+    const s = idx[i] * 3;
+    const o = p * 4;
     px[o] = ramp[s];
     px[o + 1] = ramp[s + 1];
     px[o + 2] = ramp[s + 2];
@@ -126,8 +141,8 @@ function drawMap(
   }
 
   const small = document.createElement("canvas");
-  small.width = cols;
-  small.height = rows;
+  small.width = rw;
+  small.height = rh;
   small.getContext("2d")!.putImageData(img, 0, 0);
 
   ctx.save();
@@ -139,13 +154,13 @@ function drawMap(
   ctx.drawImage(small, x, y, w, h);
 
   const borders = buildBorders(cells);
-  const sx = w / cols;
-  const sy = h / rows;
   const line = (seg: Float32Array, width: number, colour: string) => {
     ctx.beginPath();
     for (let i = 0; i < seg.length; i += 4) {
-      ctx.moveTo(x + seg[i] * sx, y + seg[i + 1] * sy);
-      ctx.lineTo(x + seg[i + 2] * sx, y + seg[i + 3] * sy);
+      const a = albers.fromGrid(seg[i], seg[i + 1]);
+      const b = albers.fromGrid(seg[i + 2], seg[i + 3]);
+      ctx.moveTo(x + a.x * w, y + a.y * h);
+      ctx.lineTo(x + b.x * w, y + b.y * h);
     }
     ctx.lineWidth = width;
     ctx.strokeStyle = colour;
@@ -154,9 +169,38 @@ function drawMap(
   line(borders.state, 0.4, inkColour(0.22));
   line(borders.coast, 0.7, inkColour(0.5));
 
-  const p = project(cells, spec.marker.lat, spec.marker.lon);
+  const p = albers.forward(spec.marker.lat, spec.marker.lon);
+
+  // City names, on the same rules as the live map. A card that travels
+  // without the page around it needs them more, not less: it arrives with no
+  // caption and no scale, and "somewhere in the northeast" is the whole claim.
+  if (spec.places.length) {
+    const fontSize = Math.max(10, Math.min(15, w / 46));
+    ctx.font = `500 ${fontSize}px ${token("--font-ui")}`;
+    ctx.textBaseline = "middle";
+    ctx.lineJoin = "round";
+    const paper = token("--paper");
+    const dot = Math.max(1.6, fontSize * 0.16);
+    const gap = dot * 2.4;
+    for (const l of pickLabels(spec.places, albers.forward, 11, 0.115, 0.06, [p])) {
+      const lx = x + l.x * w;
+      const ly = y + l.y * h;
+      ctx.beginPath();
+      ctx.arc(lx, ly, dot, 0, Math.PI * 2);
+      ctx.fillStyle = inkColour(0.55);
+      ctx.fill();
+      const right = lx + gap + ctx.measureText(l.name).width < x + w - 4;
+      ctx.textAlign = right ? "left" : "right";
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = paper;
+      ctx.strokeText(l.name, right ? lx + gap : lx - gap, ly);
+      ctx.fillStyle = inkColour(0.75);
+      ctx.fillText(l.name, right ? lx + gap : lx - gap, ly);
+    }
+  }
+
   ctx.beginPath();
-  ctx.arc(x + p.x * sx, y + p.y * sy, 4, 0, Math.PI * 2);
+  ctx.arc(x + p.x * w, y + p.y * h, 4, 0, Math.PI * 2);
   ctx.fillStyle = token("--accent");
   ctx.fill();
   ctx.lineWidth = 1.4;
@@ -194,7 +238,7 @@ export function renderCard(spec: CardSpec): HTMLCanvasElement {
   const headingLines = wrap(ctx, spec.heading, INNER);
 
   const mapW = INNER;
-  const mapH = Math.round(mapW / displayAspect(spec.cells));
+  const mapH = Math.round(mapW / makeAlbers(spec.cells).aspect);
   const honestH = honestLines.length * (TYPE.honest + 5);
   const strapH = strapLines.length * (TYPE.strap + 4);
   const headingH = headingLines.length * (TYPE.heading + 4);

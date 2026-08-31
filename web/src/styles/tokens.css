@@ -54,25 +54,52 @@
   --warn: #9d3d1c;
   --warn-soft: #f2dcd1;
 
-  /* The map ramp, paper at the bottom end so low mass fades into the page
-   * rather than sitting on it as a visible floor. Consumed by canvas code,
-   * which cannot read a CSS gradient, so the same stops are mirrored in
-   * model/ramp.ts and that file is the one the renderer reads. */
   /* Density ramp. The stops are read by model/ramp.ts and interpolated to 256
      steps, so this is the only place the map palette is defined.
 
-     The previous ramp was a single blue hue, and measuring it explained why it
-     looked washed out: chroma ran [9, 12, 26, 36, 29], so the lower half of
-     every surface was effectively grey. Lightness was never the problem, it
-     was already monotonic. A diffuse surface like the population prior puts
-     most of its cells in that low half, which is precisely where the old ramp
-     had no colour to spend. These stops hold even lightness steps and carry
-     chroma from the first level, peaking at 78 rather than 36. */
-  --map-0: #efe8d8;
-  --map-1: #efb02e;
-  --map-2: #e8801c;
-  --map-3: #cc3018;
-  --map-4: #8c0026;
+     Measured in OKLCH, because two earlier attempts were argued from taste and
+     both were wrong in ways numbers would have caught.
+
+     A single blue hue was tried first and abandoned: its chroma ran
+     [0.7, 2.5, 5.9, 9.4, 9.9], so the light half of every surface was grey,
+     and a diffuse posterior puts most of its cells exactly there. The warm
+     ramp that replaced it fixed the chroma but never fixed its lightness,
+     which stepped [13.6, 9.5, 14.7, 14.9] -- the second step is two thirds of
+     the others, so the ramp stalls in the middle and reads as one flat wash of
+     orange rather than as distinguishable levels.
+
+     These stops step [16.1, 13.0, 12.9, 12.5] and carry a floor of 7.5 chroma
+     from the second stop rather than 2.5. Hue rotates 225 -> 252 across the
+     ramp: blue cannot hold chroma at high lightness the way orange can, and
+     letting the light end drift toward teal is what keeps it from going grey
+     again. Drifting any further than this was tried and looks like a swimming
+     pool rather than a map. The honest cost is a lower peak chroma than the
+     warm ramp, 10.9 against 19.6. What it buys is even steps, and a cool
+     surface on warm paper, which separates figure from ground in a way orange
+     on cream never did.
+
+     The first step is larger than the other three on purpose, and that is the
+     one place this ramp is deliberately not uniform. The reason is measured:
+     binning the rendered land pixels of each map to their nearest stop puts
+     95.7% of a fourteen-answer posterior in the bottom bin, against 56% for
+     the population prior and 49% for the discounted map. A bottom bin holding
+     nine tenths of the picture is not a level to be read, it is the absence of
+     one, and drawn as a visible blue it asserted belief across the whole
+     country where there was almost none. So the floor is pulled to L* 96.1 at
+     1.5 chroma -- cool, but a shade lighter than the paper it sits on, so
+     empty land reads as the lit sheet it is rather than as fill.
+
+     The second stop is what protects this from repeating the failure above.
+     The diffuse maps put 40 to 45% of their land in bin one, so that is where
+     a broad posterior actually lives, and it keeps the full 7.5 chroma. The
+     ramp fades out below it, not through it.
+
+     The dark end is the accent colour, so the map and the page agree. */
+  --map-0: #e9f4fb;
+  --map-1: #8cc7e6;
+  --map-2: #579dcd;
+  --map-3: #2f74aa;
+  --map-4: #184d83;
 
   /* ------------------------------------------------------------------ type */
   --font-prose: "Iowan Old Style", "Palatino Linotype", Palatino,
