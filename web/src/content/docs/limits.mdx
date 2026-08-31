@@ -1,10 +1,14 @@
-import Section from "../components/prose/Section.astro";
-import Body from "../components/prose/Body.astro";
-import Stat from "../components/prose/Stat.astro";
-import Note from "../components/prose/Note.astro";
-import Ladder from "../components/prose/Ladder.astro";
-import Rung from "../components/prose/Rung.astro";
-import s from "./Section.module.css";
+---
+title: What is known, and what is only hoped.
+description: The claims are sorted by what produced them, so the line between evidence and self-agreement is drawn explicitly rather than left to the reader.
+sidebar:
+  order: 6
+---
+
+import Stat from "../../components/prose/Stat.astro";
+import Ladder from "../../components/prose/Ladder.astro";
+import Rung from "../../components/prose/Rung.astro";
+import s from "../../sections/Section.module.css";
 import {
   constants,
   content,
@@ -15,7 +19,7 @@ import {
   quantisation,
   recovery,
   tuning,
-} from "../content";
+} from "../../content";
 
 export const cov = curveAt(MODELS.deployed, constants.nQuestions);
 
@@ -29,13 +33,7 @@ export const cov = curveAt(MODELS.deployed, constants.nQuestions);
   worth anything.
 */}
 
-<Section id="limits" act="Act V" title="What is known, and what is only hoped.">
-
-<Body>
-
 Simulating people from the same surfaces you are testing, and letting them obey every assumption the model makes, guarantees a flattering answer and tests nothing. So the claims here are sorted by what produced them, and the line between evidence and self-agreement is drawn explicitly.
-
-</Body>
 
 <div class={s.wide}>
 <Ladder>
@@ -49,7 +47,7 @@ The Cambridge Survey of World Englishes re-ran the Harvard question set years la
 </Rung>
 
 <Rung tier="Measured, but narrow" claim="The idiolect correlation is real. The use made of it was not.">
-ρ = <Stat>{constants.rho}</Stat> comes from real people answering two constructions, and a within-person correlation does not much care who was sampled. That is a different claim from the one the model made with it, which was that the whole likelihood should be tempered — and <a href="#mistake">that claim failed on its own terms</a>.
+ρ = <Stat>{constants.rho}</Stat> comes from real people answering two constructions, and a within-person correlation does not much care who was sampled. That is a different claim from the one the model made with it, which was that the whole likelihood should be tempered — and <a href="/american-dialects/mistake/">that claim failed on its own terms</a>.
 </Rung>
 
 <Rung tier="Stress-tested, not validated" claim="Every accuracy figure on this page is from simulated speakers.">
@@ -67,47 +65,20 @@ There is no public dataset of real people with both their dialect answers and wh
 </Ladder>
 </div>
 
-<Body>
+## Why no figure here was measured on a real player
 
-### Why no figure here was measured on a real player
+:::caution[Nothing on this page was measured on someone who played]
+Every confidence figure here — median error, state accuracy, the coverage of the 80% region — is simulated rather than measured on the people who play the quiz, and this site is not collecting what would change that. It is a static file: it can run the model in your browser, but it has nowhere to send the game afterwards.
 
-<Note>
-  Every confidence figure on this page — median error, state accuracy, the
-  coverage of the 80% region — is simulated rather than measured on the people
-  who play the quiz, and this site is not collecting what would change that. It
-  is a static file: it can run the model in your browser, but it has nowhere to
-  send the game afterwards. The workaround a static site permits is to invite
-  the player to file a public report carrying their result and the town they
-  grew up in. That was considered and declined. Such reports come only from
-  people willing to publish where they were raised, and, among those,
-  disproportionately from the ones whose guess was uncanny or absurd —
-  selection on precisely the quantity being estimated, uncorrectable without
-  knowing who chose not to write. A number built that way would read as a
-  measurement while carrying less than this paragraph does. The instrument that
-  would do it properly already exists: <code>site/server.py</code> logs whole
-  games against a stated home town, and runs on a local machine under a consent
-  conversation a share button cannot hold.
-</Note>
+The workaround a static site permits is to invite the player to file a public report carrying their result and the town they grew up in. That was considered and declined. Such reports come only from people willing to publish where they were raised, and, among those, disproportionately from the ones whose guess was uncanny or absurd — selection on precisely the quantity being estimated, uncorrectable without knowing who chose not to write. A number built that way would read as a measurement while carrying less than this paragraph does.
 
-</Body>
+The instrument that would do it properly already exists: `site/server.py` logs whole games against a stated home town, and runs on a local machine under a consent conversation a share button cannot hold.
+:::
 
-<Body>
+## Two smaller things, for completeness
 
-### Two smaller things, for completeness
+:::note[Quantisation, and the wording of the questions]
+The surfaces are shipped to your browser as one byte per cell. Over <Stat n={quantisation.games} /> simulated games that costs nothing measurable: the chosen cell is identical in <Stat>{`${oneDp.format(quantisation.identicalPct)}%`}</Stat> of them, and in the rest the cell picked instead was within <Stat>{`${oneDp.format(100 * (1 - quantisation.worstRatio))}%`}</Stat> of the true best cell's probability. Compression is breaking ties, not losing accuracy.
 
-<Note>
-  The surfaces are shipped to your browser as one byte per cell. Over{" "}
-  <Stat n={quantisation.games} /> simulated games that costs nothing
-  measurable: the chosen cell is identical in{" "}
-  <Stat>{`${oneDp.format(quantisation.identicalPct)}%`}</Stat> of them, and in
-  the rest the cell picked instead was within{" "}
-  <Stat>{`${oneDp.format(100 * (1 - quantisation.worstRatio))}%`}</Stat> of the
-  true best cell's probability. Compression is breaking ties, not losing
-  accuracy. Separately, the questions and answers here are the survey's own
-  wording from 2003, reproduced unchanged, and <Stat n={content.inventory.length} />{" "}
-  data files stand behind everything above.
-</Note>
-
-</Body>
-
-</Section>
+Separately, the questions and answers here are the survey's own wording from 2003, reproduced unchanged, and <Stat n={content.inventory.length} /> data files stand behind everything above.
+:::

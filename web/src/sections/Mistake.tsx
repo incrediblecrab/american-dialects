@@ -77,13 +77,6 @@ export default function Mistake() {
 
   return (
     <section className={s.section} id="mistake">
-      <div className={s.head}>
-        <p className={s.act}>Act III</p>
-        <h2 className={s.title}>
-          The most careful thing in the model was the worst thing in it.
-        </h2>
-      </div>
-
       <div className={s.body}>
         <p>
           Treating {int.format(constants.nQuestions)} answers from one person as{" "}

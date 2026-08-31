@@ -1,10 +1,14 @@
-import Scrubber from "../components/Scrubber";
-import Section from "../components/prose/Section.astro";
-import Body from "../components/prose/Body.astro";
-import Wide from "../components/prose/Wide.astro";
-import Stat from "../components/prose/Stat.astro";
-import Note from "../components/prose/Note.astro";
-import { content, oneDp, recovery, recoveryStrip } from "../content";
+---
+title: The data was never published. The pictures were.
+description: The Harvard Dialect Survey released one image per answer and nothing else. The geography is recoverable from those images, and checks out against numbers the recovery never saw.
+sidebar:
+  order: 2
+---
+
+import Scrubber from "../../components/Scrubber";
+import Wide from "../../components/prose/Wide.astro";
+import Stat from "../../components/prose/Stat.astro";
+import { content, oneDp, recovery, recoveryStrip } from "../../content";
 
 export const strip = recoveryStrip;
 
@@ -17,15 +21,9 @@ export const strip = recoveryStrip;
   percentages are exactly that: they were never an input.
 */}
 
-<Section id="recovery" act="Act II" title="The data was never published. The pictures were.">
-
-<Body>
-
 The Harvard Dialect Survey collected where every respondent grew up, down to their ZIP code, and released none of it. What it released was one image per answer: a dot for each person, drawn at their ZIP centroid on a map of the lower 48. For twenty years those images have been the only surviving sub-state record of the survey.
 
 They are recoverable, because of how they were drawn. Every dot is a known colour over a white background, and the drawing was antialiased, so a pixel on the edge of a dot is a measurable blend of ink and paper. Solving that blend per pixel gives back not just *where* people were, but roughly *how many*.
-
-</Body>
 
 <Wide>
   <Scrubber
@@ -36,26 +34,18 @@ They are recoverable, because of how they were drawn. Every dot is a known colou
   />
 </Wide>
 
-<Body>
-
 The step above recovers <Stat n={strip.inkedPixels} /> inked pixels from a single answer map, and the same procedure over every published map recovers the geography of the whole survey.
 
-### Checking it against numbers it never saw
+## Checking it against numbers it never saw
 
 A recovery like this is easy to believe and hard to trust. So it is checked against the one thing the survey did publish in numeric form: the percentage of each state choosing each answer. Those percentages were never an input to the recovery. If reading the pixels were fabricating structure, there is no reason the fabrication would agree with them.
 
 Over <Stat n={recovery.comparisons} /> state-by-answer comparisons, it agrees at **r = <Stat>{recovery.r.toFixed(3)}</Stat>**, with a mean absolute error of <Stat>{oneDp.format(recovery.mae)}</Stat> percentage points, and it picks the same winning answer in a state <Stat>{`${oneDp.format(recovery.modalAgreement)}%`}</Stat> of the time.
 
+## A check from outside the survey
+
 A second, fully independent check comes from outside the survey entirely. The *Pop vs Soda* project collected the same question from <Stat n={content.popVsSoda.categorised} /> people across <Stat n={content.popVsSoda.counties} /> counties, with different respondents, a different decade and a different method. The recovered surface reproduces its geography too.
 
-<Note>
-  Both checks are at the state level, because state percentages are the only
-  published numbers to check against. Nothing here validates the recovery
-  <em>within</em> a state, and the sub-state detail — which is the entire
-  reason to do this — remains unvalidated. That is the honest limit of the
-  claim, and <a href="#limits">it is stated again at the end</a>.
-</Note>
-
-</Body>
-
-</Section>
+:::caution[What this does not establish]
+Both checks are at the state level, because state percentages are the only published numbers to check against. Nothing here validates the recovery *within* a state, and the sub-state detail — which is the entire reason to do this — remains unvalidated. That is the honest limit of the claim, and [it is stated again at the end](/american-dialects/limits/).
+:::

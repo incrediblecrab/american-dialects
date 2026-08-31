@@ -1,10 +1,14 @@
-import Curve from "../components/Curve";
-import Section from "../components/prose/Section.astro";
-import Body from "../components/prose/Body.astro";
-import Wide from "../components/prose/Wide.astro";
-import Stat from "../components/prose/Stat.astro";
-import Note from "../components/prose/Note.astro";
-import { constants, kMax, km, MODELS, twelve } from "../content";
+---
+title: Nobody ever worked out how many questions it should ask.
+description: Twelve is not a finding about language. It is an interface decision from 2013, inherited ever since as though it were a property of the problem.
+sidebar:
+  order: 5
+---
+
+import Curve from "../../components/Curve";
+import Wide from "../../components/prose/Wide.astro";
+import Stat from "../../components/prose/Stat.astro";
+import { constants, kMax, km, MODELS, twelve } from "../../content";
 
 export const series = [
   { model: MODELS.deployed, label: "Bayes, no idiolect discount", tone: "accent" },
@@ -25,19 +29,13 @@ export const series = [
   sentence that has to be kept in sync with it.
 */}
 
-<Section id="questions" act="Act IV" title="Nobody ever worked out how many questions it should ask.">
-
-<Body>
-
 Twelve is not a finding about language. It is an interface decision from 2013 — a quiz that fits on a page and holds attention — and it has been inherited ever since as though it were a property of the problem. It is worth asking what the number should be, and the honest way to ask is to measure error against how many questions are asked and look at the curve.
-
-</Body>
 
 <Wide>
   <Curve client:visible markK={constants.nQuestions} series={series} />
 </Wide>
 
-<Body>
+## Two curves behave, one does not
 
 Two of these curves do what you would expect: more questions, less error, still falling when the measurement runs out at <Stat n={kMax} />. At that point the network is down to <Stat>{km(twelve.netEnd.medianKm)}</Stat> of median error and the undiscounted Bayesian model to <Stat>{km(twelve.correctEnd.medianKm)}</Stat>.
 
@@ -48,24 +46,18 @@ Two of these curves do what you would expect: more questions, less error, still 
     and then gets <em>worse</em>, ending at <Stat>{km(twelve.end.medianKm)}</Stat>.
     Feeding more evidence to a model and watching it move further from the
     truth is not a tuning problem. It is the signature of{" "}
-    <a href="#mistake">the mistake in Act III</a>: the discount is applied so
-    that additional answers pull the answer back toward the population prior
-    faster than they push it toward the speaker.
+    <a href="/american-dialects/mistake/">the mistake in Act III</a>: the
+    discount is applied so that additional answers pull the answer back toward
+    the population prior faster than they push it toward the speaker.
   </p>
 )}
+
+## Why the count and the discount cannot be settled separately
 
 So the question count and the discount cannot be settled separately. With the discount in place, asking more than about <Stat n={twelve.best.k} /> questions is actively harmful, which makes twelve look like a reasonable choice for the wrong reason. Remove it and the ceiling disappears; the curve is still falling at the end of the measurement, and where to stop becomes a judgement about how long a stranger will keep answering, not about statistics.
 
 This quiz asks <Stat n={constants.nQuestions} />, and that is the judgement rather than a result. It is the point at which an extra question stops being worth about 30 km of accuracy — roughly what one more screen of a stranger's patience seems to cost. Ask instead where 90% of the available accuracy has arrived and the answer is further out. Both are defensible; neither is a fact about dialects, which is the entire point of this section.
 
-<Note>
-  These are simulated speakers, built to violate the model's assumptions in
-  three calibrated ways rather than to obey them. That makes the curve an
-  answer to &ldquo;how wrong can this be and still work&rdquo; rather than a
-  measurement of accuracy on real people, which this project does not have and{" "}
-  <a href="#limits">says so plainly</a>.
-</Note>
-
-</Body>
-
-</Section>
+:::note[These are simulated speakers]
+They are built to violate the model's assumptions in three calibrated ways rather than to obey them. That makes the curve an answer to "how wrong can this be and still work" rather than a measurement of accuracy on real people, which this project does not have and [says so plainly](/american-dialects/limits/).
+:::

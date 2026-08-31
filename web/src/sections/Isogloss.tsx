@@ -150,13 +150,6 @@ export default function Isogloss() {
 
   return (
     <section className={s.section} id="isoglosses">
-      <div className={s.head}>
-        <p className={s.act}>Interlude</p>
-        <h2 className={s.title}>
-          Ninety miles up the lake from Chicago, the word changes.
-        </h2>
-      </div>
-
       <div className={s.body}>
         <p>
           An <strong>isogloss</strong> is the line where one word gives way to

@@ -29,12 +29,10 @@
   }
   .hero {
     display: grid;
-    align-content: center;
-    min-height: min(86svh, 44rem);
-    padding-block: var(--sp-6);
+    padding-block: var(--sp-4);
   }
   .hero .grid {
-    align-items: center;
+    align-items: start;
   }
   .hero .mapCol {
     position: static;
