@@ -42,12 +42,12 @@ export default defineConfig({
         {
           label: "The essay",
           items: [
-            { label: "Act I · Play", link: "/" },
-            { label: "Act II · Recovery", link: "/recovery/" },
-            { label: "Interlude · Isoglosses", link: "/isogloss/" },
-            { label: "Act III · The mistake", link: "/mistake/" },
-            { label: "Act IV · How many questions", link: "/questions/" },
-            { label: "Act V · Limits", link: "/limits/" },
+            { label: "The quiz", link: "/" },
+            { label: "Recovering the data", link: "/recovery/" },
+            { label: "Isoglosses", link: "/isogloss/" },
+            { label: "The mistake", link: "/mistake/" },
+            { label: "How many questions", link: "/questions/" },
+            { label: "What is known", link: "/limits/" },
           ],
         },
         {
