@@ -71,6 +71,10 @@ jobs:
           cache: npm
           cache-dependency-path: web/package-lock.json
 
+      - name: Check the lockfile carries this runner's binaries
+        working-directory: web
+        run: npm run lint:lockfile
+
       - name: Install
         working-directory: web
         run: npm ci

@@ -12,7 +12,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "typecheck": "astro check",
-    "verify": "node scripts/verify-port.mjs"
+    "verify": "node scripts/verify-port.mjs",
+    "lint:lockfile": "node scripts/lint-lockfile.mjs",
+    "preflight": "npm run lint:lockfile && npm ci && npm run verify && npm run build"
   },
   "allowScripts": {
     "esbuild": true
